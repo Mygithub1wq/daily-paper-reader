@@ -491,6 +491,8 @@ function testSidebarPaperVisualStateCssContract() {
   assert.ok(/content:\s*"\.\."/i.test(titleDotsRule));
   assert.ok(/position:\s*absolute/i.test(titleDotsRule));
   assert.ok(/right:\s*20px/i.test(titleDotsRule));
+  assert.ok(!/linear-gradient/i.test(titleDotsRule));
+  assert.ok(/background:\s*var\(--dpr-sidebar-paper-bg\)/i.test(titleDotsRule));
   assert.ok(/opacity:\s*0/i.test(titleDotsRule));
 
   assert.ok(/\.dpr-sidebar-paper\.is-title-overflowing \.dpr-sidebar-paper-title::after\s*{[^}]*opacity:\s*1/i.test(css));
