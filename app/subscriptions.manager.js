@@ -188,15 +188,15 @@ window.SubscriptionsManager = (function () {
     if (!conferenceKey || !yearNum) return null;
     return conferenceStatsSnapshot.byKey.get(`${conferenceKey}:${yearNum}`) || null;
   };
-  const formatConferenceYearStatsLabel = (conference, year) => {
+  const formatConferenceShortYear = (year) => {
     const yearText = normalizeText(year);
-    const stats = getConferenceYearStats(conference, yearText);
-    if (!stats) return yearText;
-    return `${yearText} (${stats.stored_total_count}/${stats.official_accepted_count})`;
+    return yearText.length === 4 ? yearText.slice(2) : yearText;
   };
-  const formatConferenceRejectLabel = (stats) => {
-    if (!stats) return '';
-    return `拒稿 ${stats.stored_rejected_count}`;
+  const formatConferenceYearStatsLabel = (conference, year) => {
+    const shortYear = formatConferenceShortYear(year);
+    const stats = getConferenceYearStats(conference, year);
+    if (!stats) return shortYear;
+    return `${shortYear} (${stats.stored_total_count})`;
   };
   const buildConferenceChoiceRowsHtml = () => QUICK_RUN_CONFERENCES
     .map((name) => {
@@ -212,15 +212,20 @@ window.SubscriptionsManager = (function () {
             active ? 'is-active' : '',
             disabled ? 'is-disabled' : '',
           ].filter(Boolean).join(' ');
-          const rejectLabel = formatConferenceRejectLabel(stats);
+          const shortYear = formatConferenceShortYear(year);
+          const visibleLabel = formatConferenceYearStatsLabel(name, year);
+          const labelHtml = stats
+            ? `<span class="dpr-choice-year">${escapeHtml(shortYear)}</span><span class="dpr-choice-total-wrap"> (<span class="dpr-choice-total">${escapeHtml(String(stats.stored_total_count))}</span>)</span>`
+            : `<span class="dpr-choice-year">${escapeHtml(shortYear)}</span>`;
           return `<button
             class="${classes}"
             type="button"
             data-conference="${escapeHtml(name)}"
             data-conference-year="${escapeHtml(year)}"
             aria-pressed="${active ? 'true' : 'false'}"
+            aria-label="${escapeHtml(`${name} ${visibleLabel}`)}"
             ${disabled ? `disabled title="${escapeHtml(reason)}"` : ''}
-          ><span class="dpr-choice-pill-main">${escapeHtml(formatConferenceYearStatsLabel(name, year))}</span>${stats ? `<span class="dpr-choice-pill-reject">${escapeHtml(rejectLabel)}</span>` : ''}</button>`;
+          ><span class="dpr-choice-pill-main">${labelHtml}</span></button>`;
         })
         .join('');
       return `<div class="dpr-conference-choice-row">

@@ -186,7 +186,7 @@ function testConferenceDefaultYearOnlySelects2025() {
   assert.deepEqual(pairs, []);
 }
 
-function testConferenceYearChoicesShowStoredAndAcceptedCounts() {
+function testConferenceYearChoicesShowTwoDigitYearAndStoredTotalOnly() {
   __setRunSelectionState({ conferencePairs: ['ICLR:2025'] });
   __setConferenceStatsSnapshot({
     generated_at: '2026-06-30T00:00:00Z',
@@ -203,11 +203,14 @@ function testConferenceYearChoicesShowStoredAndAcceptedCounts() {
     ],
   });
 
-  assert.equal(formatConferenceYearStatsLabel('ICLR', '2025'), '2025 (401/379)');
+  assert.equal(formatConferenceYearStatsLabel('ICLR', '2025'), '25 (401)');
   const html = __buildConferenceChoiceRowsHtml();
   assert.ok(html.includes('ICLR'));
-  assert.ok(html.includes('2025 (401/379)'));
-  assert.ok(html.includes('拒稿 22'));
+  assert.ok(html.includes('25 (401)'));
+  assert.ok(html.includes('class="dpr-choice-year">25</span>'));
+  assert.ok(html.includes('class="dpr-choice-total">401</span>'));
+  assert.equal(html.includes('拒稿'), false);
+  assert.equal(html.includes('379'), false);
   assert.ok(html.includes('aria-pressed="true"'));
 }
 
@@ -330,7 +333,7 @@ async function testQuickFetchIncludesAnySelectedProfile() {
   await testRunProfileQuickFetchPassesProfileTagToWorkflow();
   testConferenceCurrentYearDisabledForPendingSources();
   testConferenceDefaultYearOnlySelects2025();
-  testConferenceYearChoicesShowStoredAndAcceptedCounts();
+  testConferenceYearChoicesShowTwoDigitYearAndStoredTotalOnly();
   testQuickRunUnsavedMessageClearsAfterSave();
   testConferenceRunDisabledWhenUnsaved();
   await testQuickFetchIncludesAnySelectedProfile();
