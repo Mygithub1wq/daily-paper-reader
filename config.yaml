@@ -25,3 +25,52 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: embodied-VLA
+      description: 具身智能决策与VLA模型相关论文
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: vision language action model
+          keyword_cn: 视觉语言动作模型
+          query: vision language action models for embodied decision making
+        - keyword: embodied decision making
+          keyword_cn: 具身决策
+          query: embodied decision making with vision language action models
+        - keyword: embodied agent
+          keyword_cn: 具身智能体
+          query: embodied agent with vision language action model
+        - keyword: multimodal decision making
+          keyword_cn: 多模态决策
+          query: multimodal decision making for embodied agents
+        - keyword: robot learning
+          keyword_cn: 机器人学习
+          query: robot learning with vision language action models
+      intent_queries:
+        - query: Find papers on vision language action models for embodied decision making
+          query_cn: 查找关于视觉 语言 动作模型在具身决策中应用的论文
+          enabled: true
+          source: manual
+          note: ''
+        - query: Embodied agents using vision language action models for decision making
+          query_cn: 使用视觉语言动作模型进行决策的具身智能体
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-07-22T03:55:51.076Z'
+source_backends:
+  arxiv:
+    papers_table: arxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_arxiv_papers
+    vector_rpc_exact: match_arxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_arxiv_papers_bm25
+    sync_table: arxiv_sync_status
+    sync_success_value: success
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
