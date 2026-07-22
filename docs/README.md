@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-07-13 ~ 2026-07-22</span>
+      <span class="dpr-home-dashboard-kicker">2026-07-22</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 27 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 12 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>16</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>11</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-07-22 04:38:01 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-07-22 21:23:11 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>过去十天27篇论文聚焦机器人视觉-语言-动作(VLA)模型，精读16篇，两篇高分工作均强调3D点云/高斯地图表示。</p>
-<p>最值得关注的方向是“机器人中心点图”与“3D高斯语义锚定”的VLA框架，分别获9.0/10高分。</p>
-<p>建议普通读者优先精读这两篇论文，理解如何将几何先验融入动作决策，并关注其如何降低VLA推理中的时间冗余。</p>
+<p>今日精选12篇论文，精读6篇，聚焦视觉-语言-动作模型（VLA）的规范生成、鲁棒性与可解释性。</p>
+<p>最值得关注的是《STeP》提出用信号时序逻辑精确生成VLA动作规范（满分10分），以及《Reasoning as a Double-Edged Sword》揭示VLA架构的双刃剑效应及跨阶段鲁棒性（9分）。</p>
+<p>速读中《What Do They See?》和《SoftNav》从自动驾驶可信解释和3D场景令牌注入导航入手，适合关注VLA可解释性与导航的读者。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">16 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="See like a Robot: Robot-Centric Pointmaps for Vision-Language-Action Models">See like a Robot: Robot-Centric Pointmaps for Vision-Language-Action Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="VistaVLA: Geometry- and Semantic-Aware 3D Gaussian-Grounded VLA for Robotic Manipulation">VistaVLA: Geometry- and Semantic-Aware 3D Gaussian-Grounded VLA for Robotic Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="Hy-Embodied-VLM-1.0: Efficient Physical-World Agents">Hy-Embodied-VLM-1.0: Efficient Physical-World Agents</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="STeP: Signal Temporal Logic for Precise Specifications for Action Generation with Vision Language Models">STeP: Signal Temporal Logic for Precise Specifications for Action Generation with Vision Language Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="Reasoning as a Double-Edged Sword: Architecture and Cross-Stage Robustness in Vision-Language-Action Models">Reasoning as a Double-Edged Sword: Architecture and Cross-Stage Robustness in Vision-Language-Action Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="Closing the Loop in Humanoid VLA: Persistent 3D Object Tokens for Verifiable Loco-Manipulation">Closing the Loop in Humanoid VLA: Persistent 3D Object Tokens for Verifiable Loco-Manipulation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>16</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>6</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">11 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="VIA: Visual Interface Agent for Robot Control">VIA: Visual Interface Agent for Robot Control</span></li><li><span class="dpr-home-dashboard-paper-title" title="Reducing Temporal Redundancy for Efficient Vision-Language-Action Inference">Reducing Temporal Redundancy for Efficient Vision-Language-Action Inference</span></li><li><span class="dpr-home-dashboard-paper-title" title="From Language to Navigation Goals: A Vision-Language Approach for Semantic Navigation of Mobile Robots Using RGB-D Perception">From Language to Navigation Goals: A Vision-Language Approach for Semantic Navigation of Mobile Robots Using RGB-D Perception</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="What Do They See? Interpreting Complex Road Scenarios Through the Eyes of Vision-Language-Action Models for Safe and Trustworthy Autonomous Vehicle Learning">What Do They See? Interpreting Complex Road Scenarios Through the Eyes of Vision-Language-Action Models for Safe and Trustworthy Autonomous Vehicle Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Patch Policy: Efficient Embodied Control via Dense Visual Representations">Patch Policy: Efficient Embodied Control via Dense Visual Representations</span></li><li><span class="dpr-home-dashboard-paper-title" title="SoftNav: Injecting 3D Scene Tokens into VLMs for Embodied Navigation">SoftNav: Injecting 3D Scene Tokens into VLMs for Embodied Navigation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>11</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>6</strong></span></div>
 </section>
 </div>
 

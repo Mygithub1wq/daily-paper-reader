@@ -1,0 +1,525 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-22T21:18:23.231552+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 8,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "2607.18580v1",
+      "source": "arxiv",
+      "title": "STeP: Signal Temporal Logic for Precise Specifications for Action Generation with Vision Language Models",
+      "abstract": "Vision-language-action (VLA) models have shown impressive generalization, but often lack interpretability and can struggle to follow precise natural language instructions that encode spatial, temporal, and logical requirements. We propose a hierarchical framework that uses Signal Temporal Logic (STL) as a shared representation connecting high-level language understanding with low-level robot execution. A high-level policy leverages a VLM to decompose language instructions into high-level subtasks, generate STL specifications for each subtask, and choose a low-level policy for executing each subtask. The STL specifications translate language-derived intent into precise constraints, and the low-level policy selection determines whether those constraints are enforced directly through STL-guided model-predictive control or monitored during execution of a learned policy for perceptually complex, or contact-rich behaviors. By integrating STL into plan validation, low-level policy, subtask monitoring, and replanning, our framework enables language-derived plans to be checked, optimized, and revised at runtime using a common formal structure. We evaluate the approach on a real-world tabletop domain, demonstrating how formal specifications can improve the precision, reliability, and interpretability of language-conditioned robot planning.",
+      "authors": [
+        "Kasra Torshizi",
+        "Anukriti Singh",
+        "Sidharth Mathur",
+        "Khuzema Habib",
+        "Leo Du",
+        "Pratap Tokekar"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-20T23:26:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.18580v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "STL specifications for VLA action generation",
+      "llm_evidence_cn": "利用信号时序逻辑为VLA生成精确动作规范",
+      "llm_evidence": "利用信号时序逻辑为VLA生成精确动作规范",
+      "canonical_evidence": "利用信号时序逻辑为VLA生成精确动作规范",
+      "llm_tldr_en": "Proposes a hierarchical framework using Signal Temporal Logic (STL) to connect high-level language understanding with low-level robot execution for precise action generation.",
+      "llm_tldr_cn": "该论文针对VLA模型缺乏可解释性和难以遵循精确指令的问题，提出了一种分层框架，利用信号时序逻辑(STL)作为共享表示，将高层语言理解与底层机器人执行连接起来。高层策略使用VLM分解指令并生成STL规范，确保动作精确满足时空和逻辑约束。",
+      "llm_tldr": "该论文针对VLA模型缺乏可解释性和难以遵循精确指令的问题，提出了一种分层框架，利用信号时序逻辑(STL)作为共享表示，将高层语言理解与底层机器人执行连接起来。高层策略使用VLM分解指令并生成STL规范，确保动作精确满足时空和逻辑约束。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.17786v1",
+      "source": "arxiv",
+      "title": "Reasoning as a Double-Edged Sword: Architecture and Cross-Stage Robustness in Vision-Language-Action Models",
+      "abstract": "Does adding a reasoning step make a Vision-Language-Action (VLA) model more robust to perturbation? Intuitively, a policy that reasons before acting should absorb a perturbed input better than one that maps observations directly to actions. We test this premise head-on across three models that span the reasoning spectrum (no reasoning, a text chain-of-thought, and a latent iterative loop), perturbing each at the vision, reasoning, and action stages on LIBERO and SimplerEnv. Two questions organize the study: does the reasoning design shift robustness, and can the reasoning be read back at runtime as a safety signal? We find that the latent-iterative model is by far the least robust: under both stochastic noise and white-box perturbation its task success collapses, while the other two hold. This fragility is structural rather than cumulative: varying the reasoning depth at inference barely moves it. Reasoning outputs can in principle be monitored, but the monitors fail under fair tests. A plan--action consistency probe that looks near-perfect under naive evaluation falls to chance under adaptive attack. Under matched-FPR calibration, fusing it with an action-anomaly probe never lifts defended success above undefended. Scoped to these output-level behavioral probes under white-box vision-stage attack, this ceiling is a precondition that any viable defense must first satisfy.",
+      "authors": [
+        "Tuan Duong Trinh",
+        "Naveed Akhtar",
+        "Basim Azam"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CR",
+        "cs.LG"
+      ],
+      "published": "2026-07-20T10:20:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.17786v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "analyzes reasoning robustness in VLA models",
+      "llm_evidence_cn": "分析VLA模型推理鲁棒性",
+      "llm_evidence": "分析VLA模型推理鲁棒性",
+      "canonical_evidence": "分析VLA模型推理鲁棒性",
+      "llm_tldr_en": "Investigates how different reasoning designs (none, chain-of-thought, latent iterative) affect robustness of VLA models; latent iterative is least robust, and reasoning can serve as a safety signal.",
+      "llm_tldr_cn": "本文研究推理步骤对VLA模型鲁棒性的影响。在LIBERO和SimplerEnv上测试无推理、文本链式推理和潜在迭代推理三种设计，发现潜在迭代模型对扰动最不鲁棒，但推理链可作为运行时的安全信号。",
+      "llm_tldr": "本文研究推理步骤对VLA模型鲁棒性的影响。在LIBERO和SimplerEnv上测试无推理、文本链式推理和潜在迭代推理三种设计，发现潜在迭代模型对扰动最不鲁棒，但推理链可作为运行时的安全信号。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.18016v1",
+      "source": "arxiv",
+      "title": "Closing the Loop in Humanoid VLA: Persistent 3D Object Tokens for Verifiable Loco-Manipulation",
+      "abstract": "Vision-language-action policies are a promising foundation for general robot control, but long-horizon humanoid loco-manipulation requires the robot to treat task objects as persistent physical entities across movement, contact, occlusion, and recovery. We study this problem as object-state divergence: the object state used to condition a whole-body action can differ from the state used to decide whether the action achieved the intended physical relation. We propose \\emph{Persistent Object Tokenization} (POT), which maintains role-indexed 3D object records from RGB-D observations and converts them into object tokens for a whole-body action expert. Instantiated as \\emph{POT-VLA}, the same object records condition action generation and support geometric predicate checks, yielding a closed-loop execution system in which object state is both actionable and verifiable. On a Unitree G1, POT-VLA improves a matched direct GR00T-N1.7 baseline from 39/80 to 71/80 successes over eight real-world task families. In an external Being-0-aligned reference, POT-VLA achieves 44/50 successes on aligned service tasks, compared with the 37/50 success reported by the Being-0 paper. The largest gains occur on tasks requiring maintained 3D relations, suggesting that persistent object-centered state is a useful abstraction for verifiable humanoid VLA execution.",
+      "authors": [
+        "Peng Ren",
+        "Haoyang Ge",
+        "Jiang Zhao",
+        "Cong Huang",
+        "Yukun Shi",
+        "Pei Chi",
+        "Kai Chen"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-20T14:52:46+00:00",
+      "link": "https://arxiv.org/pdf/2607.18016v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "VLA policy for humanoid loco-manipulation with persistent object tokens",
+      "llm_evidence_cn": "针对人形机器人操作与移动的VLA策略及持久对象令牌",
+      "llm_evidence": "针对人形机器人操作与移动的VLA策略及持久对象令牌",
+      "canonical_evidence": "针对人形机器人操作与移动的VLA策略及持久对象令牌",
+      "llm_tldr_en": "POT-VLA: persistent 3D object tokens enable verifiable loco-manipulation in humanoid robots, closing the loop in VLA policies.",
+      "llm_tldr_cn": "该论文提出POT-VLA方法，通过持久化3D对象令牌解决人形机器人在长周期操作-移动任务中的对象状态分歧问题。该方法维护角色索引的3D对象记录，将其转换为对象令牌，用于条件化全身动作专家。实验证明，POT-VLA在多种任务中实现了可验证的闭环控制，提高了长期操作的可靠性。",
+      "llm_tldr": "该论文提出POT-VLA方法，通过持久化3D对象令牌解决人形机器人在长周期操作-移动任务中的对象状态分歧问题。该方法维护角色索引的3D对象记录，将其转换为对象令牌，用于条件化全身动作专家。实验证明，POT-VLA在多种任务中实现了可验证的闭环控制，提高了长期操作的可靠性。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14514v1",
+      "source": "arxiv",
+      "title": "VTM-Nav: Hierarchical Visual-Topological Memory for Cross-Episode Object-Goal Navigation",
+      "abstract": "Object-goal navigation requires an embodied agent to locate and reach an instance of a specified object category in an indoor environment. Recent training-free approaches leverage vision-language models (VLMs) for open-vocabulary semantic reasoning, but are typically evaluated under an episodic protocol that resets all scene-specific state after each episode. We introduce Cross-Episode Object-Goal Navigation, in which an agent repeatedly operates in the same scene, retains only self-acquired experience, and keeps its model parameters fixed. To support experience reuse, we present \\method, a training-free VLM navigation framework with a persistent hierarchical Visual-Topological Memory (VTM). The VTM organizes scene knowledge at room and object levels and retrieves relevant experience through coarse-to-fine matching, providing memory as soft guidance only when it agrees with current observations. A conservative execution guard further mitigates oscillations, blocked motions, and premature stopping. Under a controlled same-scene protocol, we evaluate \\method{} on three benchmarks, HM3D v0.1, HM3D v0.2, and MP3D, and compare it with a strengthened WMNav baseline augmented with cross-episode textual memory, while keeping the VLM backbone and action pipeline identical. \\method{} achieves the best performance across all three benchmarks, demonstrating the effectiveness and robustness of structured visual-topological experience reuse across datasets.",
+      "authors": [
+        "Xiaoran Xu",
+        "Yupeng Wu",
+        "Tianyu Xue",
+        "Yifan Xu",
+        "Xuanran Dong",
+        "Xiaoshan Yang",
+        "Changsheng Xu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-16T03:11:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.14514v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Embodied agent navigation with VLM memory",
+      "llm_evidence_cn": "使用视觉语言模型的具身智能体导航记忆框架",
+      "llm_evidence": "使用视觉语言模型的具身智能体导航记忆框架",
+      "canonical_evidence": "使用视觉语言模型的具身智能体导航记忆框架",
+      "llm_tldr_en": "Proposes VTM-Nav, a training-free VLM navigation framework with persistent hierarchical visual-topological memory for cross-episode object-goal navigation.",
+      "llm_tldr_cn": "该论文提出跨情节目标导航任务，并设计VTM-Nav框架，利用视觉-语言模型和层次化视觉拓扑记忆来重用场景经验。无需训练，智能体在多次导航中积累房间级知识，显著提升后续导航效率。",
+      "llm_tldr": "该论文提出跨情节目标导航任务，并设计VTM-Nav框架，利用视觉-语言模型和层次化视觉拓扑记忆来重用场景经验。无需训练，智能体在多次导航中积累房间级知识，显著提升后续导航效率。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "embodied agent with vision language action model",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.18840v1",
+      "source": "arxiv",
+      "title": "WorldScape Policy 2.0: Empowering Steerable World Action Modeling with Reasoning-Augmented Memory",
+      "abstract": "World Action Models (WAMs) offer a promising paradigm for robotic manipulation by jointly modeling visual state transitions and robot actions. However, existing WAMs are constrained by limited temporal context, coarse episode-level language supervision, and predominantly text-only conditioning, which hinder task-progress tracking and fine-grained language-video-action grounding while limiting visual-context reasoning and cross-embodiment transfer. In this paper, we introduce WorldScape Policy 2.0, a controllable WAM with reasoning-augmented long short-term memory. Its causal short-term visual memory supplies recent observations as DiT prefill to preserve local interaction dynamics, while its long short-term event memory organizes historical VLM outputs into global-history, local-active, and event-boundary representations for progress-aware retrieval. The retrieved history augments perception and autoregressively generated planning tokens, yielding an implicit subgoal condition for autonomous planning; semantic forcing further transfers event-level instruction semantics into this latent planning pathway. To establish fine-grained multimodal controllability, we construct ManipEvent-5M, an event-grounded embodied pretraining dataset containing nearly 5 million event segments with aligned action trajectories, episode-level task instructions, segment-level subtask captions, goal images, and video demonstrations. These designs provide a unified interface for autonomous planning from high-level instructions and controllable execution from fine-grained text, goal-image, or video-context prompts. Experiments in both simulation and real-world platforms demonstrate superior capabilities in long-horizon autonomous planning, fine-grained instruction following and in-context adaptation.",
+      "authors": [
+        "Haisheng Su",
+        "Zongdai Liu",
+        "Xin Jin",
+        "Haoxuan Dou",
+        "Chengming Hu",
+        "Baorun Li",
+        "Zhanwang Liu",
+        "Ruiyan Xu",
+        "Jianjie Fang",
+        "Xin Zhang",
+        "Zhenjie Yang",
+        "Xue Yang",
+        "Chen Gao",
+        "Junchi Yan",
+        "Yong Li",
+        "Wei Wu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-21T08:25:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.18840v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "World Action Model for robotic manipulation, related to VLA through vision-language-action grounding",
+      "llm_evidence_cn": "用于机器人操作的世界动作模型，通过视觉-语言-动作锚定与VLA相关",
+      "llm_evidence": "用于机器人操作的世界动作模型，通过视觉-语言-动作锚定与VLA相关",
+      "canonical_evidence": "用于机器人操作的世界动作模型，通过视觉-语言-动作锚定与VLA相关",
+      "llm_tldr_en": "WorldScape Policy 2.0 enhances World Action Models with reasoning-augmented memory, enabling fine-grained language-video-action grounding and cross-embodiment transfer for robotic manipulation.",
+      "llm_tldr_cn": "针对现有世界动作模型（WAM）时间上下文有限、语言-视频-动作锚定粗粒度的问题，论文提出WorldScape Policy 2.0，引入推理增强的长短期记忆机制：因果短期视觉记忆保留局部交互动态，长短期事件记忆记录语义信息。该方法在多个操作任务上实现了更精细的视觉-语言-动作对齐和跨本体迁移能力。",
+      "llm_tldr": "针对现有世界动作模型（WAM）时间上下文有限、语言-视频-动作锚定粗粒度的问题，论文提出WorldScape Policy 2.0，引入推理增强的长短期记忆机制：因果短期视觉记忆保留局部交互动态，长短期事件记忆记录语义信息。该方法在多个操作任务上实现了更精细的视觉-语言-动作对齐和跨本体迁移能力。",
+      "llm_tags": [
+        "query:embodied-vla:composite"
+      ],
+      "matched_query_tag": "query:embodied-vla:composite",
+      "matched_query_text": "Papers central to 具身智能决策与VLA模型相关论文, especially work that connects or combines: vision language action models for embodied decision making; embodied decision making with vision language action models; embodied agent with vision language action model; multimodal decision making for embodied agents; robot learning with vision language action models; Find papers on vision language action models for embodied decision making; Embodied agents using vision language action models for decision making.",
+      "matched_requirement_id": "req-composite-embodied-vla",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14698v1",
+      "source": "arxiv",
+      "title": "Lights, Camera, Malfunction: When Illumination Robustness Leaves VLA Models Blind to Color",
+      "abstract": "Vision-Language-Action (VLA) models have emerged as a powerful paradigm for general-purpose robot manipulation; however, their transition to real-world environments reveals vulnerabilities to minor environmental perturbations. We propose FLARE, an optimized physical spotlight attack framework that exploits these vulnerabilities via targeted illuminations, dropping baseline task success rates to zero without any access to model internals. While adversarial training is the standard countermeasure, we identify a critical and previously underestimated defensive pitfall: naive data augmentations incorrectly condition VLA models to discard color as noise, collapsing their visual perception into a purely shape-biased processor. We expose this degradation through a diagnostic grayscale evaluation, in which the defended model maintains high success rates on grayscale inputs, while its success rate on benign, color-dependent real-world tasks drops to at most 47.5%, well below the undefended baseline. To address this, we propose ChromaGuard, a chroma-preserving adversarial training method. On a physical 6-DoF robotic platform, we demonstrate that ChromaGuard achieves 97.5% and 92.5% success rates in benign and attacked color-dependent tasks, respectively.",
+      "authors": [
+        "Marino Watanabe",
+        "Takami Sato",
+        "Kentaro Yoshioka"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-16T08:01:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.14698v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "physical attack on VLA models reveals vulnerability",
+      "llm_evidence_cn": "对VLA模型的物理攻击揭示脆弱性",
+      "llm_evidence": "对VLA模型的物理攻击揭示脆弱性",
+      "canonical_evidence": "对VLA模型的物理攻击揭示脆弱性",
+      "llm_tldr_en": "FLARE physical spotlight attack drops VLA model success to zero; naive augmentations cause color blindness, revealing a defensive pitfall.",
+      "llm_tldr_cn": "VLA模型在真实环境中易受光照扰动。本文提出FLARE物理聚光攻击，在无需模型内幕的情况下将成功率降至零，并发现朴素数据增强会错误地使模型丢弃颜色信息，导致视觉感知退化为形状偏置处理器。",
+      "llm_tldr": "VLA模型在真实环境中易受光照扰动。本文提出FLARE物理聚光攻击，在无需模型内幕的情况下将成功率降至零，并发现朴素数据增强会错误地使模型丢弃颜色信息，导致视觉感知退化为形状偏置处理器。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.16938v1",
+      "source": "arxiv",
+      "title": "What Do They See? Interpreting Complex Road Scenarios Through the Eyes of Vision-Language-Action Models for Safe and Trustworthy Autonomous Vehicle Learning",
+      "abstract": "End-to-end autonomous driving models are now able to navigate complex road scenarios, mapping raw sensor observations directly to observed paths for open-loop evaluation and often effective driving in closed-loop evaluation. Yet the internal logic of these safety-critical systems remains largely opaque, due to the complexity of traffic scenes. We propose a counterfactual ablation framework called Counterfactual Vision Action Analysis (CVAA) that systematically removes individual detected objects from front-camera images using photorealistic generative inpainting to prepare counterfactual sets to evaluate the difference in the model's response. This isolates the causal effect of each object's presence on the model's planning behaviour. Applied to the Alpamayo 1 trajectory predictor across 210 nuScenes driving scenes, we create a dataset Counter -nuScenes, using which we see that vehicles and pedestrians within the model's 'path' dominate causal influence as expected, while traffic lights, as expected, exert disproportionate effect relative to their image footprint. However, we also find cases where the model responds strongly to objects a human driver would consider irrelevant. This brings forth a deeper question: does the model itself view the scene as a sum of individual objects influencing the outcome, or does it encode an entirely different set of internal features that do not correspond to human-legible scene elements? To further understand this, we compare intermediate representations of original and inpainted image pairs using mechanistic interpretability techniques and examine the effect of the removal through the various model layers. Together, these two stages offer a path from behavioral auditing to representational understanding, creating explainable driving systems and solidifying human-AI trust.",
+      "authors": [
+        "Kalpana Panda",
+        "Wesley Maia",
+        "Vinti Agarwal",
+        "Ross Greer"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-07-18T19:20:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.16938v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Interprets VLA models for autonomous driving, an embodied decision making task",
+      "llm_evidence_cn": "解读自动驾驶中的VLA模型，这是具身决策任务",
+      "llm_evidence": "解读自动驾驶中的VLA模型，这是具身决策任务",
+      "canonical_evidence": "解读自动驾驶中的VLA模型，这是具身决策任务",
+      "llm_tldr_en": "The paper proposes CVAA, a counterfactual ablation framework to interpret how VLA models respond to individual objects in complex road scenarios, enhancing safety and trustworthiness in autonomous driving.",
+      "llm_tldr_cn": "针对自动驾驶VLA模型内部逻辑黑箱化的问题，论文提出反事实视觉动作分析（CVAA）框架，通过生成式修复去除图像中单一对象，观察模型响应变化。该方法能够隔离因果关系，揭示模型决策依据，为安全可信的自动驾驶提供了解释性工具。",
+      "llm_tldr": "针对自动驾驶VLA模型内部逻辑黑箱化的问题，论文提出反事实视觉动作分析（CVAA）框架，通过生成式修复去除图像中单一对象，观察模型响应变化。该方法能够隔离因果关系，揭示模型决策依据，为安全可信的自动驾驶提供了解释性工具。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.14586v1",
+      "source": "arxiv",
+      "title": "SoftNav: Injecting 3D Scene Tokens into VLMs for Embodied Navigation",
+      "abstract": "In goal-directed embodied navigation, where an agent must locate a specified target in an unseen environment, 3D scene understanding and navigation reasoning must work in concert. Current approaches transmit 3D scene information to vision-language models (VLMs) through text, suggesting a representation gap in our tested configurations; a controlled ablation confirms that direct embedding-level transfer significantly outperforms the evaluated text serialization formats. We introduce SoftNav, which injects entity-level 3D continuous representations -- one token per detected object or frontier -- into a VLM's hidden space as soft tokens through a lightweight projector. With the 3D encoder and VLM frozen, only ~1,200 samples and ~17M trainable parameters are needed. On HM3D-OVON, SoftNav achieves 74.2%/68.3%/66.7% SR across three splits, surpassing all prior methods in both SR and SPL; the same navigation policy transfers zero-shot to GOAT-Bench (67.2% SR), SG3D (47.2% s-SR), and real-world robot deployment without retraining or architectural modification. Injecting 3D scene tokens directly into VLMs bridges the representation gap, enabling transferable navigation with minimal training.",
+      "authors": [
+        "Yi Wu",
+        "Junjie An",
+        "Xiao Liu",
+        "Yiqun Zhou",
+        "Yuechen Wu",
+        "Xiaoqing Guan",
+        "Shuyang Yu",
+        "You Wang",
+        "Guang Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-16T05:32:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.14586v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Embodied navigation using 3D scene tokens injected into VLM",
+      "llm_evidence_cn": "通过向VLM注入3D场景令牌实现具身导航",
+      "llm_evidence": "通过向VLM注入3D场景令牌实现具身导航",
+      "canonical_evidence": "通过向VLM注入3D场景令牌实现具身导航",
+      "llm_tldr_en": "SoftNav: injecting entity-level 3D continuous representations as soft tokens into a VLM for zero-shot embodied navigation with minimal fine-tuning.",
+      "llm_tldr_cn": "该论文提出SoftNav方法，用于具身目标导航。当前方法通过文本传递3D场景信息存在表示差距，SoftNav将实体级3D连续表示（每个检测对象或前沿一个令牌）作为软令牌注入VLM的隐藏空间。仅需少量样本和参数即可实现零样本导航，实验表明直接嵌入级传输优于文本序列化格式。",
+      "llm_tldr": "该论文提出SoftNav方法，用于具身目标导航。当前方法通过文本传递3D场景信息存在表示差距，SoftNav将实体级3D连续表示（每个检测对象或前沿一个令牌）作为软令牌注入VLM的隐藏空间。仅需少量样本和参数即可实现零样本导航，实验表明直接嵌入级传输优于文本序列化格式。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "multimodal decision making for embodied agents",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.15758v1",
+      "source": "arxiv",
+      "title": "SkillNav: Score-Level Skill Intervention for Zero-Shot Object Goal Navigation",
+      "abstract": "Vision-Language Model (VLM) agents have advanced zero-shot object-goal navigation, yet single-frame reasoning leaves them without the cross-step behavioral awareness an embodied navigator requires, producing recurring failures such as dead-end stalls, in-room loops, and circuitous approaches to detected targets. Prompt-based remedies inflate token budgets across multi-submodule episodes and still struggle to encode inherently spatial signals such as angles, map cells, and viewpoint coordinates. In this paper, we propose SkillNav, an extensible behavioral skill framework for VLM-based navigation that treats the curiosity value map already maintained by modern VLM navigators as a writable substrate on which composable skills inscribe behavioral memory at zero token cost. Skills are stratified into three tiers by their level of behavioral authority, namely soft scaling for proportional reweighting, lower-bound boost for region-level guarantees, and hard override for threshold-triggered forced actions, and cooperate across tiers under a fixed composition order that establishes a predictable, declared priority among skills. This design turns capability improvement into skill registration: new behaviors plug in without retraining the VLM or disturbing existing skills, opening a path for continual refinement. A minimal prompt channel complements the score-level skills with category-level semantic hints, yielding a dual-representation design in which spatial memory lives on the map and semantic memory in short prompts. Training-free, SkillNav establishes new state-of-the-art SPL across MP3D (25.5), HM3D v0.1 (39.3), and HM3D v0.2 (43.2), improving SPL by up to 6.0 absolute over the strongest prior method, and achieves the highest Success Rate on HM3D v0.1 (69.7) and v0.2 (75.9).",
+      "authors": [
+        "Ruijie Sang",
+        "Yiqun Duan",
+        "Pinhan Fu",
+        "Ruilin Wang",
+        "Wei Sui",
+        "Xianda Guo"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-17T08:49:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.15758v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Skill-level intervention for VLM-based zero-shot object goal navigation",
+      "llm_evidence_cn": "对基于VLM的零样本目标导航进行技能级干预",
+      "llm_evidence": "对基于VLM的零样本目标导航进行技能级干预",
+      "canonical_evidence": "对基于VLM的零样本目标导航进行技能级干预",
+      "llm_tldr_en": "SkillNav: score-level behavioral skill framework for VLM-based navigation using curiosity value maps to inscribe reusable skills.",
+      "llm_tldr_cn": "该论文提出SkillNav，为基于VLM的零样本目标导航提供可组合技能框架。现有VLM导航器缺乏跨步行为感知，导致死胡同、循环等问题。SkillNav利用导航器已有的好奇心价值图作为可写基底，通过可组合技能（如探索、转向）来引导行为，无需增加token预算。实验证明SkillNav有效减少了导航失败模式。",
+      "llm_tldr": "该论文提出SkillNav，为基于VLM的零样本目标导航提供可组合技能框架。现有VLM导航器缺乏跨步行为感知，导致死胡同、循环等问题。SkillNav利用导航器已有的好奇心价值图作为可写基底，通过可组合技能（如探索、转向）来引导行为，无需增加token预算。实验证明SkillNav有效减少了导航失败模式。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.18236v1",
+      "source": "arxiv",
+      "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+      "abstract": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones trained from scratch, sacrificing both fine-grained spatial detail and the benefits of large-scale visual pre-training. While there exist policies that do operate on dense patch features like large vision-language-action models (VLAs), they tend to be heavy and slow, inheriting the full cost of a billion-parameter vision-language model (VLM) backbone. We close this gap with Patch Policy, a minimal architectural extension that enables transformer-based policies to consume dense pre-trained patch tokens directly without the computational overhead of a full VLM. At its core is a block-causal attention mask that preserves the temporal causality of standard policies while letting the model attend over many patch tokens per observation, alongside other state information. Patch Policy is lightweight, fast, and highly effective. Across four simulated and three real-world environment suites, our method achieves a 40% relative improvement over policies using state-of-the-art global-pooled representations. Furthermore, it surpasses fine-tuned OpenVLA-OFT by 18% while using roughly 0.7% of the parameters. We believe Patch Policy provides a pipeline for the robotics community to readily leverage continuing progress in visual representation learning, without sacrificing the training efficiency or inference speed required for high-frequency, reactive control. Videos can be viewed at https://patch-policy.github.io",
+      "authors": [
+        "Gaoyue Zhou",
+        "Zichen Jeff Cui",
+        "Ada Langford",
+        "Bowen Tan",
+        "Yann LeCun",
+        "Lerrel Pinto"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-07-20T17:59:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.18236v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Efficient embodied control using dense pretrained visual features for robot learning",
+      "llm_evidence_cn": "利用密集预训练视觉特征实现高效具身控制，用于机器人学习",
+      "llm_evidence": "利用密集预训练视觉特征实现高效具身控制，用于机器人学习",
+      "canonical_evidence": "利用密集预训练视觉特征实现高效具身控制，用于机器人学习",
+      "llm_tldr_en": "Patch Policy enables transformer-based robot policies to directly consume dense pretrained patch tokens, achieving efficient embodied control without the heavy computational cost of large VLAs.",
+      "llm_tldr_cn": "针对现有机器人策略要么丢失空间细节要么依赖笨重VLA模型的问题，论文提出Patch Policy，一种最小化的架构扩展，使基于Transformer的策略能直接使用预训练的密集补丁标记。该方法在保持密集视觉信息的同时显著降低计算成本，实现了高效的具身控制。",
+      "llm_tldr": "针对现有机器人策略要么丢失空间细节要么依赖笨重VLA模型的问题，论文提出Patch Policy，一种最小化的架构扩展，使基于Transformer的策略能直接使用预训练的密集补丁标记。该方法在保持密集视觉信息的同时显著降低计算成本，实现了高效的具身控制。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "robot learning with vision language action models",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.18042v1",
+      "source": "arxiv",
+      "title": "Anticipate Before Acting: Future-State-Conditioned Vision-Language Navigation",
+      "abstract": "End-to-end vision-language navigation (VLN) with causal vision-language models can map instructions and egocentric observations directly to actions, but standard behavior cloning supervises only the next action and does not explicitly train the policy state to be predictive of future visual outcomes. We first ask a diagnostic question: if the policy is given an expert-trajectory future image as privileged input at training and testing time, is that additional visual evidence useful for choosing the current action? (These expert-trajectory future images are unavailable at test time in real deployment, so we use this setting only as a privileged-input diagnostic.) The answer is yes; this sanity check shows that future observations can provide rich, actionable cues.   We then ask a deployable question: without accessing future images at inference, can we still benefit from future information by using a compressed future visual latent only as training supervision? We propose Future-State-Conditioned VLN (FSC-VLN), which adds a future-query token and aligns its hidden state to a frozen visual embedding $Δ$ steps ahead via a training-only target branch that is removed after training. On R2R val-unseen, FSC-VLN improves SR/OSR/SPL over a StreamVLN-style baseline under two training-data regimes, with larger gains on long-horizon episodes; ablations further support the dual-query design (separating future and action queries).",
+      "authors": [
+        "Lingfeng Zhang",
+        "Zhanguang Zhang",
+        "Liheng Ma",
+        "Tongtong Cao",
+        "Yingxue Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-20T15:11:46+00:00",
+      "link": "https://arxiv.org/pdf/2607.18042v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "future-state conditioning for embodied navigation",
+      "llm_evidence_cn": "具身导航中的未来状态条件化",
+      "llm_evidence": "具身导航中的未来状态条件化",
+      "canonical_evidence": "具身导航中的未来状态条件化",
+      "llm_tldr_en": "Investigates future-state conditioning for vision-language navigation; privileged future images improve action selection but are unavailable at test time.",
+      "llm_tldr_cn": "端到端视觉-语言导航仅监督下一步动作，缺乏对未来视觉结果的预测训练。本文通过为策略提供专家未来图像（特权信息）进行诊断，发现未来观察能显著改善当前动作选择，尽管实际部署无法获得。",
+      "llm_tldr": "端到端视觉-语言导航仅监督下一步动作，缺乏对未来视觉结果的预测训练。本文通过为策略提供专家未来图像（特权信息）进行诊断，发现未来观察能显著改善当前动作选择，尽管实际部署无法获得。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "multimodal decision making for embodied agents",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.19190v1",
+      "source": "arxiv",
+      "title": "Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents",
+      "abstract": "Real-to-sim conversion for robotic interaction with objects remains labor-intensive because it requires more than visual reconstruction: a streamlined real2sim process must recover scene geometries and object states, infer physical parameters, and assemble actors, objects, cameras, poses, and trajectories into a runnable physical simulation. Today this process still depends on manual tuning of visual foundation models, mesh cleanup, coordinate-frame alignment, and brittle workflow glue across visual perception tools and simulators. We introduce \\textit{Agentic Real2Sim}, a framework for generalized physical world modeling with vision-language agents, converting a real-world recording of object-robot interaction into a simulatable episodic twin which preserves observations, geometries, robot interactions, and object states. We evaluate Agentic Real2Sim on rigid-object manipulation, deformable-object interaction, and humanoid motion scenes, spanning domains that are usually handled by separate Real2Sim pipelines, marking a first step toward scalable conversion. The framework's agentic decisions can be driven by an open-weight VLM backend at a small fraction of the cost of frontier models, while attaining comparable conversion success rate. We aim to use the resulting real-world-aligned twins for downstream robotics tasks, specifically policy learning and evaluation. The project site is available at https://ericchen321.github.io/agentic_real2sim.github.io/.",
+      "authors": [
+        "Guanxiong Chen",
+        "Qianjun Xia",
+        "Jiawei Peng",
+        "Heng Zhang",
+        "Bole Ma",
+        "Justin Qian",
+        "Ziyi Jiao",
+        "Bingyang Zhou",
+        "Luoxin Ye",
+        "Kaifeng Zhang",
+        "Kunyi Wang",
+        "Weijia Zeng",
+        "Yunuo Chen",
+        "Pengzhi Yang",
+        "Ziqiu Zeng",
+        "Huamin Wang",
+        "Chao Liu",
+        "Alan Yuille",
+        "Fan Shi",
+        "Changxi Zheng",
+        "Yunzhu Li",
+        "Chenfanfu Jiang",
+        "Peter Yichen Chen"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-21T15:23:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.19190v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Vision-language agents for physics-based world modeling",
+      "llm_evidence_cn": "基于视觉语言代理的物理世界建模",
+      "llm_evidence": "基于视觉语言代理的物理世界建模",
+      "canonical_evidence": "基于视觉语言代理的物理世界建模",
+      "llm_tldr_en": "Introduces Agentic Real2Sim, a framework using VLAs to convert real-world interactions into simulatable environments for robotic training.",
+      "llm_tldr_cn": "真实到仿真转换目前需要大量人工调节，难以自动化。本文提出Agentic Real2Sim框架，利用视觉语言代理自动从真实世界交互记录中恢复场景几何、物理参数等，生成可运行的物理仿真。该工作为机器人在仿真环境中学习提供了高效工具，虽不直接进行决策，但对具身智能的模拟训练有重要支持作用。",
+      "llm_tldr": "真实到仿真转换目前需要大量人工调节，难以自动化。本文提出Agentic Real2Sim框架，利用视觉语言代理自动从真实世界交互记录中恢复场景几何、物理参数等，生成可运行的物理仿真。该工作为机器人在仿真环境中学习提供了高效工具，虽不直接进行决策，但对具身智能的模拟训练有重要支持作用。",
+      "llm_tags": [
+        "query:embodied-vla:composite"
+      ],
+      "matched_query_tag": "query:embodied-vla:composite",
+      "matched_query_text": "Papers central to 具身智能决策与VLA模型相关论文, especially work that connects or combines: vision language action models for embodied decision making; embodied decision making with vision language action models; embodied agent with vision language action model; multimodal decision making for embodied agents; robot learning with vision language action models; Find papers on vision language action models for embodied decision making; Embodied agents using vision language action models for decision making.",
+      "matched_requirement_id": "req-composite-embodied-vla",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

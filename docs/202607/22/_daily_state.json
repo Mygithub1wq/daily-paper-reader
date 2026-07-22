@@ -1,0 +1,201 @@
+{
+  "date": "20260722",
+  "date_label": "",
+  "generated_at": "2026-07-22 21:23:11 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.18580v1",
+      "route": "202607/22/2607.18580v1-step-signal-temporal-logic-for-precise-specifications-for-action-generation-with-vision-language-models",
+      "title": "STeP: Signal Temporal Logic for Precise Specifications for Action Generation with Vision Language Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "利用信号时序逻辑为VLA生成精确动作规范",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    },
+    {
+      "paper_id": "2607.17786v1",
+      "route": "202607/22/2607.17786v1-reasoning-as-a-double-edged-sword-architecture-and-cross-stage-robustness-in-vision-language-action-models",
+      "title": "Reasoning as a Double-Edged Sword: Architecture and Cross-Stage Robustness in Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "分析VLA模型推理鲁棒性",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    },
+    {
+      "paper_id": "2607.18016v1",
+      "route": "202607/22/2607.18016v1-closing-the-loop-in-humanoid-vla-persistent-3d-object-tokens-for-verifiable-loco-manipulation",
+      "title": "Closing the Loop in Humanoid VLA: Persistent 3D Object Tokens for Verifiable Loco-Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "针对人形机器人操作与移动的VLA策略及持久对象令牌",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    },
+    {
+      "paper_id": "2607.14514v1",
+      "route": "202607/22/2607.14514v1-vtm-nav-hierarchical-visual-topological-memory-for-cross-episode-object-goal-navigation",
+      "title": "VTM-Nav: Hierarchical Visual-Topological Memory for Cross-Episode Object-Goal Navigation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "使用视觉语言模型的具身智能体导航记忆框架",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    },
+    {
+      "paper_id": "2607.14698v1",
+      "route": "202607/22/2607.14698v1-lights-camera-malfunction-when-illumination-robustness-leaves-vla-models-blind-to-color",
+      "title": "Lights, Camera, Malfunction: When Illumination Robustness Leaves VLA Models Blind to Color",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "对VLA模型的物理攻击揭示脆弱性",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    },
+    {
+      "paper_id": "2607.16938v1",
+      "route": "202607/22/2607.16938v1-what-do-they-see-interpreting-complex-road-scenarios-through-the-eyes-of-vision-language-action-models-for-safe-and-trustworthy-autonomous-vehicle-learning",
+      "title": "What Do They See? Interpreting Complex Road Scenarios Through the Eyes of Vision-Language-Action Models for Safe and Trustworthy Autonomous Vehicle Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "解读自动驾驶中的VLA模型，这是具身决策任务",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    },
+    {
+      "paper_id": "2607.18236v1",
+      "route": "202607/22/2607.18236v1-patch-policy-efficient-embodied-control-via-dense-visual-representations",
+      "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "利用密集预训练视觉特征实现高效具身控制，用于机器人学习",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    },
+    {
+      "paper_id": "2607.18840v1",
+      "route": "202607/22/2607.18840v1-worldscape-policy-20-empowering-steerable-world-action-modeling-with-reasoning-augmented-memory",
+      "title": "WorldScape Policy 2.0: Empowering Steerable World Action Modeling with Reasoning-Augmented Memory",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "用于机器人操作的世界动作模型，通过视觉-语言-动作锚定与VLA相关",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    },
+    {
+      "paper_id": "2607.14586v1",
+      "route": "202607/22/2607.14586v1-softnav-injecting-3d-scene-tokens-into-vlms-for-embodied-navigation",
+      "title": "SoftNav: Injecting 3D Scene Tokens into VLMs for Embodied Navigation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "通过向VLM注入3D场景令牌实现具身导航",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    },
+    {
+      "paper_id": "2607.15758v1",
+      "route": "202607/22/2607.15758v1-skillnav-score-level-skill-intervention-for-zero-shot-object-goal-navigation",
+      "title": "SkillNav: Score-Level Skill Intervention for Zero-Shot Object Goal Navigation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "对基于VLM的零样本目标导航进行技能级干预",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    },
+    {
+      "paper_id": "2607.18042v1",
+      "route": "202607/22/2607.18042v1-anticipate-before-acting-future-state-conditioned-vision-language-navigation",
+      "title": "Anticipate Before Acting: Future-State-Conditioned Vision-Language Navigation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "具身导航中的未来状态条件化",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    },
+    {
+      "paper_id": "2607.19190v1",
+      "route": "202607/22/2607.19190v1-agentic-real2sim-physics-based-world-modeling-with-vision-language-agents",
+      "title": "Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于视觉语言代理的物理世界建模",
+      "first_seen_at": "2026-07-22 21:23:11 UTC",
+      "updated_at": "2026-07-22 21:23:11 UTC"
+    }
+  ]
+}
