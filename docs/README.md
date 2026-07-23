@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-07-22</span>
+      <span class="dpr-home-dashboard-kicker">2026-07-23</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 12 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 9 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>7</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-07-22 21:23:11 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-07-23 21:08:57 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精选12篇论文，精读6篇，聚焦视觉-语言-动作模型（VLA）的规范生成、鲁棒性与可解释性。</p>
-<p>最值得关注的是《STeP》提出用信号时序逻辑精确生成VLA动作规范（满分10分），以及《Reasoning as a Double-Edged Sword》揭示VLA架构的双刃剑效应及跨阶段鲁棒性（9分）。</p>
-<p>速读中《What Do They See?》和《SoftNav》从自动驾驶可信解释和3D场景令牌注入导航入手，适合关注VLA可解释性与导航的读者。</p>
+<p>今日推荐9篇论文，聚焦具身智能实时控制与视觉追踪两大方向。重点精读《Reflex》实现VLA流式推理实时控制，《ReferTrack》提出指代追踪新范式，均获9.0高分。建议优先关注精读文章，并尝试将《G2-Nav》的社会导航成本地图融入实际机器人部署。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="STeP: Signal Temporal Logic for Precise Specifications for Action Generation with Vision Language Models">STeP: Signal Temporal Logic for Precise Specifications for Action Generation with Vision Language Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="Reasoning as a Double-Edged Sword: Architecture and Cross-Stage Robustness in Vision-Language-Action Models">Reasoning as a Double-Edged Sword: Architecture and Cross-Stage Robustness in Vision-Language-Action Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="Closing the Loop in Humanoid VLA: Persistent 3D Object Tokens for Verifiable Loco-Manipulation">Closing the Loop in Humanoid VLA: Persistent 3D Object Tokens for Verifiable Loco-Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Reflex: Real-Time VLA Control through Streaming Inference">Reflex: Real-Time VLA Control through Streaming Inference</span></li><li><span class="dpr-home-dashboard-paper-title" title="ReferTrack: Referring Then Tracking for Embodied Visual Tracking">ReferTrack: Referring Then Tracking for Embodied Visual Tracking</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>2</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">7 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="What Do They See? Interpreting Complex Road Scenarios Through the Eyes of Vision-Language-Action Models for Safe and Trustworthy Autonomous Vehicle Learning">What Do They See? Interpreting Complex Road Scenarios Through the Eyes of Vision-Language-Action Models for Safe and Trustworthy Autonomous Vehicle Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Patch Policy: Efficient Embodied Control via Dense Visual Representations">Patch Policy: Efficient Embodied Control via Dense Visual Representations</span></li><li><span class="dpr-home-dashboard-paper-title" title="SoftNav: Injecting 3D Scene Tokens into VLMs for Embodied Navigation">SoftNav: Injecting 3D Scene Tokens into VLMs for Embodied Navigation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="G2-Nav: Grounded and Guarded Vision-Language Costmaps for Robot Social Navigation">G2-Nav: Grounded and Guarded Vision-Language Costmaps for Robot Social Navigation</span></li><li><span class="dpr-home-dashboard-paper-title" title="Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents">Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination">RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>7</strong></span></div>
 </section>
 </div>
 
