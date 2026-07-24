@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-07-23</span>
+      <span class="dpr-home-dashboard-kicker">2026-07-24</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 9 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>7</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>3</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-07-23 21:08:57 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-07-24 21:18:18 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日推荐9篇论文，聚焦具身智能实时控制与视觉追踪两大方向。重点精读《Reflex》实现VLA流式推理实时控制，《ReferTrack》提出指代追踪新范式，均获9.0高分。建议优先关注精读文章，并尝试将《G2-Nav》的社会导航成本地图融入实际机器人部署。</p>
+<p>今日日报聚焦零售机器人与自动驾驶两大方向，其中一篇满分论文提出数据高效VLA框架。</p>
+<p>最值得看的是《Closing the Lab-to-Store Gap》（零售人形机器人）与《HyWorldVLA》（混合世界建模自动驾驶）。</p>
+<p>普通读者可关注“实验到落地”的迁移技巧，以及多模态模型在真实场景中的具体应用。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Reflex: Real-Time VLA Control through Streaming Inference">Reflex: Real-Time VLA Control through Streaming Inference</span></li><li><span class="dpr-home-dashboard-paper-title" title="ReferTrack: Referring Then Tracking for Embodied Visual Tracking">ReferTrack: Referring Then Tracking for Embodied Visual Tracking</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids">Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids</span></li><li><span class="dpr-home-dashboard-paper-title" title="HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving">HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving</span></li><li><span class="dpr-home-dashboard-paper-title" title="Representation-Aligned Tactile Grounding for Contact-Rich Robotic Manipulation">Representation-Aligned Tactile Grounding for Contact-Rich Robotic Manipulation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>3</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">7 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="G2-Nav: Grounded and Guarded Vision-Language Costmaps for Robot Social Navigation">G2-Nav: Grounded and Guarded Vision-Language Costmaps for Robot Social Navigation</span></li><li><span class="dpr-home-dashboard-paper-title" title="Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents">Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination">RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents">Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments">SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments</span></li><li><span class="dpr-home-dashboard-paper-title" title="SOPD-SocialNav: Selective On-Policy Distillation for Vision-Language Social Navigation">SOPD-SocialNav: Selective On-Policy Distillation for Vision-Language Social Navigation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>7</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>3</strong></span></div>
 </section>
 </div>
 

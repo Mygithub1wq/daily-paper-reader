@@ -1,0 +1,105 @@
+{
+  "date": "20260724",
+  "date_label": "",
+  "generated_at": "2026-07-24 21:18:18 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.20345v1",
+      "route": "202607/24/2607.20345v1-closing-the-lab-to-store-gap-a-data-efficient-post-training-and-experience-driven-learning-vla-framework-for-retail-humanoids",
+      "title": "Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "面向零售人形机器人的数据高效VLA框架",
+      "first_seen_at": "2026-07-24 21:18:18 UTC",
+      "updated_at": "2026-07-24 21:18:18 UTC"
+    },
+    {
+      "paper_id": "2607.20988v1",
+      "route": "202607/24/2607.20988v1-hyworldvla-a-vision-language-action-model-with-hybrid-world-modeling-for-autonomous-driving",
+      "title": "HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "具有混合世界建模的VLA模型用于自动驾驶",
+      "first_seen_at": "2026-07-24 21:18:18 UTC",
+      "updated_at": "2026-07-24 21:18:18 UTC"
+    },
+    {
+      "paper_id": "2607.14609v1",
+      "route": "202607/24/2607.14609v1-representation-aligned-tactile-grounding-for-contact-rich-robotic-manipulation",
+      "title": "Representation-Aligned Tactile Grounding for Contact-Rich Robotic Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "触觉增强的VLA模型用于接触丰富操作",
+      "first_seen_at": "2026-07-24 21:18:18 UTC",
+      "updated_at": "2026-07-24 21:18:18 UTC"
+    },
+    {
+      "paper_id": "2607.19190v2",
+      "route": "202607/24/2607.19190v2-agentic-real2sim-physics-based-world-modeling-with-vision-language-agents",
+      "title": "Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "使用视觉语言代理进行世界建模，支持具身决策",
+      "first_seen_at": "2026-07-24 21:18:18 UTC",
+      "updated_at": "2026-07-24 21:18:18 UTC"
+    },
+    {
+      "paper_id": "2607.20207v1",
+      "route": "202607/24/2607.20207v1-seededgrasp-language-guided-grasping-in-complex-scenes-with-multiple-embodiments",
+      "title": "SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "使用VLM预测种子点进行语言引导的抓取",
+      "first_seen_at": "2026-07-24 21:18:18 UTC",
+      "updated_at": "2026-07-24 21:18:18 UTC"
+    },
+    {
+      "paper_id": "2607.19850v1",
+      "route": "202607/24/2607.19850v1-sopd-socialnav-selective-on-policy-distillation-for-vision-language-social-navigation",
+      "title": "SOPD-SocialNav: Selective On-Policy Distillation for Vision-Language Social Navigation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "视觉语言模型用于社交机器人导航",
+      "first_seen_at": "2026-07-24 21:18:18 UTC",
+      "updated_at": "2026-07-24 21:18:18 UTC"
+    }
+  ]
+}
