@@ -1,0 +1,89 @@
+{
+  "date": "20260725",
+  "date_label": "",
+  "generated_at": "2026-07-25 20:40:25 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.17977v1",
+      "route": "202607/25/2607.17977v1-rynnbrain-11-towards-more-capable-and-generalizable-embodied-foundation-model",
+      "title": "RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "RynnBrain-VLA：统一跨具身动作空间的具身基础模型",
+      "first_seen_at": "2026-07-25 20:40:25 UTC",
+      "updated_at": "2026-07-25 20:40:25 UTC"
+    },
+    {
+      "paper_id": "2607.20785v1",
+      "route": "202607/25/2607.20785v1-robostral-navigate",
+      "title": "Robostral Navigate",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "视觉语言模型用于机器人导航，从RGB图像预测路径点",
+      "first_seen_at": "2026-07-25 20:40:25 UTC",
+      "updated_at": "2026-07-25 20:40:25 UTC"
+    },
+    {
+      "paper_id": "2607.17861v1",
+      "route": "202607/25/2607.17861v1-concepttree-bringing-semantic-transparency-to-black-box-decision-making-for-robotic-manipulation",
+      "title": "ConceptTree: Bringing Semantic Transparency to Black-Box Decision Making for Robotic Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "使用视觉概念进行可解释的机器人操作决策",
+      "first_seen_at": "2026-07-25 20:40:25 UTC",
+      "updated_at": "2026-07-25 20:40:25 UTC"
+    },
+    {
+      "paper_id": "2607.19190v2",
+      "route": "202607/25/2607.19190v2-agentic-real2sim-physics-based-world-modeling-with-vision-language-agents",
+      "title": "Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "视觉语言代理进行物理世界建模，支持具身决策",
+      "first_seen_at": "2026-07-25 20:40:25 UTC",
+      "updated_at": "2026-07-25 20:40:25 UTC"
+    },
+    {
+      "paper_id": "2607.19194v2",
+      "route": "202607/25/2607.19194v2-cognitive-dual-process-planning-for-autonomous-driving-with-structured-scene-knowledge-and-verifiable-reasoning-action-consistency",
+      "title": "Cognitive Dual-Process Planning for Autonomous Driving with Structured Scene Knowledge and Verifiable Reasoning-Action Consistency",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "自动驾驶规划使用视觉语言模型进行多模态决策",
+      "first_seen_at": "2026-07-25 20:40:25 UTC",
+      "updated_at": "2026-07-25 20:40:25 UTC"
+    }
+  ]
+}

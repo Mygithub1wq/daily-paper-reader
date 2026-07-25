@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-07-24</span>
+      <span class="dpr-home-dashboard-kicker">2026-07-25</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>3</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-07-24 21:18:18 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-07-25 20:40:25 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日日报聚焦零售机器人与自动驾驶两大方向，其中一篇满分论文提出数据高效VLA框架。</p>
-<p>最值得看的是《Closing the Lab-to-Store Gap》（零售人形机器人）与《HyWorldVLA》（混合世界建模自动驾驶）。</p>
-<p>普通读者可关注“实验到落地”的迁移技巧，以及多模态模型在真实场景中的具体应用。</p>
+<p>今日聚焦具身智能基础模型与导航，5篇论文中2篇精读均获9.0高分。</p>
+<p>最值得关注：RynnBrain 1.1提升具身基础模型能力与泛化性；Robostral Navigate专注导航任务。</p>
+<p>建议优先精读这两篇高分论文，其余速读可作为理解黑箱决策、世界建模及自动驾驶规划的补充。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">3 篇</strong>
+    <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids">Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids</span></li><li><span class="dpr-home-dashboard-paper-title" title="HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving">HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving</span></li><li><span class="dpr-home-dashboard-paper-title" title="Representation-Aligned Tactile Grounding for Contact-Rich Robotic Manipulation">Representation-Aligned Tactile Grounding for Contact-Rich Robotic Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model">RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model</span></li><li><span class="dpr-home-dashboard-paper-title" title="Robostral Navigate">Robostral Navigate</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>3</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>2</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -89,7 +89,7 @@
     <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents">Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments">SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments</span></li><li><span class="dpr-home-dashboard-paper-title" title="SOPD-SocialNav: Selective On-Policy Distillation for Vision-Language Social Navigation">SOPD-SocialNav: Selective On-Policy Distillation for Vision-Language Social Navigation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ConceptTree: Bringing Semantic Transparency to Black-Box Decision Making for Robotic Manipulation">ConceptTree: Bringing Semantic Transparency to Black-Box Decision Making for Robotic Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents">Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="Cognitive Dual-Process Planning for Autonomous Driving with Structured Scene Knowledge and Verifiable Reasoning-Action Consistency">Cognitive Dual-Process Planning for Autonomous Driving with Structured Scene Knowledge and Verifiable Reasoning-Action Consistency</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>3</strong></span></div>
 </section>
