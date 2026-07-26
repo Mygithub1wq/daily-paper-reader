@@ -1,0 +1,73 @@
+{
+  "date": "20260726",
+  "date_label": "",
+  "generated_at": "2026-07-26 20:30:40 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.17977v1",
+      "route": "202607/26/2607.17977v1-rynnbrain-11-towards-more-capable-and-generalizable-embodied-foundation-model",
+      "title": "RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "提出RynnBrain-VLA，统一跨具身的视觉-语言-动作模型",
+      "first_seen_at": "2026-07-26 20:30:40 UTC",
+      "updated_at": "2026-07-26 20:30:40 UTC"
+    },
+    {
+      "paper_id": "2607.16602v2",
+      "route": "202607/26/2607.16602v2-pavxplorerl-physical-action-visual-world-model-reinforcement-learning-with-action-exploration",
+      "title": "PAVXploreRL: Physical-Action-Visual World Model Reinforcement Learning with Action Exploration",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向具身强化学习的物理-动作-视觉世界模型",
+      "first_seen_at": "2026-07-26 20:30:40 UTC",
+      "updated_at": "2026-07-26 20:30:40 UTC"
+    },
+    {
+      "paper_id": "2607.17038v1",
+      "route": "202607/26/2607.17038v1-reward-driven-llm-agent-workflows-synthesizing-pomdp-routing-and-self-correction-for-autonomous-decision-making",
+      "title": "Reward-Driven LLM Agent Workflows: Synthesizing POMDP Routing and Self-Correction for Autonomous Decision-Making",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "综合视觉语言多模态与自主决策",
+      "first_seen_at": "2026-07-26 20:30:40 UTC",
+      "updated_at": "2026-07-26 20:30:40 UTC"
+    },
+    {
+      "paper_id": "2607.18985v1",
+      "route": "202607/26/2607.18985v1-athena-brain-technical-report-an-efficient-robot-brain-for-general-intelligence-and-embodied-interactio",
+      "title": "Athena-Brain Technical Report: An Efficient Robot Brain for General Intelligence and Embodied Interactio",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "用于具身决策的智能体大脑",
+      "first_seen_at": "2026-07-26 20:30:40 UTC",
+      "updated_at": "2026-07-26 20:30:40 UTC"
+    }
+  ]
+}

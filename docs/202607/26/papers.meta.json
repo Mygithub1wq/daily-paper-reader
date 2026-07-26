@@ -1,0 +1,69 @@
+{
+  "label": "2026-07-26",
+  "date": "2026-07-26",
+  "generated_at": "2026-07-26T20:30:43",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202607/26/2607.17977v1-rynnbrain-11-towards-more-capable-and-generalizable-embodied-foundation-model",
+      "section": "deep",
+      "title_en": "RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model",
+      "authors": "Kehan Li, Bohan Hou, Minghao Zhu, Tianyi Zhang, Zesen Cheng, Zhikai Wang, Sicong Leng, Xin Li, Xiao Lin, Biying Yao, Minghua Zeng, Jiangpin Liu, Ronghao Dang, Jiayan Guo, Siteng Huang, Haoyu Zhao, Heng Ping, Yaxi Zhao, Kexiang Wang, Tong Lu, Shengke Xue, Jiahao Tang, Yulei Wang, Zejing Wang, Jianwei Gao, Shijian Lu, Chengju Liu, Jianfei Yang, Mingxiu Chen, Deli Zhao",
+      "date": "2026-07-20",
+      "pdf": "https://arxiv.org/pdf/2607.17977v1",
+      "score": "10.0",
+      "evidence": "提出RynnBrain-VLA，统一跨具身的视觉-语言-动作模型",
+      "tldr": "具身基础模型面临规模与泛化能力不足的挑战。RynnBrain 1.1包含2B、9B和122B-A10B三种尺寸，采用统一时空与物理基础框架训练，支持感知、推理与规划。引入接触点预测与原生3D定位，并通过统一跨具身动作空间和具身掩码的VLA模型部署于多款机器人。122B-A10B模型在VSI-Bench等基准上超越所有评估的闭源和开源模型，真实机器人实验显示其初始化策略优于Qwen等模型，多任务联合训练进一步提升成功率。",
+      "tags": "query:embodied-vla",
+      "abstract_en": "We present RynnBrain 1.1, a family of embodied foundation models spanning 2B, 9B, and 122B-A10B scales. Trained with a unified spatio-temporal and physically grounded framework, RynnBrain 1.1 supports embodied perception, spatial reasoning, localization, and planning. Compared with RynnBrain 1.0, it further introduces contact-point prediction across the model family and native 3D grounding for the 2B and 9B models, yielding representations and outputs that are more directly aligned with robot manipulation. We also develop RynnBrain-VLA with a unified cross-embodiment action space and embodiment-specific masking, and deploy it on Unitree G1, Astribot-S1, and Tianji-Wuji. RynnBrain 1.1 achieves strong results on embodied cognition, localization, and 3D grounding, with the 122B-A10B model outperforming all evaluated proprietary and open-source models on VSI-Bench, MMSI, and RefSpatial-Bench. Real-robot experiments show that RynnBrain-initialized policies outperform Qwen-based and representative generalist VLAs, while joint multi-task and multi-embodiment training improves process scores and success rates over per-task training.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/26/2607.16602v2-pavxplorerl-physical-action-visual-world-model-reinforcement-learning-with-action-exploration",
+      "section": "deep",
+      "title_en": "PAVXploreRL: Physical-Action-Visual World Model Reinforcement Learning with Action Exploration",
+      "authors": "Han Wang, Zijun Wang, Shuoshuo Xue, Rui Cao, Fengjiao Cheng, Xiaodan Liang, Roy Ka-Wei Lee",
+      "date": "2026-07-18",
+      "pdf": "https://arxiv.org/pdf/2607.16602v2",
+      "score": "8.0",
+      "evidence": "面向具身强化学习的物理-动作-视觉世界模型",
+      "tldr": "动作条件世界模型需满足物理合理性、动作一致性和视觉保真度（PAV）三大目标，但现有方法多依赖分布内数据与像素级重建，导致对分布外动作泛化不足。本文提出PAVXploreRL，基于预训练潜在世界模型的强化学习框架，通过奖励驱动显式优化PAV目标，并联合利用分布内轨迹与噪声驱动的分布外动作探索进行训练。在多个基准测试上平均提升5.6%，生成更高质量PAV属性，且作为策略评估器时有效降低过估计偏差，提升可靠性。",
+      "tags": "query:embodied-vla",
+      "abstract_en": "Action-conditioned world models are a key component of embodied AI, serving as scalable policy evaluators that reduce reliance on expensive real-world rollouts. To accurately capture diverse action-induced dynamics, such models should satisfy three key objectives-Physical Plausibility (P), Action Adherence (A), and Visual Fidelity (V), collectively referred to as PAV-while remaining robust to both in-distribution (ID) expert demonstrations and out-of-distribution (OOD) actions. However, existing methods primarily rely on ID action-video pairs and pixel-level reconstruction losses, which do not explicitly optimize PAV objectives and generalize poorly beyond expert data. To address this, we propose PAVXploreRL, a reinforcement learning framework built on a pretrained latent world model that explicitly optimizes PAV objectives through reward-driven training. To improve action generalization, our method jointly leverages ID trajectories and noise-driven OOD action exploration, without paired video supervision. Experiments show that PAVXploreRL consistently outperforms pretrained baselines, achieving a 5.6% average gain across benchmarks and producing higher-quality PAV properties. As a policy evaluator, it also yields more reliable performance estimates and reduces the overestimation bias of prior expert-only world models such as Ctrl-World. Code: https://github.com/Social-AI-Studio/PAVXploreRL",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/26/2607.17038v1-reward-driven-llm-agent-workflows-synthesizing-pomdp-routing-and-self-correction-for-autonomous-decision-making",
+      "section": "quick",
+      "title_en": "Reward-Driven LLM Agent Workflows: Synthesizing POMDP Routing and Self-Correction for Autonomous Decision-Making",
+      "authors": "Amez Amanj Ali, Kuo-Kun Tseng",
+      "date": "2026-07-19",
+      "pdf": "https://arxiv.org/pdf/2607.17038v1",
+      "score": "6.0",
+      "evidence": "综合视觉语言多模态与自主决策",
+      "tldr": "针对LLM智能体在长期规划、稀疏奖励和动态环境中的挑战，提出一种融合POMDP路由与自纠正奖励模型的工作流。该方法通过多模态输入和PPO等强化学习算法，实现决策轨迹的动态评估与优化。在ALFWorld和WebShop基准上，任务成功率较ReAct提升24.5%，轨迹效率显著改善。该框架桥接了强化学习理论与自主代理设计，为复杂多步决策提供了可扩展的参考方案。",
+      "tags": "query:embodied-vla",
+      "abstract_en": "This paper addresses key technical challenges in current large language model (LLM) agent applications, including long-horizon planning, sparse reward attribution, and dynamic environmental interaction, by designing and optimizing an intelligent agent workflow. The proposed architecture is based on the synthesis of core AI paradigms: Visual, Language, Generative, Graph, Multimodal, Reinforcement, and Agent Intelligence. Unlike conventional baseline models that rely on static prompting and lack robust perception-action loops, our approach introduces a Partially Observable Markov Decision Process (POMDP) routing mechanism. This mechanism is augmented with an internal, self-correcting reward model that evaluates decision trajectories before execution. By integrating multimodal inputs and advanced reinforcement learning principles (such as proximal policy optimization and value function approximation), the agent maintains long-term structural memory and dynamically adapts its reasoning pathways to mitigate error accumulation. Empirical experiments on the ALFWorld embodied simulation environment and the WebShop online navigation benchmark demonstrate a 24.5% absolute improvement in task success rate and trajectory efficiency over mainstream baselines like the standard ReAct framework. Comprehensive ablation studies confirm the significant contribution of the reward-driven critique module in suppressing hallucination rates. This research bridges theoretical foundations of reinforcement learning and graph-based memory with autonomous agent workflows. Ultimately, the resulting architecture offers a practical, scalable reference framework for developing artificial intelligence technologies in complex, multi-step autonomous systems. Code is available at https://github.com/01Amez/RLAW_Implementation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/26/2607.18985v1-athena-brain-technical-report-an-efficient-robot-brain-for-general-intelligence-and-embodied-interactio",
+      "section": "quick",
+      "title_en": "Athena-Brain Technical Report: An Efficient Robot Brain for General Intelligence and Embodied Interactio",
+      "authors": "Jialian Li, Junhong Liu, Yuchen Cao, Weiran Guo, Jiaming Song, Xutao Wang, Yi Zhao, Jiangpin Liu, Jie Chen",
+      "date": "2026-07-21",
+      "pdf": "https://arxiv.org/pdf/2607.18985v1",
+      "score": "6.0",
+      "evidence": "用于具身决策的智能体大脑",
+      "tldr": "大语言模型展现出强大的通用能力，但作为机器人脑需兼顾通用与具身。Athena-Brain-8B通过多阶段后训练（通用SFT、通用RL、具身专家训练、模型融合），在通用评测上媲美Qwen3-8B且生成更短回复，在具身任务上超越同尺寸及部分更大模型。表明紧凑模型能有效整合通用智能与具身能力。",
+      "tags": "query:embodied-vla",
+      "abstract_en": "Large language models (LLMs) have demonstrated remarkable capabilities in language understanding, reasoning, and world knowledge. As embodied agents become increasingly capable, there is a growing demand for compact models that can serve as an on-device brain, preserving the broad general intelligence of LLMs while enabling effective high-level interaction with embodied environments. Existing approaches, however, often prioritize either general-purpose intelligence or specialized embodied capabilities, making it challenging to satisfy both requirements within a single model. We present \\textbf{Athena-Brain-8B}, an 8B LLM designed to serve as an on-device brain for embodied intelligence for embodied intelligence. Through a multi-stage post-training pipeline consisting of General Supervised Fine-Tuning, General Reinforcement Learning, Embodied Expert training, and Model Merge, Athena-Brain-8B maintains strong general capabilities while acquiring strong high-level embodied interaction capabilities and generating concise responses for efficient embodied interaction. Experimental results demonstrate the effectiveness of Athena across both general and embodied evaluations. Compared with the corresponding Qwen3-8B thinking model, Athena-Brain-8B achieves comparable performance on general language and reasoning benchmarks while generating substantially shorter responses. On in-domain embodied benchmarks, Athena-Brain-8B consistently outperforms models of similar scale and surpasses several substantially larger frontier models evaluated zero-shot, demonstrating that compact language models can effectively integrate strong general intelligence with embodied capabilities.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
