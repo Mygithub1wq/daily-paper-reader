@@ -1,0 +1,41 @@
+{
+  "date": "20260727",
+  "date_label": "",
+  "generated_at": "2026-07-27 21:19:43 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.17767v1",
+      "route": "202607/27/2607.17767v1-vln-avp-zero-shot-vision-language-navigation-with-hybrid-long-short-term-memory-for-autonomous-valet-parking",
+      "title": "VLN-AVP: Zero-Shot Vision-Language Navigation with Hybrid Long-Short-Term Memory for Autonomous Valet Parking",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "使用视觉语言模型实现零样本自主泊车导航",
+      "first_seen_at": "2026-07-27 21:19:43 UTC",
+      "updated_at": "2026-07-27 21:19:43 UTC"
+    },
+    {
+      "paper_id": "2607.22014v1",
+      "route": "202607/27/2607.22014v1-zero-shot-mission-level-evaluation-for-aerial-mllm-agents",
+      "title": "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向MLLM具身任务的基准",
+      "first_seen_at": "2026-07-27 21:19:43 UTC",
+      "updated_at": "2026-07-27 21:19:43 UTC"
+    }
+  ]
+}

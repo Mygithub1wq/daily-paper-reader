@@ -1,0 +1,106 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-27T21:18:26.042858+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.17767v1",
+      "source": "arxiv",
+      "title": "VLN-AVP: Zero-Shot Vision-Language Navigation with Hybrid Long-Short-Term Memory for Autonomous Valet Parking",
+      "abstract": "Existing methods in Autonomous Valet Parking (AVP) typically rely on pre-built maps, which severely restricts their scalability to unseen environments and open-vocabulary targets. Inspired by the application of Vision-Language Models (VLMs) in Vision-Language Navigation (VLN) tasks, we propose VLN-AVP, a zero-shot navigation framework for AVP tasks. By combining the precise spatial perception of a Bird's-Eye-View (BEV) model with the general intelligence of VLMs, our framework 1) eliminates the dependency on pre-built maps, 2) interprets semantic environmental contexts in parking scenarios, and 3) enables intuitive navigation following natural language instructions. Specifically, we introduce a hybrid memory system: a short-term perception memory tracks semantic visual cues to address the limitations of VLM's single-frame reasoning in existing methods, while a long-term topological memory facilitates stable policy learning from past experiences. To bridge the gap in existing benchmarks, we also present the VLN-AVP dataset and benchmark. Featuring 10 high-fidelity parking scenes and over 1,000 navigation episodes, it has the largest number of garage scenes to date and is the first VLN benchmark for underground parking. Extensive experiments demonstrate that in simulation, our method achieves an over 25% improvement in success rate compared to VLN methods and an over 15% improvement compared to other autonomous driving methods. Furthermore, it attains a leading success rate in real-world vehicle experiments, proving its practical feasibility.",
+      "authors": [
+        "Yijian Li",
+        "Xiangru Mu",
+        "Changze Li",
+        "Hantian Shi",
+        "Jiyuan Cai",
+        "Jia Cai",
+        "Xiaoxue Liu",
+        "Yajing Sun",
+        "Ming Yang",
+        "Tong Qin"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-20T10:01:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.17767v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "zero-shot VLN framework using VLM for autonomous parking",
+      "llm_evidence_cn": "使用视觉语言模型实现零样本自主泊车导航",
+      "llm_evidence": "使用视觉语言模型实现零样本自主泊车导航",
+      "canonical_evidence": "使用视觉语言模型实现零样本自主泊车导航",
+      "llm_tldr_en": "VLN-AVP combines BEV spatial perception with VLM for zero-shot autonomous valet parking, eliminating pre-built maps and enabling natural language instruction following.",
+      "llm_tldr_cn": "针对现有自主泊车方法依赖预建地图、难以扩展至新环境的问题，提出VLN-AVP框架，融合鸟瞰图模型的空间感知能力和视觉语言模型的通用智能。该框架无需预建地图，可理解停车场景语义，并支持自然语言指令导航。引入混合记忆系统处理长短期信息。实验证明该方法在多种未见停车场中实现零样本导航，展现了VLM在自主泊车中的潜力。",
+      "llm_tldr": "针对现有自主泊车方法依赖预建地图、难以扩展至新环境的问题，提出VLN-AVP框架，融合鸟瞰图模型的空间感知能力和视觉语言模型的通用智能。该框架无需预建地图，可理解停车场景语义，并支持自然语言指令导航。引入混合记忆系统处理长短期信息。实验证明该方法在多种未见停车场中实现零样本导航，展现了VLM在自主泊车中的潜力。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.22014v1",
+      "source": "arxiv",
+      "title": "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents",
+      "abstract": "Multimodal Large Language Models (MLLMs) are emerging as core reasoning modules for embodied agents, yet it remains unclear how well general-purpose models can solve long-horizon embodied tasks from a single high-level instruction. We introduce MissionBench, a benchmark for mission-level evaluation of MLLMs in aerial 3D environments. It comprises 120 missions across five simulated 3D environments and four task families. Agents must autonomously plan, navigate, and report outcomes using only egocentric observations and its action history, without aerial-specific fine-tuning. Across 22 open- and closed-source MLLMs, the strongest model succeeds on fewer than 35% of missions compared to 84.4% human performance, highlighting the difficulty of multi-step embodied tasks. Despite large variations between model families, we observe gains from scaling, indicating that larger general-purpose models possess stronger zero-shot embodied capabilities. Our analysis shows that mission-level competence requires coordinating multiple capabilities beyond spatial perception, including multi-step planning and adaptive reasoning. This motivates closed-loop evaluation and highlights both the promise and risk of scaling-driven improvements for embodied AI.",
+      "authors": [
+        "Suman Navaratnarajah",
+        "Taehyoung Kim",
+        "Jona Ruthardt",
+        "Ishaan Bhimwal",
+        "Ryousuke Yamada",
+        "Yannik Blei",
+        "Wolfram Burgard",
+        "Yuki M Asano"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-24T06:22:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.22014v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "benchmark for MLLM agents in embodied missions",
+      "llm_evidence_cn": "面向MLLM具身任务的基准",
+      "llm_evidence": "面向MLLM具身任务的基准",
+      "canonical_evidence": "面向MLLM具身任务的基准",
+      "llm_tldr_en": "MissionBench evaluates MLLMs on long-horizon embodied missions in 3D aerial environments, requiring autonomous planning and navigation, serving as a relevant benchmark for multimodal decision making embodied agents.",
+      "llm_tldr_cn": "MissionBench是面向空中3D环境的具身任务基准，包含120个任务，测试MLLM智能体在零样本条件下的多步规划与导航能力。实验显示最强模型成功率低于35%，远低于人类84.4%，揭示了当前多模态决策在具身智能体中的巨大挑战，为VLA模型研究提供了重要评估平台。",
+      "llm_tldr": "MissionBench是面向空中3D环境的具身任务基准，包含120个任务，测试MLLM智能体在零样本条件下的多步规划与导航能力。实验显示最强模型成功率低于35%，远低于人类84.4%，揭示了当前多模态决策在具身智能体中的巨大挑战，为VLA模型研究提供了重要评估平台。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "multimodal decision making for embodied agents",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
