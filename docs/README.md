@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-07-27</span>
+      <span class="dpr-home-dashboard-kicker">2026-07-28</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 2 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 14 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>8</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-07-27 21:19:43 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-07-28 21:22:28 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日推荐2篇零样本相关论文，重点关注自动驾驶泊车场景的视觉-语言导航。</p>
-<p>最值得看的是《VLN-AVP》，它提出混合长短期记忆实现零样本自主泊车导航。</p>
-<p>建议关注零样本方法在实际任务中的可行性，尤其是结合记忆机制的应用。</p>
+<p>今日精选14篇论文，精读6篇，聚焦视觉-语言-动作操作与触觉-语言-动作模型。</p>
+<p>最值得看的是基于AMD ROCm管线的Real2Sim2Real VLA操作框架，以及引入潜在触觉token的N0-VTLA扩展模型。</p>
+<p>建议普通读者重点关注触觉与动作结合、世界模型统一架构这两个前沿方向。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">0 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Real2Sim2Real for Vision-Language-Action Manipulation: An AMD ROCm-Based Pipeline">Real2Sim2Real for Vision-Language-Action Manipulation: An AMD ROCm-Based Pipeline</span></li><li><span class="dpr-home-dashboard-paper-title" title="$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens">$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens</span></li><li><span class="dpr-home-dashboard-paper-title" title="MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents">MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents</span></li></ul>
   </div>
-
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>6</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">8 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="VLN-AVP: Zero-Shot Vision-Language Navigation with Hybrid Long-Short-Term Memory for Autonomous Valet Parking">VLN-AVP: Zero-Shot Vision-Language Navigation with Hybrid Long-Short-Term Memory for Autonomous Valet Parking</span></li><li><span class="dpr-home-dashboard-paper-title" title="Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents">Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="WorldDiT: A Unified Diffusion Architecture for World and Action Modeling">WorldDiT: A Unified Diffusion Architecture for World and Action Modeling</span></li><li><span class="dpr-home-dashboard-paper-title" title="FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking">FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking</span></li><li><span class="dpr-home-dashboard-paper-title" title="A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference">A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>8</strong></span></div>
 </section>
 </div>
 
