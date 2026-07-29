@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-07-28</span>
+      <span class="dpr-home-dashboard-kicker">2026-07-29</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 14 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 9 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>8</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-07-28 21:22:28 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-07-29 21:26:32 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精选14篇论文，精读6篇，聚焦视觉-语言-动作操作与触觉-语言-动作模型。</p>
-<p>最值得看的是基于AMD ROCm管线的Real2Sim2Real VLA操作框架，以及引入潜在触觉token的N0-VTLA扩展模型。</p>
-<p>建议普通读者重点关注触觉与动作结合、世界模型统一架构这两个前沿方向。</p>
+<p>今天聚焦视觉-语言-动作模型（VLA）的精进，两篇高分论文分别提出轻量级链式思维蒸馏和测试时模态适应框架。</p>
+<p>最值得看CoTinyVLA（亚十亿参数实现高性能）和因果推断-诊断-精炼框架（解决模态不匹配问题）。</p>
+<p>建议优先关注VLA模型的效率优化与鲁棒性增强，这对低成本机器人部署和跨模态场景应用极具价值。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Real2Sim2Real for Vision-Language-Action Manipulation: An AMD ROCm-Based Pipeline">Real2Sim2Real for Vision-Language-Action Manipulation: An AMD ROCm-Based Pipeline</span></li><li><span class="dpr-home-dashboard-paper-title" title="$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens">$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens</span></li><li><span class="dpr-home-dashboard-paper-title" title="MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents">MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model">CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model</span></li><li><span class="dpr-home-dashboard-paper-title" title="A Causality-aware Infer-diagnose-refine Framework for Test-time Modality Adaptation in VLA Models">A Causality-aware Infer-diagnose-refine Framework for Test-time Modality Adaptation in VLA Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models">SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>5</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">8 篇</strong>
+    <strong class="dpr-home-dashboard-count">4 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="WorldDiT: A Unified Diffusion Architecture for World and Action Modeling">WorldDiT: A Unified Diffusion Architecture for World and Action Modeling</span></li><li><span class="dpr-home-dashboard-paper-title" title="FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking">FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking</span></li><li><span class="dpr-home-dashboard-paper-title" title="A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference">A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Embodied GPT-5.1: Evidence of a World Model?">Embodied GPT-5.1: Evidence of a World Model?</span></li><li><span class="dpr-home-dashboard-paper-title" title="SceneActBench: Can Agents Act on the 3D Scenes They See?">SceneActBench: Can Agents Act on the 3D Scenes They See?</span></li><li><span class="dpr-home-dashboard-paper-title" title="Scaling GUI Agents with Visual State Transitions">Scaling GUI Agents with Visual State Transitions</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>8</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>4</strong></span></div>
 </section>
 </div>
 

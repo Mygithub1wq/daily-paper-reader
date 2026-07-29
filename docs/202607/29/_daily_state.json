@@ -1,0 +1,153 @@
+{
+  "date": "20260729",
+  "date_label": "",
+  "generated_at": "2026-07-29 21:26:32 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.25487v1",
+      "route": "202607/29/2607.25487v1-cotinyvla-chain-of-thought-distillation-for-a-sub-billion-parameter-vision-language-action-model",
+      "title": "CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "将思维链蒸馏应用于亚十亿参数VLA模型",
+      "first_seen_at": "2026-07-29 21:26:32 UTC",
+      "updated_at": "2026-07-29 21:26:32 UTC"
+    },
+    {
+      "paper_id": "2607.25516v1",
+      "route": "202607/29/2607.25516v1-a-causality-aware-infer-diagnose-refine-framework-for-test-time-modality-adaptation-in-vla-models",
+      "title": "A Causality-aware Infer-diagnose-refine Framework for Test-time Modality Adaptation in VLA Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "VLA模型测试时适应用于具身决策",
+      "first_seen_at": "2026-07-29 21:26:32 UTC",
+      "updated_at": "2026-07-29 21:26:32 UTC"
+    },
+    {
+      "paper_id": "2607.25912v1",
+      "route": "202607/29/2607.25912v1-sam3d-guided-object-centric-representation-alignment-for-vision-language-action-models",
+      "title": "SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "针对视觉-语言-动作模型的目标中心3D表示对齐",
+      "first_seen_at": "2026-07-29 21:26:32 UTC",
+      "updated_at": "2026-07-29 21:26:32 UTC"
+    },
+    {
+      "paper_id": "2607.25918v1",
+      "route": "202607/29/2607.25918v1-dc-wam-dynamic-centric-visual-supervision-and-reasoning-for-world-action-models",
+      "title": "DC-WAM: Dynamic-Centric Visual Supervision and Reasoning for World-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "世界动作模型通过未来视觉预测增强机器人策略，聚焦控制相关表征",
+      "first_seen_at": "2026-07-29 21:26:32 UTC",
+      "updated_at": "2026-07-29 21:26:32 UTC"
+    },
+    {
+      "paper_id": "2607.23797v1",
+      "route": "202607/29/2607.23797v1-memory-for-attention-language-conditioned-re-perception-with-a-vision--language--motion-map",
+      "title": "Memory for Attention: Language-Conditioned Re-Perception with a Vision--Language--Motion Map",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "基于视觉-语言-运动地图的语言条件式重感知用于具身智能体",
+      "first_seen_at": "2026-07-29 21:26:32 UTC",
+      "updated_at": "2026-07-29 21:26:32 UTC"
+    },
+    {
+      "paper_id": "2607.23899v1",
+      "route": "202607/29/2607.23899v1-embodied-gpt-51-evidence-of-a-world-model",
+      "title": "Embodied GPT-5.1: Evidence of a World Model?",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "测试GPT-5.1作为物理移动机器人的高层控制器，使用视觉观测和动作",
+      "first_seen_at": "2026-07-29 21:26:32 UTC",
+      "updated_at": "2026-07-29 21:26:32 UTC"
+    },
+    {
+      "paper_id": "2607.22393v1",
+      "route": "202607/29/2607.22393v1-sceneactbench-can-agents-act-on-the-3d-scenes-they-see",
+      "title": "SceneActBench: Can Agents Act on the 3D Scenes They See?",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "评估VLM智能体对3D场景执行动作的基准",
+      "first_seen_at": "2026-07-29 21:26:32 UTC",
+      "updated_at": "2026-07-29 21:26:32 UTC"
+    },
+    {
+      "paper_id": "2607.24112v1",
+      "route": "202607/29/2607.24112v1-scaling-gui-agents-with-visual-state-transitions",
+      "title": "Scaling GUI Agents with Visual State Transitions",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "在GUI agent上通过视觉状态转换预训练多模态模型，利用逆动力学和正动力学学习动作表征",
+      "first_seen_at": "2026-07-29 21:26:32 UTC",
+      "updated_at": "2026-07-29 21:26:32 UTC"
+    },
+    {
+      "paper_id": "2607.25106v1",
+      "route": "202607/29/2607.25106v1-imprint-image-conditioned-query-enrichment-for-long-tail-object-goal-navigation",
+      "title": "IMPRINT: Image-Conditioned Query Enrichment for Long-Tail Object Goal Navigation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "具身AI，利用视觉语言模型进行目标导航",
+      "first_seen_at": "2026-07-29 21:26:32 UTC",
+      "updated_at": "2026-07-29 21:26:32 UTC"
+    }
+  ]
+}

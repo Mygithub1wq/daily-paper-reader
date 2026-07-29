@@ -1,0 +1,385 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-29T21:21:27.647777+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2607.25487v1",
+      "source": "arxiv",
+      "title": "CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model",
+      "abstract": "Vision-Language-Action (VLA) models translate natural-language commands into robot action sequences, but leading systems on the LIBERO-Plus robustness benchmark use three- to seven-billion-parameter backbones whose memory demands can exceed embedded robotic budgets. We present CoTinyVLA, a 0.9B-parameter action model on a Qwen3.5-0.8B backbone that obtains that robustness by structuring supervision instead of enlarging the model. Three components target different axes of the problem: dual-view temporal input of 16 history frames per step with textual camera and time markers; hierarchical chain-of-thought (CoT) distillation from a 35B teacher into an episode-level Plan and a chunk-level Think span over task phase, gripper state and next subaction; and paraphrase augmentation expanding 40 base commands into 800 variants. On LIBERO-Plus, spanning 10,030 perturbed tasks across seven perturbation dimensions, CoTinyVLA reaches 90.8% on Spatial, 87.3% on Object, 86.6% on Goal and 80.7% on Long, leading the strongest 7B baseline on all four suites by 4.7, 2.8, 15.9 and 3.0 points, with every margin interval excluding zero. The gains concentrate on the hardest axes of the benchmark: across the eleven published baselines none exceeds 53.2% on Robot Initial States in any suite, whereas CoTinyVLA reaches 73.6% on Goal against 39.9% for the strongest baseline. Ablations show the three components to be separable by perturbation axis, and at a matched image budget how frames are divided between the two cameras and across time accounts for 8.6 points on its own. Closed-loop inference peaks at 2.25 GiB of allocated GPU memory, and paired interventions show the episode Plan to be load-bearing: replacing it with an empty or contradictory span costs 40 to 45 points of success. Structured supervision thus lets a 0.9B backbone exceed all of them. Code: https://github.com/BrainJellyPie/CoTinyVLA",
+      "authors": [
+        "Minhyeok Lee",
+        "Chiyoung Kim",
+        "Chanhoe Gu",
+        "Seongrok Kim",
+        "Sanghyuk Roy Choi",
+        "Donghwan Hwang",
+        "Donghun Ryu",
+        "Seokhyun Kim"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-07-28T09:24:17+00:00",
+      "link": "https://arxiv.org/pdf/2607.25487v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "chain-of-thought distillation for sub-billion-parameter VLA model",
+      "llm_evidence_cn": "将思维链蒸馏应用于亚十亿参数VLA模型",
+      "llm_evidence": "将思维链蒸馏应用于亚十亿参数VLA模型",
+      "canonical_evidence": "将思维链蒸馏应用于亚十亿参数VLA模型",
+      "llm_tldr_en": "Proposes CoTinyVLA, a 0.9B VLA model achieving robustness via hierarchical CoT distillation from a 35B teacher.",
+      "llm_tldr_cn": "本文提出CoTinyVLA，一个仅有0.9B参数的视觉-语言-动作模型，通过从35B教师模型中进行分层思维链蒸馏实现鲁棒性。该方法包含双视角时间输入、层次化CoT蒸馏（规划层和思考层）等组件。在LIBERO-Plus基准上，CoTinyVLA以远少于大模型的参数量达到了有竞争力的性能。该工作直接满足了用户对高效VLA模型的需求，是具身决策领域的重要进展。",
+      "llm_tldr": "本文提出CoTinyVLA，一个仅有0.9B参数的视觉-语言-动作模型，通过从35B教师模型中进行分层思维链蒸馏实现鲁棒性。该方法包含双视角时间输入、层次化CoT蒸馏（规划层和思考层）等组件。在LIBERO-Plus基准上，CoTinyVLA以远少于大模型的参数量达到了有竞争力的性能。该工作直接满足了用户对高效VLA模型的需求，是具身决策领域的重要进展。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.25516v1",
+      "source": "arxiv",
+      "title": "A Causality-aware Infer-diagnose-refine Framework for Test-time Modality Adaptation in VLA Models",
+      "abstract": "Vision-language-action (VLA) models predict sequential actions to execute tasks specified by language instructions, conditioned on visual observations and proprioceptive states. However, how to fuse modalities in VLA models remains an open problem, since robot manipulation involves dynamic phases, such as long-distance movements and close-range interactions, in which the importance of visual observations may vary over time. In this paper, we propose an infer-diagnose-refine (IDR) framework, a model-agnostic framework that can be integrated with diverse VLA architectures for refining action predictions at test time. IDR first infers actions under factual and counterfactual scenarios of visual observations, and then diagnoses the causal effects of visual observations as the estimated dynamic importance, which is finally used to refine the action predictions in a training-free manner. We further design a causality-aware action refiner to realize the IDR framework, including zero-padding interventions for inferring counterfactual actions, norm-based quantification for diagnosing causal effects, and gated residual fusion for refining actions. Extensive experiments on both simulation benchmarks and real-world tasks show improvements in overall performance across multiple VLA backbones, demonstrating the efficacy of dynamically adjusting visual importance at test time.",
+      "authors": [
+        "Haoyu Zhang",
+        "Yuwei Wu",
+        "Jin Chen",
+        "Gao Zhi",
+        "Zhenxin Diao",
+        "Mingyang Gao",
+        "Kun Wu",
+        "Yongchun Liu",
+        "Fan Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-28T09:56:42+00:00",
+      "link": "https://arxiv.org/pdf/2607.25516v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "VLA model test-time adaptation for embodied decision making",
+      "llm_evidence_cn": "VLA模型测试时适应用于具身决策",
+      "llm_evidence": "VLA模型测试时适应用于具身决策",
+      "canonical_evidence": "VLA模型测试时适应用于具身决策",
+      "llm_tldr_en": "Proposes a causality-aware infer-diagnose-refine framework for test-time modality adaptation in VLA models, improving action predictions in robot manipulation.",
+      "llm_tldr_cn": "该论文针对视觉-语言-动作(VLA)模型在机器人操作中模态融合难的问题，提出了一种因果感知的推理-诊断-精炼(IDR)框架，通过在测试时对视觉观测进行事实和反事实推理来精炼动作预测。实验表明该方法能有效提升VLA模型在动态操作阶段的任务执行准确性，为VLA模型的模态适应提供了轻量级解决方案。",
+      "llm_tldr": "该论文针对视觉-语言-动作(VLA)模型在机器人操作中模态融合难的问题，提出了一种因果感知的推理-诊断-精炼(IDR)框架，通过在测试时对视觉观测进行事实和反事实推理来精炼动作预测。实验表明该方法能有效提升VLA模型在动态操作阶段的任务执行准确性，为VLA模型的模态适应提供了轻量级解决方案。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.25912v1",
+      "source": "arxiv",
+      "title": "SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models",
+      "abstract": "Vision-Language-Action (VLA) models have shown strong potential for general robot manipulation, but most existing models rely on 2D visual-language backbones and lack fine-grained 3D understanding of target objects, especially under occlusion, pose variation, scale changes, and precise spatial interaction. We propose an object-centric 3D representation alignment framework built upon $π_0$, using SAM3D as a frozen 3D teacher to provide target-object 3D priors during training. Specifically, we localize task-relevant objects with object recognition models, generate corresponding object masks, and use SAM3D to extract dense object-level 3D representations, which are aligned with intermediate visual features of $π_0$. This enables the policy to internalize target-object 3D information while preserving the original RGB-language-to-action inference pipeline without requiring depth, point clouds, masks, SAM3D, or additional 3D modules at test time. Simulation experiments show consistent improvements, achieving 99.1\\% on LIBERO and an average length of 4.11 on CALVIN. Real-world experiments further demonstrate that our method is particularly effective in long-horizon manipulation scenarios where the robot must focus on different target objects across multiple subtasks.",
+      "authors": [
+        "Zonghe Liu",
+        "Shanyuan Jie",
+        "Xiaoquan Sun",
+        "Chen Cao",
+        "Zetian Xu",
+        "Zongsheng Liu",
+        "Jiayu Chen"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-28T16:05:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.25912v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "object-centric 3D representation alignment for Vision-Language-Action models",
+      "llm_evidence_cn": "针对视觉-语言-动作模型的目标中心3D表示对齐",
+      "llm_evidence": "针对视觉-语言-动作模型的目标中心3D表示对齐",
+      "canonical_evidence": "针对视觉-语言-动作模型的目标中心3D表示对齐",
+      "llm_tldr_en": "Proposes SAM3D-guided alignment to enhance VLA models' 3D object understanding for manipulation under occlusion and pose variation.",
+      "llm_tldr_cn": "本文针对视觉-语言-动作(VLA)模型缺乏精细3D理解的问题，提出基于SAM3D的目标中心3D表示对齐框架。该方法利用SAM3D作为冻结的3D教师，为目标物体提供3D先验，并与VLA模型的特征对齐。实验证明该框架能显著提升机器人操作在遮挡、姿态变化等复杂场景下的性能。该工作直接增强了VLA模型在具身决策中的3D感知能力。",
+      "llm_tldr": "本文针对视觉-语言-动作(VLA)模型缺乏精细3D理解的问题，提出基于SAM3D的目标中心3D表示对齐框架。该方法利用SAM3D作为冻结的3D教师，为目标物体提供3D先验，并与VLA模型的特征对齐。实验证明该框架能显著提升机器人操作在遮挡、姿态变化等复杂场景下的性能。该工作直接增强了VLA模型在具身决策中的3D感知能力。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.25918v1",
+      "source": "arxiv",
+      "title": "DC-WAM: Dynamic-Centric Visual Supervision and Reasoning for World-Action Models",
+      "abstract": "World-Action Models (WAMs) augment robot policies with future visual prediction, but it remains unclear what the visual modality should learn for control. While photorealistic future prediction provides dense supervision, it also incurs substantial computation and can allocate capacity to texture, illumination, and background variations that are only weakly related to action selection. Recent efficient WAM variants suggest that the main benefit of the video branch may not lie in the rendered future itself, but in the control-relevant visual representations induced during training. In this work, we revisit future video prediction from a dynamic-centric perspective and ask whether an existing RGB-based WAM can be redirected from appearance-dominated reconstruction toward interaction-induced visual dynamics without introducing additional modality-specific predictions or online inputs at deployment. We propose DC-WAM, a dynamic-centric WAM framework that redistributes supervision and computation in the RGB video branch. At the supervision level, DC-WAM combines temporal-difference flow matching with trajectory-guided weighting, emphasizing dense temporal changes and localized regions where the gripper, manipulated objects, and contact areas move. At the reasoning level, DynaRoute predicts token-wise dynamic relevance and converts it into an attention bias, guiding the model toward control-relevant future tokens. Experiments in simulation and on real-world manipulation tasks show that DC-WAM consistently improves policy performance, especially under out-of-distribution perturbations in lighting, object appearance, and background texture.",
+      "authors": [
+        "Haoyuan Ji",
+        "Lingxiang Fan",
+        "Shang Su",
+        "Yinqiao Lu",
+        "Mengkai Shi",
+        "Jun Gao",
+        "Shuo Feng"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-28T16:08:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.25918v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "World-Action Models augment robot policies with future visual prediction, focusing on control-relevant representations",
+      "llm_evidence_cn": "世界动作模型通过未来视觉预测增强机器人策略，聚焦控制相关表征",
+      "llm_evidence": "世界动作模型通过未来视觉预测增强机器人策略，聚焦控制相关表征",
+      "canonical_evidence": "世界动作模型通过未来视觉预测增强机器人策略，聚焦控制相关表征",
+      "llm_tldr_en": "DC-WAM revisits future video prediction from a dynamic-centric perspective, redirecting RGB-based WAMs to learn control-relevant representations rather than photorealistic details.",
+      "llm_tldr_cn": "该论文探讨世界动作模型（WAM）中视觉模态应学习什么内容。提出动态中心视角，将现有RGB基WAM从外观主导的预测重定向为控制相关的表征学习，避免计算资源浪费在纹理、光照等弱相关因素上。实验表明该方法在提升策略性能的同时降低了计算开销。",
+      "llm_tldr": "该论文探讨世界动作模型（WAM）中视觉模态应学习什么内容。提出动态中心视角，将现有RGB基WAM从外观主导的预测重定向为控制相关的表征学习，避免计算资源浪费在纹理、光照等弱相关因素上。实验表明该方法在提升策略性能的同时降低了计算开销。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "robot learning with vision language action models",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.23797v1",
+      "source": "arxiv",
+      "title": "Memory for Attention: Language-Conditioned Re-Perception with a Vision--Language--Motion Map",
+      "abstract": "A robot carrying a persistent, behavior-annotated map faces two planning questions, and its memory answers only one well. The \\emph{spatial-navigation} question -- how to walk around a room -- we address first and report a negative: building on Vision--Language--Motion Maps (VLMM), a behavior-aware planner cost cuts a planning-time objective by $\\sim$35\\% over 28 AI2-THOR scenes, but under closed-loop execution the real benefit nearly vanishes ($\\sim$4\\%) and an on-demand vision--language model (VLM) does as well. The \\emph{resource-allocation} question differs: under a limited perception budget, what should the robot re-observe now to keep its map fresh? Framing re-perception as this attention decision, we show a persistent map's memory (change-history, or even just recency of last sighting) yields the best schedule (held-out), matching an oracle, while the memoryless VLM prior is poor. Because the schedule reallocates budget toward what matters, memory's benefit concentrates on the important objects ($\\sim$1.6$\\times$ the mean), and a downstream fetch task confirms fewer wasted trips; the gain grows with per-instance heterogeneity exactly as a Cauchy--Schwarz bound predicts -- it equals $\\mathrm{Var}(\\sqrtλ)$, the variance of root-volatility. With a real CLIP prior on rendered objects the advantage is $+21$--$26\\%$. The map's distinctive value appears when the task is \\emph{language-conditioned}: told what to track, VLMM grounds the relevant objects (open-vocabulary) and tracks their change (memory), beating even a strong relevance-weighted recency baseline ($+2.5\\%$) -- so its motion channel adds value beyond a last-seen timestamp -- and an on-demand VLM ($+8.9\\%$); neither language nor dynamics alone suffices. The map earns its keep not by telling the robot how to walk around a room, but by telling it what to pay attention to.",
+      "authors": [
+        "Dibyendu Ghosh"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-26T18:49:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.23797v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Language-conditioned re-perception with VLMM for embodied agents",
+      "llm_evidence_cn": "基于视觉-语言-运动地图的语言条件式重感知用于具身智能体",
+      "llm_evidence": "基于视觉-语言-运动地图的语言条件式重感知用于具身智能体",
+      "canonical_evidence": "基于视觉-语言-运动地图的语言条件式重感知用于具身智能体",
+      "llm_tldr_en": "Explores language-conditioned re-perception using Vision-Language-Motion Maps for robot planning under limited perception budget.",
+      "llm_tldr_cn": "该论文研究携带持久行为标注地图的机器人在有限感知预算下的规划问题。提出了基于视觉-语言-运动地图(VLMM)的记忆引导重感知方法，将重感知问题建模为注意力决策。实验表明该方法在资源分配问题上优于基线，但在空间导航任务中闭环收益有限。为具身智能体的感知-规划权衡提供了新视角。",
+      "llm_tldr": "该论文研究携带持久行为标注地图的机器人在有限感知预算下的规划问题。提出了基于视觉-语言-运动地图(VLMM)的记忆引导重感知方法，将重感知问题建模为注意力决策。实验表明该方法在资源分配问题上优于基线，但在空间导航任务中闭环收益有限。为具身智能体的感知-规划权衡提供了新视角。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "embodied agent with vision language action model",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.23899v1",
+      "source": "arxiv",
+      "title": "Embodied GPT-5.1: Evidence of a World Model?",
+      "abstract": "This exploratory study examines whether a large multimodal language model, GPT-5.1, can serve as the high-level controller of a physical mobile robot despite having no prior embodiment, no training in simulated environments, and no exposure to sensorimotor experience. Using only low-resolution first-person images and a discrete action set, the model was tasked with navigation and object-directed behaviors such as locating and contacting a target toy. Across multiple trials, GPT-5.1 demonstrated emergent capabilities that suggest elements of spatial reasoning and physical understanding. These included maintaining short-term memory of object locations after they left the camera frame, inferring the physical consequences of its own movements, and executing coherent action sequences such as colliding with an object and reversing to visually verify the outcome. At the same time, the model displayed inefficiencies and perceptual limitations, including imprecise alignment strategies and occasional misidentification of distant distractors. Overall, the results indicate that GPT-5.1 exhibits signs of world-model-like behavior in an embodied setting, despite the absence of any embodiment-related training, a finding that challenges long-standing views in cognitive science and robotics which hold that a physical body is a necessary prerequisite for developing such forms of intelligence. The findings motivate deeper investigation into the emergence, limits, and robustness of physical understanding in large language models.",
+      "authors": [
+        "Roberto Spinelli",
+        "Thiago C. Martins"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-27T00:14:21+00:00",
+      "link": "https://arxiv.org/pdf/2607.23899v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "tests GPT-5.1 as high-level controller for a physical mobile robot, using visual observations and actions",
+      "llm_evidence_cn": "测试GPT-5.1作为物理移动机器人的高层控制器，使用视觉观测和动作",
+      "llm_evidence": "测试GPT-5.1作为物理移动机器人的高层控制器，使用视觉观测和动作",
+      "canonical_evidence": "测试GPT-5.1作为物理移动机器人的高层控制器，使用视觉观测和动作",
+      "llm_tldr_en": "Embodied GPT-5.1 explores using a large multimodal model as a high-level controller for a mobile robot, demonstrating emergent spatial reasoning and coherent action sequences.",
+      "llm_tldr_cn": "该论文探索了大型多模态模型GPT-5.1作为物理移动机器人高层控制器的可能性。仅使用低分辨率第一人称图像和离散动作集，模型在没有具身经验的情况下展示了空间推理、短时记忆和因果推断能力。实验表明其能够定位目标并执行连贯动作序列，提示具备朴素世界模型。",
+      "llm_tldr": "该论文探索了大型多模态模型GPT-5.1作为物理移动机器人高层控制器的可能性。仅使用低分辨率第一人称图像和离散动作集，模型在没有具身经验的情况下展示了空间推理、短时记忆和因果推断能力。实验表明其能够定位目标并执行连贯动作序列，提示具备朴素世界模型。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "embodied agent with vision language action model",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.22393v1",
+      "source": "arxiv",
+      "title": "SceneActBench: Can Agents Act on the 3D Scenes They See?",
+      "abstract": "Vision-language model (VLM) agents increasingly use tools to act on 3D scenes rather than only describe them. Existing 3D benchmarks score textual responses or single-object operations, leaving agent action on complete multi-object 3D scenes under evaluated. We present SceneActBench, a benchmark for visually conditioned action across five 3D tasks under a unified agent-environment loop. Given PNG images or sampled video frames and, where applicable, supplied 3D assets, an agent acts on a 3D environment. We evaluate each final output against hidden ground truth with task-specific geometric metrics. SceneActBench comprises five tasks built from 210 source instances, yielding 520 task cases including paired input conditions. Every task runs through one fixed agent loop to keep the comparison fair. Across eleven proprietary VLM configurations, Overall scores span 38.6-50.2, and none performs consistently well across tasks. We further analyse where and how failures manifest.",
+      "authors": [
+        "Yifei Zhao",
+        "Xiangxin Zhou",
+        "Wenhao Yang",
+        "Jiaqi Tang",
+        "Pu Jian",
+        "Huanjin Yao",
+        "Jiarui Yao",
+        "Haowei Lin",
+        "Chunchao Guo",
+        "Zhuo Chen",
+        "Wenkai Lyu",
+        "Jianzhu Ma",
+        "Xueqian Wang",
+        "Wenxi Zhu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-07-24T15:16:47+00:00",
+      "link": "https://arxiv.org/pdf/2607.22393v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Benchmark for VLM agents acting on 3D scenes",
+      "llm_evidence_cn": "评估VLM智能体对3D场景执行动作的基准",
+      "llm_evidence": "评估VLM智能体对3D场景执行动作的基准",
+      "canonical_evidence": "评估VLM智能体对3D场景执行动作的基准",
+      "llm_tldr_en": "SceneActBench evaluates VLM-based agents on acting in 3D scenes across five tasks, providing a unified benchmark for embodied decision making.",
+      "llm_tldr_cn": "现有3D基准主要评估文本响应或单目标操作，缺乏对多目标3D场景中智能体动作的全面评估。本文提出SceneActBench，包含五个视觉条件动作任务（210个源实例，520个测试案例），在统一的智能体-环境循环中评估VLM智能体的动作能力。实验揭示了现有VLM在复杂场景动作规划上的不足，为未来具身决策研究提供了标准化评估平台。",
+      "llm_tldr": "现有3D基准主要评估文本响应或单目标操作，缺乏对多目标3D场景中智能体动作的全面评估。本文提出SceneActBench，包含五个视觉条件动作任务（210个源实例，520个测试案例），在统一的智能体-环境循环中评估VLM智能体的动作能力。实验揭示了现有VLM在复杂场景动作规划上的不足，为未来具身决策研究提供了标准化评估平台。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "Embodied agents using vision language action models for decision making",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.24112v1",
+      "source": "arxiv",
+      "title": "Scaling GUI Agents with Visual State Transitions",
+      "abstract": "We introduce State Transition Pretraining (STP) as a new scaling axis for GUI agents. During the STP stage, we continually pretrain a unified multimodal model on visual state transitions by jointly optimizing inverse dynamics (predicting actions from state changes) and forward dynamics (predicting next states from current states and actions). This optimization equips the model with better action-grounded visual representations and an internal world model of GUI dynamics. When subsequently fine-tuned on trajectories with task instructions, our STP-trained models consistently outperform baselines trained solely via direct trajectory fine-tuning across agent benchmarks in both desktop and mobile GUI scenarios (AgentNetBench, AndroidControl, and GUIOdyssey). Further empirical studies show that joint dynamics optimization yields stable improvements over single-objective training, and downstream performance scales steadily with the volume of transition data.",
+      "authors": [
+        "Xiangyan Liu",
+        "Kaixin Li",
+        "Haonan Wang",
+        "Biao Wu",
+        "Meng Fang",
+        "Longxu Dou",
+        "Chao Du",
+        "Michael Qizhe Shieh",
+        "Tianyu Pang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-27T07:54:08+00:00",
+      "link": "https://arxiv.org/pdf/2607.24112v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "pretrains multimodal model on visual state transitions for GUI agents, leveraging inverse and forward dynamics for action representation",
+      "llm_evidence_cn": "在GUI agent上通过视觉状态转换预训练多模态模型，利用逆动力学和正动力学学习动作表征",
+      "llm_evidence": "在GUI agent上通过视觉状态转换预训练多模态模型，利用逆动力学和正动力学学习动作表征",
+      "canonical_evidence": "在GUI agent上通过视觉状态转换预训练多模态模型，利用逆动力学和正动力学学习动作表征",
+      "llm_tldr_en": "State Transition Pretraining (STP) scales GUI agents by pretraining on visual state transitions with inverse and forward dynamics, improving action-grounded representations.",
+      "llm_tldr_cn": "该论文针对GUI agent提出状态转换预训练（STP）方法。在持续预训练阶段，通过联合优化逆动力学（从状态变化预测动作）和正动力学（从状态和动作预测下一状态），使多模态模型学习动作相关的视觉表征和内部世界模型。在多个GUI benchmark上，STP训练模型优于仅轨迹微调的基线，验证了其有效性。",
+      "llm_tldr": "该论文针对GUI agent提出状态转换预训练（STP）方法。在持续预训练阶段，通过联合优化逆动力学（从状态变化预测动作）和正动力学（从状态和动作预测下一状态），使多模态模型学习动作相关的视觉表征和内部世界模型。在多个GUI benchmark上，STP训练模型优于仅轨迹微调的基线，验证了其有效性。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "robot learning with vision language action models",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.25106v1",
+      "source": "arxiv",
+      "title": "IMPRINT: Image-Conditioned Query Enrichment for Long-Tail Object Goal Navigation",
+      "abstract": "Embodied AI increasingly relies on queryable semantic maps built from pre-trained vision-language models to enable zero-shot Object Goal Navigation (ObjectNav). However, existing approaches typically depend on text-only queries, which become less reliable as semantic specificity increases toward fine-grained object categories. We introduce IMPRINT, a zero-shot plug-and-play framework that enriches textual object queries with web-sourced images to improve grounding in queryable maps. Retrieved images are encoded using a vision-language model, matched against the semantic map to produce similarity maps, and aggregated to yield context-aware localization. Notably, this requires no training or modification of the underlying navigation policy. To explicitly evaluate long-tail behavior, we present HSSD-rare, a new ObjectNav benchmark built on Habitat Synthetic Scenes and featuring semantically specific subcategories. Across both OVON and HSSD-rare, image-conditioned queries consistently improve object grounding and yield end-to-end navigation gains. Further analysis reveals that translating localization gains to navigation performance depends critically on downstream detection quality, highlighting a key systems bottleneck in long-tail embodied navigation.",
+      "authors": [
+        "Jelin Raphael Akkara",
+        "Filippo Ziliotto",
+        "Luciano Serafini",
+        "Lamberto Ballan",
+        "Tommaso Campari"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-27T22:09:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.25106v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Embodied AI, object goal navigation with vision-language models",
+      "llm_evidence_cn": "具身AI，利用视觉语言模型进行目标导航",
+      "llm_evidence": "具身AI，利用视觉语言模型进行目标导航",
+      "canonical_evidence": "具身AI，利用视觉语言模型进行目标导航",
+      "llm_tldr_en": "IMPRINT enriches object queries with images for better VLM grounding in ObjectNav, improving zero-shot navigation without policy changes.",
+      "llm_tldr_cn": "IMPRINT通过引入网络图像增强对象查询，改善了基于视觉语言模型的语义地图在精细物体目标导航中的定位能力。该方法无需训练或修改导航策略，在零样本设置下显著提升了导航成功率，尤其是在长尾物体类别上。该工作为具身智能中的查询增强提供了新思路。",
+      "llm_tldr": "IMPRINT通过引入网络图像增强对象查询，改善了基于视觉语言模型的语义地图在精细物体目标导航中的定位能力。该方法无需训练或修改导航策略，在零样本设置下显著提升了导航成功率，尤其是在长尾物体类别上。该工作为具身智能中的查询增强提供了新思路。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "multimodal decision making for embodied agents",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
