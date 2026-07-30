@@ -1,0 +1,121 @@
+{
+  "date": "20260730",
+  "date_label": "",
+  "generated_at": "2026-07-30 21:38:37 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.27205v1",
+      "route": "202607/30/2607.27205v1-turbovla-real-time-vision-language-action-model-at-32-hz-on-an-rtx-4090-with-1-gb-vram",
+      "title": "TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "新VLA范式直接映射V+L到A，实现实时性能",
+      "first_seen_at": "2026-07-30 21:38:37 UTC",
+      "updated_at": "2026-07-30 21:38:37 UTC"
+    },
+    {
+      "paper_id": "2607.26513v1",
+      "route": "202607/30/2607.26513v1-explicit-kinematic-guidance-from-analytic-concepts-for-vision-language-action-models",
+      "title": "Explicit Kinematic Guidance from Analytic Concepts for Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "为VLA模型提出显式运动学引导，增强具身操作",
+      "first_seen_at": "2026-07-30 21:38:37 UTC",
+      "updated_at": "2026-07-30 21:38:37 UTC"
+    },
+    {
+      "paper_id": "2607.26991v1",
+      "route": "202607/30/2607.26991v1-rl2-vla-adaptive-rl-latent-compositional-steering-with-test-time-scaling-for-vision-language-action-models",
+      "title": "RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "基于潜在空间强化学习的VLA模型自适应推理时调控",
+      "first_seen_at": "2026-07-30 21:38:37 UTC",
+      "updated_at": "2026-07-30 21:38:37 UTC"
+    },
+    {
+      "paper_id": "2607.27138v1",
+      "route": "202607/30/2607.27138v1-dlam-distributional-latent-actions-with-temporal-constraints",
+      "title": "DLAM: Distributional Latent Actions with Temporal Constraints",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "分布潜动作模型解决VLA中的误差传播",
+      "first_seen_at": "2026-07-30 21:38:37 UTC",
+      "updated_at": "2026-07-30 21:38:37 UTC"
+    },
+    {
+      "paper_id": "2607.26770v1",
+      "route": "202607/30/2607.26770v1-vision-tl-action-neuro-symbolic-trajectory-generation-from-visual-observations-and-temporal-logic",
+      "title": "Vision-TL-Action: Neuro-Symbolic Trajectory Generation from Visual Observations and Temporal Logic",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "基于视觉和时序逻辑的神经符号轨迹生成用于具身机器人",
+      "first_seen_at": "2026-07-30 21:38:37 UTC",
+      "updated_at": "2026-07-30 21:38:37 UTC"
+    },
+    {
+      "paper_id": "2607.27180v1",
+      "route": "202607/30/2607.27180v1-humanclaw-can-vision-language-models-act-through-a-body",
+      "title": "HumanCLAW: Can Vision-Language Models Act Through a Body?",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "评估VLM通过物理身体行动，分离决策与电机控制",
+      "first_seen_at": "2026-07-30 21:38:37 UTC",
+      "updated_at": "2026-07-30 21:38:37 UTC"
+    },
+    {
+      "paper_id": "2607.26148v1",
+      "route": "202607/30/2607.26148v1-embodied-agents-take-control-minimal-interface-zero-shot-agents-rival-industrial-scale-policies-in-vision-and-language-navigation",
+      "title": "Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通用智能体用于具身视觉语言导航",
+      "first_seen_at": "2026-07-30 21:38:37 UTC",
+      "updated_at": "2026-07-30 21:38:37 UTC"
+    }
+  ]
+}

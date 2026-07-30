@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-07-29</span>
+      <span class="dpr-home-dashboard-kicker">2026-07-30</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 9 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 7 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>5</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>4</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-07-29 21:26:32 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-07-30 21:38:37 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今天聚焦视觉-语言-动作模型（VLA）的精进，两篇高分论文分别提出轻量级链式思维蒸馏和测试时模态适应框架。</p>
-<p>最值得看CoTinyVLA（亚十亿参数实现高性能）和因果推断-诊断-精炼框架（解决模态不匹配问题）。</p>
-<p>建议优先关注VLA模型的效率优化与鲁棒性增强，这对低成本机器人部署和跨模态场景应用极具价值。</p>
+<p>今日精读聚焦VLA实时化与运动学引导，速读涵盖逻辑轨迹与具身交互新范式。</p>
+<p>最值得关注：TurboVLA以32Hz运行于RTX4090且显存低于1GB，证明极轻量VLA的可行性；Explicit Kinematic Guidance通过解析运动学概念提升动作精度。</p>
+<p>下一步可追踪VLA轻量化部署方案，并探索神经符号轨迹生成（Vision-TL-Action）与具身代理（HumanCLAW）的实际交互效果。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">5 篇</strong>
+    <strong class="dpr-home-dashboard-count">4 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model">CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model</span></li><li><span class="dpr-home-dashboard-paper-title" title="A Causality-aware Infer-diagnose-refine Framework for Test-time Modality Adaptation in VLA Models">A Causality-aware Infer-diagnose-refine Framework for Test-time Modality Adaptation in VLA Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models">SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with &lt;1 GB VRAM">TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with &lt;1 GB VRAM</span></li><li><span class="dpr-home-dashboard-paper-title" title="Explicit Kinematic Guidance from Analytic Concepts for Vision-Language-Action Models">Explicit Kinematic Guidance from Analytic Concepts for Vision-Language-Action Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models">RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>5</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>4</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">4 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Embodied GPT-5.1: Evidence of a World Model?">Embodied GPT-5.1: Evidence of a World Model?</span></li><li><span class="dpr-home-dashboard-paper-title" title="SceneActBench: Can Agents Act on the 3D Scenes They See?">SceneActBench: Can Agents Act on the 3D Scenes They See?</span></li><li><span class="dpr-home-dashboard-paper-title" title="Scaling GUI Agents with Visual State Transitions">Scaling GUI Agents with Visual State Transitions</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Vision-TL-Action: Neuro-Symbolic Trajectory Generation from Visual Observations and Temporal Logic">Vision-TL-Action: Neuro-Symbolic Trajectory Generation from Visual Observations and Temporal Logic</span></li><li><span class="dpr-home-dashboard-paper-title" title="HumanCLAW: Can Vision-Language Models Act Through a Body?">HumanCLAW: Can Vision-Language Models Act Through a Body?</span></li><li><span class="dpr-home-dashboard-paper-title" title="Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation">Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>4</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>3</strong></span></div>
 </section>
 </div>
 
