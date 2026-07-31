@@ -1,0 +1,137 @@
+{
+  "date": "20260731",
+  "date_label": "",
+  "generated_at": "2026-07-31 21:53:41 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.27549v1",
+      "route": "202607/31/2607.27549v1-cross-embodiment-transfer-via-behavior-aligned-representations",
+      "title": "Cross-Embodiment Transfer via Behavior-Aligned Representations",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "研究VLA模型中的行为对齐表示以促进跨具身机器人学习",
+      "first_seen_at": "2026-07-31 21:53:41 UTC",
+      "updated_at": "2026-07-31 21:53:41 UTC"
+    },
+    {
+      "paper_id": "2607.27881v1",
+      "route": "202607/31/2607.27881v1-robobridge-a-modular-framework-for-bridging-policies-to-robust-real-world-robotic-agents",
+      "title": "RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向鲁棒真实世界机器人智能体的VLA模型部署框架",
+      "first_seen_at": "2026-07-31 21:53:41 UTC",
+      "updated_at": "2026-07-31 21:53:41 UTC"
+    },
+    {
+      "paper_id": "2607.26770v1",
+      "route": "202607/31/2607.26770v1-vision-tl-action-neuro-symbolic-trajectory-generation-from-visual-observations-and-temporal-logic",
+      "title": "Vision-TL-Action: Neuro-Symbolic Trajectory Generation from Visual Observations and Temporal Logic",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "融合视觉观测与时序逻辑生成机器人轨迹的神经符号方法",
+      "first_seen_at": "2026-07-31 21:53:41 UTC",
+      "updated_at": "2026-07-31 21:53:41 UTC"
+    },
+    {
+      "paper_id": "2607.27599v1",
+      "route": "202607/31/2607.27599v1-world-action-planner-generalizable-decision-making-with-action-conditioned-world-models",
+      "title": "World Action Planner: Generalizable Decision-Making with Action-Conditioned World Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "结合VLM与动作条件世界模型实现可泛化的具身决策",
+      "first_seen_at": "2026-07-31 21:53:41 UTC",
+      "updated_at": "2026-07-31 21:53:41 UTC"
+    },
+    {
+      "paper_id": "2607.27703v1",
+      "route": "202607/31/2607.27703v1-spatialcli-learning-to-reason-with-spatial-tools-then-without-them",
+      "title": "SpatialCLI: Learning to Reason With Spatial Tools, Then Without Them",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "训练VLM借助空间工具进行具身任务级空间推理与决策",
+      "first_seen_at": "2026-07-31 21:53:41 UTC",
+      "updated_at": "2026-07-31 21:53:41 UTC"
+    },
+    {
+      "paper_id": "2607.22226v1",
+      "route": "202607/31/2607.22226v1-offline-vision-language-navigation-with-geometric-goal-localization-for-outdoor-environments",
+      "title": "Offline Vision-Language Navigation with Geometric Goal Localization for Outdoor Environments",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向户外具身智能体的机载视觉语言导航",
+      "first_seen_at": "2026-07-31 21:53:41 UTC",
+      "updated_at": "2026-07-31 21:53:41 UTC"
+    },
+    {
+      "paper_id": "2607.24744v1",
+      "route": "202607/31/2607.24744v1-data-pyramid-for-embodied-manipulation",
+      "title": "Data Pyramid for Embodied Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "组织具身数据源以支撑具身基础模型的数据金字塔",
+      "first_seen_at": "2026-07-31 21:53:41 UTC",
+      "updated_at": "2026-07-31 21:53:41 UTC"
+    },
+    {
+      "paper_id": "2607.26148v1",
+      "route": "202607/31/2607.26148v1-embodied-agents-take-control-minimal-interface-zero-shot-agents-rival-industrial-scale-policies-in-vision-and-language-navigation",
+      "title": "Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "最小RGB接口下智能体化具身控制的零样本导航",
+      "first_seen_at": "2026-07-31 21:53:41 UTC",
+      "updated_at": "2026-07-31 21:53:41 UTC"
+    }
+  ]
+}
