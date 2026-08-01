@@ -1,0 +1,57 @@
+{
+  "date": "20260801",
+  "date_label": "",
+  "generated_at": "2026-08-01 20:56:01 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.26657v1",
+      "route": "202608/01/2607.26657v1-enfold-folding-world-generator-computation-into-predictive-representations-for-efficient-embodied-control",
+      "title": "Enfold: Folding World-Generator Computation into Predictive Representations for Efficient Embodied Control",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "从当前视觉与语言指令预测表征以实现具身控制，与VLA决策目标一致。",
+      "first_seen_at": "2026-08-01 20:56:01 UTC",
+      "updated_at": "2026-08-01 20:56:01 UTC"
+    },
+    {
+      "paper_id": "2607.24744v1",
+      "route": "202608/01/2607.24744v1-data-pyramid-for-embodied-manipulation",
+      "title": "Data Pyramid for Embodied Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向具身操作的数据生态分析，与VLA训练数据相关",
+      "first_seen_at": "2026-08-01 20:56:01 UTC",
+      "updated_at": "2026-08-01 20:56:01 UTC"
+    },
+    {
+      "paper_id": "2607.27145v1",
+      "route": "202608/01/2607.27145v1-explainable-and-resource-efficient-spatial-reasoning-in-multimodal-llms-for-decision-critical-applications",
+      "title": "Explainable and Resource-Efficient Spatial Reasoning in Multimodal LLMs for Decision-Critical Applications",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "提升用于机器人和具身AI的多模态大模型空间推理，支持多模态决策。",
+      "first_seen_at": "2026-08-01 20:56:01 UTC",
+      "updated_at": "2026-08-01 20:56:01 UTC"
+    }
+  ]
+}

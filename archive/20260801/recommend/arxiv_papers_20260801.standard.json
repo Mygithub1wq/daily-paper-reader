@@ -1,0 +1,165 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-01T20:53:46.035971+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.26657v1",
+      "source": "arxiv",
+      "title": "Enfold: Folding World-Generator Computation into Predictive Representations for Efficient Embodied Control",
+      "abstract": "World generative models are typically used through what they produce: a rendered future, a video-conditioned action, or latent context computed by a costly generative branch. We argue that their more reusable asset is the computation that constructs a future. As a generator transforms a corrupted future into a coherent trajectory, its intermediate states organize appearance, spatial layout, and interaction across levels of abstraction. Can this future-generative computation be internalized in a representation inferred from the present alone? We present Enfold, which transfers this computation into a representation predicted from the current visual context and language instruction. During training, multi-level states exposed as the generator processes the observed future supervise a current-only encoder. The learned representation is fed back to condition future generation and is read by task heads without allowing task gradients to reshape the encoder. At deployment, action prediction no longer executes the generator. Across LIBERO, RoboTwin2.0, and real-robot tasks, Enfold supports strong control while reducing action latency by $3.7\\times$ relative to Fast--WAM, Enfold-Flash reaches $10.1\\times$. Representation analyses show that it suppresses nuisance variation and preferentially captures changes that emerge over longer horizons. When the current scene is altered by human intervention, both the generated continuation and the executed actions adapt, which is inconsistent with fixed trajectory replay. These results recast a world generator as a source of predictive control representations: its future need not be materialized at every step if its internal structure can be enfolded into the present.",
+      "authors": [
+        "Weili Zeng",
+        "Yitong Xing",
+        "Fulong Liu",
+        "Chengqun Yang",
+        "Antao Xiang",
+        "Feng Tian",
+        "Jingnan Gao",
+        "Jisong Cai",
+        "Xin Wang",
+        "Xiaomin Wu",
+        "Yao Mu",
+        "Yichao Yan"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-29T09:17:33+00:00",
+      "link": "https://arxiv.org/pdf/2607.26657v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Predictive representation learned from current visual context and language instruction for embodied control, aligning with VLA-based decision making.",
+      "llm_evidence_cn": "从当前视觉与语言指令预测表征以实现具身控制，与VLA决策目标一致。",
+      "llm_evidence": "从当前视觉与语言指令预测表征以实现具身控制，与VLA决策目标一致。",
+      "canonical_evidence": "从当前视觉与语言指令预测表征以实现具身控制，与VLA决策目标一致。",
+      "llm_tldr_en": "Enfold transfers the computation of world generative models into predictive representations inferred from current visual context and language instruction. Intermediate generator states organize appearance, layout, and interaction, enabling efficient embodied control without costly future rendering.",
+      "llm_tldr_cn": "针对世界生成模型只使用生成产物、计算成本高的问题，提出将未来构建过程折叠为从当前视觉上下文和语言指令预测的表示。训练中利用生成器的多级中间状态组织外观、空间布局与交互信息，使控制器无需昂贵渲染即可高效完成任务。该方法提升了具身控制的效率，为VLA式具身决策中世界模型的复用提供了新的表征路径。",
+      "llm_tldr": "针对世界生成模型只使用生成产物、计算成本高的问题，提出将未来构建过程折叠为从当前视觉上下文和语言指令预测的表示。训练中利用生成器的多级中间状态组织外观、空间布局与交互信息，使控制器无需昂贵渲染即可高效完成任务。该方法提升了具身控制的效率，为VLA式具身决策中世界模型的复用提供了新的表征路径。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.24744v1",
+      "source": "arxiv",
+      "title": "Data Pyramid for Embodied Manipulation",
+      "abstract": "Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These signals can be provided, to varying degrees, by multiple data sources. In this work, we organize the embodied data ecosystem as a \"pyramid\" spanning five complementary sources: real-robot data, UMI-style data, egocentric and exocentric data, simulation data, and general vision-language data. We organize the pyramid around the tension between scalability and robot alignment, and further characterize each source in terms of data quality, diversity, reusability, and physical fidelity. We then analyze recent embodied foundation models through the lens of their data recipes, examining how different sources are selected, aligned, and mixed during pretraining. For embodied brain models, vision-language-action models, and world-action models alike, we relate data composition to capabilities in perception, reasoning, planning, action generation, and world prediction. We close by discussing six open challenges: building large-scale tactile datasets, collecting failure and recovery data, developing scalable data-collection pipelines, aligning actions across embodiments, leveraging egocentric data for dexterous manipulation, and designing principled data recipes for robot learning. We hope this work paves the foundation for the design of next-generation embodied systems.",
+      "authors": [
+        "Yifan Ye",
+        "Yankai Fu",
+        "Yaoxu Lv",
+        "Bohan Hou",
+        "Jun Cen",
+        "Lingdong Kong",
+        "Duo Zheng",
+        "Tianxing Chen",
+        "Jiaming Liu",
+        "Ziang Cao",
+        "Yunfan Lou",
+        "Wei Chow",
+        "Xian Sun",
+        "Yingshuo Wang",
+        "Kuangzhi Ge",
+        "Xiaowei Chi",
+        "Xidong Zhang",
+        "Zhibo Pang",
+        "Yiwu Zhong",
+        "Sirui Han",
+        "Zhihe Lu",
+        "Weihao Yuan",
+        "Qifeng Chen",
+        "Michael Yu Wang",
+        "Yao Mu",
+        "Ziwei Liu",
+        "Jianfei Yang",
+        "Ping Luo",
+        "Shanghang Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-07-27T17:59:58+00:00",
+      "link": "https://arxiv.org/pdf/2607.24744v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Data ecosystem analysis for embodied manipulation, relevant to VLA training data",
+      "llm_evidence_cn": "面向具身操作的数据生态分析，与VLA训练数据相关",
+      "llm_evidence": "面向具身操作的数据生态分析，与VLA训练数据相关",
+      "canonical_evidence": "面向具身操作的数据生态分析，与VLA训练数据相关",
+      "llm_tldr_en": "Organizes embodied data sources into a five-level pyramid, analyzing scalability-robot alignment tradeoffs to guide future embodied foundation model training.",
+      "llm_tldr_cn": "针对具身智能体缺乏像互联网那样大规模感知-动作耦合数据的问题，将具身数据生态划分为真实机器人数据、UMI式数据、自我/外部视角数据、仿真数据和通用视觉语言数据五层金字塔，并以数据质量、多样性、复用性和物理保真度刻画各来源，从数据配方角度分析近期具身基础模型，为VLA等模型的训练数据选择提供了系统化的组织视角。",
+      "llm_tldr": "针对具身智能体缺乏像互联网那样大规模感知-动作耦合数据的问题，将具身数据生态划分为真实机器人数据、UMI式数据、自我/外部视角数据、仿真数据和通用视觉语言数据五层金字塔，并以数据质量、多样性、复用性和物理保真度刻画各来源，从数据配方角度分析近期具身基础模型，为VLA等模型的训练数据选择提供了系统化的组织视角。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "robot learning with vision language action models",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.27145v1",
+      "source": "arxiv",
+      "title": "Explainable and Resource-Efficient Spatial Reasoning in Multimodal LLMs for Decision-Critical Applications",
+      "abstract": "As Multimodal Large Language Models (MLLMs) are increasingly deployed in decision-critical pipelines such as robotics, embodied AI, and safety monitoring, the opacity of their spatial judgments limits operator trust and auditability. MLLMs demonstrate strong reasoning but often struggle with fine-grained spatial understanding and object hallucination. Prior work, ByDeWay, introduced Layered-Depth-Based Prompting (LDP), a training-free framework that mitigates hallucinations by structuring prompts using monocular depth estimation. However, coarse depth layering falls short in resolving object-to-object spatial relationships within the same geometric plane, such as projective (\"left of\", \"above\") and topological (\"inside\", \"touching\") relations. We propose ByDeWay-V2, which integrates explicit spatial relational context alongside depth cues, expressed as human-readable predicates that serve as auditable evidence for downstream decision support. Using an open-vocabulary object detector (YOLO-World-L), our framework computes pairwise geometric relations between detected objects and injects them as structured spatial predicates into the MLLM prompt, bridging 3D scene depth and 2D spatial semantics without any training. We evaluate ByDeWay-V2 on the Visual Spatial Reasoning (VSR) and BLINK benchmarks across multiple MLLMs, with hallucination grounding assessed via POPE. On the BLINK spatial subset, ByDeWay-V2 achieves a 46 percent relative F1 improvement over LDP for Qwen2.5-VL, and recovers BLIP-Base's spatial reasoning on VSR from near-random performance to a competitive F1 of 0.53. Our lightest configuration operates under a strict 40-token context budget on CPU, showing the framework's suitability for resource-constrained, real-time decision-support settings.",
+      "authors": [
+        "Piyush Jain",
+        "Kousik Dasgupta",
+        "Rajarshi Roy",
+        "Subarna Tripathi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-29T17:20:56+00:00",
+      "link": "https://arxiv.org/pdf/2607.27145v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Improves spatial reasoning in MLLMs for robotics and embodied AI, supporting multimodal decision making.",
+      "llm_evidence_cn": "提升用于机器人和具身AI的多模态大模型空间推理，支持多模态决策。",
+      "llm_evidence": "提升用于机器人和具身AI的多模态大模型空间推理，支持多模态决策。",
+      "canonical_evidence": "提升用于机器人和具身AI的多模态大模型空间推理，支持多模态决策。",
+      "llm_tldr_en": "Addresses spatial hallucinations in MLLMs for robotics and embodied AI. Proposes layered-depth prompting with monocular depth to improve fine-grained spatial relations. Improves trust and auditability in decision-critical pipelines.",
+      "llm_tldr_cn": "针对多模态大模型在机器人与具身AI等关键决策场景中空间判断不透明、易产生物体幻觉的问题，该方法利用单目深度估计构造分层深度提示框架，增强同一几何平面内物体的投影与拓扑空间关系理解。实验表明其能有效减少幻觉、提升空间判断的可信度与可审计性，为具身智能决策中的多模态空间推理提供了资源高效的改进手段。",
+      "llm_tldr": "针对多模态大模型在机器人与具身AI等关键决策场景中空间判断不透明、易产生物体幻觉的问题，该方法利用单目深度估计构造分层深度提示框架，增强同一几何平面内物体的投影与拓扑空间关系理解。实验表明其能有效减少幻觉、提升空间判断的可信度与可审计性，为具身智能决策中的多模态空间推理提供了资源高效的改进手段。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "multimodal decision making for embodied agents",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
