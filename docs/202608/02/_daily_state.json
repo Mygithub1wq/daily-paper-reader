@@ -1,0 +1,25 @@
+{
+  "date": "20260802",
+  "date_label": "",
+  "generated_at": "2026-08-02 19:52:51 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.23537v1",
+      "route": "202608/02/2607.23537v1-obsdrivebench-benchmarking-multimodal-understanding-under-adverse-weather-with-observability-awareness",
+      "title": "ObsDriveBench: Benchmarking Multimodal Understanding under Adverse Weather with Observability Awareness",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "在恶劣天气下评测多模态理解，面向自动驾驶中的场景理解与决策支持",
+      "first_seen_at": "2026-08-02 19:52:51 UTC",
+      "updated_at": "2026-08-02 19:52:51 UTC"
+    }
+  ]
+}

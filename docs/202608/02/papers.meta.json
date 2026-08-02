@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-02",
+  "date": "2026-08-02",
+  "generated_at": "2026-08-02T19:52:53",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/02/2607.23537v1-obsdrivebench-benchmarking-multimodal-understanding-under-adverse-weather-with-observability-awareness",
+      "section": "quick",
+      "title_en": "ObsDriveBench: Benchmarking Multimodal Understanding under Adverse Weather with Observability Awareness",
+      "authors": "Qiao Yan, Yihan Wang, Zhenghao Xing, Jiaqi Xu, Pheng-Ann Heng",
+      "date": "2026-07-26",
+      "pdf": "https://arxiv.org/pdf/2607.23537v1",
+      "score": "6.0",
+      "evidence": "在恶劣天气下评测多模态理解，面向自动驾驶中的场景理解与决策支持",
+      "tldr": "恶劣天气下多模态观测不可靠且跨模态不一致，但现有视觉-语言基准多限于标准条件或合成退化，缺乏真实场景的细粒度评估。为此，提出ObsDriveBench，基于相机、LiDAR与雷达同步数据，围绕可观测性感知、空间可靠性和风险感知决策三个维度构建超过2.7万道测试题。实验发现现有模型性能普遍下降；进一步提出ObsDrive模型，结合正常天气监督微调和恶劣天气强化学习，显著提升三方面鲁棒性。该工作为真实恶劣天气下的多模态理解评估与鲁棒建模提供了基准和方法。",
+      "tags": "query:embodied-vla",
+      "abstract_en": "Autonomous driving under adverse weather remains a critical challenge, yet existing vision-language benchmarks mainly evaluate under standard conditions, synthetic corruptions, or single modality. As a result, it remains unclear how vision-language models behave under real-world adverse weather with multi-modal inputs. We argue that a key difficulty lies in degraded environmental observability: under fog, rain, snow, and low illumination, multi-modal observations become unreliable and cross-modally inconsistent, posing challenges to scene understanding, and subsequent decision-making. To study this, we introduce \\textbf{ObsDriveBench}, a real-world multi-modal benchmark for adverse-weather autonomous driving. Our benchmark is designed with three capability dimensions: \\textbf{observability awareness}, \\textbf{spatial reliability}, and \\textbf{risk-aware decision-making}, enabling fine-grained diagnosis of model behavior under degraded observations. We construct the benchmark through observability meta-annotation, scene description, and capability oriented multiple-choice tasks over synchronized camera, LiDAR, and radar inputs, forming a benchmark with over 14k training and 13k test questions. Experiments reveal consistent performance degradation of existing vision-language models. We further introduce \\textbf{ObsDrive} model with normal-weather supervised fine-tuning and adverse-weather reinforcement learning, improving robustness across all three capabilities. The dataset and evaluation code will be released at \\href{https://github.com/russellyq/ObsDriveBench}{\\texttt{ObsDriveBench}}.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
