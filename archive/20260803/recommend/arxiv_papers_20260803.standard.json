@@ -1,0 +1,353 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-03T20:16:25.139112+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 8,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.29569v1",
+      "source": "arxiv",
+      "title": "Safe Vision Language Action Models via Barrier Enhanced Flow Matching",
+      "abstract": "This article presents a modular inference framework that integrates Flow Matching generative models with formal Control Barrier Function (CBF) safety guarantees. Unlike existing methods that apply external safety filters to a model's final output, our approach modifies the Flow Matching denoising process within the model to inherently generate safe trajectories. By employing a smooth Log-Sum-Exponential aggregate barrier, we enforce safety over entire action chunks. This aggregate barrier ensures a minimal increase in computational overhead and does not alter the semantic intent of the model. We show that, within the proposed framework, the 2-Wasserstein distance between the generated distribution and the target distribution remains bounded. Our method eliminates the need for safety-specific datasets or costly model retraining, providing a versatile solution for safe inference. We validate the approach on two robotic manipulation platforms and a 2D navigation benchmark, verifying that our framework achieves reliable safety without degrading the success rate of the model.",
+      "authors": [
+        "Kasra Sinaei",
+        "Hung-Chieh Wu",
+        "Donald Ebeigbe"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "published": "2026-07-31T15:56:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.29569v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Directly proposes safety-enhanced VLA models using flow matching and control barrier functions",
+      "llm_evidence_cn": "直接在VLA框架内将流匹配生成模型与控制屏障函数结合，从内部生成安全轨迹",
+      "llm_evidence": "直接在VLA框架内将流匹配生成模型与控制屏障函数结合，从内部生成安全轨迹",
+      "canonical_evidence": "直接在VLA框架内将流匹配生成模型与控制屏障函数结合，从内部生成安全轨迹",
+      "llm_tldr_en": "Presents a modular inference framework integrating flow matching with control barrier functions to make VLA policies inherently generate safe trajectories for robotic manipulation.",
+      "llm_tldr_cn": "针对VLA模型输出轨迹可能不安全的问题，提出一种将流匹配生成与控制屏障函数（CBF）融合的模块化推理框架。与外部安全过滤器不同，该方法在流匹配去噪过程中直接约束生成轨迹，利用平滑的Log-Sum-Exponential聚合屏障对整个动作块施加安全保证，同时保持模型语义意图不变且计算开销小。理论上证明了生成分布与目标分布之间的2-Wasserstein距离有界。实验验证了该框架能有效保障VLA策略的安全性。",
+      "llm_tldr": "针对VLA模型输出轨迹可能不安全的问题，提出一种将流匹配生成与控制屏障函数（CBF）融合的模块化推理框架。与外部安全过滤器不同，该方法在流匹配去噪过程中直接约束生成轨迹，利用平滑的Log-Sum-Exponential聚合屏障对整个动作块施加安全保证，同时保持模型语义意图不变且计算开销小。理论上证明了生成分布与目标分布之间的2-Wasserstein距离有界。实验验证了该框架能有效保障VLA策略的安全性。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.29596v1",
+      "source": "arxiv",
+      "title": "FibVLA: An Efficient Temporal Vision-Language-Action Model with Fibonacci Sampling",
+      "abstract": "Vision-language-action models (VLAs), which leverage the cognition of multimodal information to infer physical-world actions, provide a generalized solution for embodied AI applications. Conventional VLAs usually concentrate on current digital cognition. While some efforts are made to enhance VLAs' reasoning capabilities by capturing temporal information, encoding the long-context history causes an efficiency-decreasing issue. To reconcile the conflict between capturing temporal information and maintaining inference efficiency in VLAs, this paper introduces FibVLA, an efficient framework featuring temporal perception of long-context history. Specifically, we leverage logarithmic hindsight sampling to both proprioceptive states and visual frames to capture long-term temporal dependencies with minimal redundancy. For the action expert, we introduce the flow matching to produce action distributions, and the Fibonacci recurrent inference strategy to generate long-range planning steps based on real-time closed-loop feedback. Experiments demonstrate that FibVLA significantly improves action smoothness and success rates without retraining large-scale visual encoders. Efficiency analysis demonstrates superior real-time responsiveness compared to video-based baselines in real-world evaluations.",
+      "authors": [
+        "Li Lin",
+        "Wujun Xu",
+        "Weiwei Meng",
+        "Kaiwen Xia",
+        "Kang Hao Cheong",
+        "Shuai Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-07-31T16:23:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.29596v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Directly proposes an efficient temporal VLA model using Fibonacci sampling for embodied AI",
+      "llm_evidence_cn": "提出FibVLA框架，引入斐波那契/对数后见采样平衡长程时序信息捕捉与推理效率",
+      "llm_evidence": "提出FibVLA框架，引入斐波那契/对数后见采样平衡长程时序信息捕捉与推理效率",
+      "canonical_evidence": "提出FibVLA框架，引入斐波那契/对数后见采样平衡长程时序信息捕捉与推理效率",
+      "llm_tldr_en": "Presents FibVLA, a temporal VLA framework that uses Fibonacci sampling to capture long-horizon history efficiently for embodied decision making.",
+      "llm_tldr_cn": "VLA模型利用多模态信息为具身AI提供通用决策方案，但捕捉长程时序信息会导致推理效率下降。为此本文提出FibVLA，一种兼顾时序感知与推理效率的框架，通过对本体感觉状态和视觉帧采用斐波那契对数后见采样进行高效长程历史编码。该方法在不牺牲时序信息的前提下显著降低计算开销，提升了VLA模型在具身场景中的实时决策能力，为长上下文时序建模提供了新思路。",
+      "llm_tldr": "VLA模型利用多模态信息为具身AI提供通用决策方案，但捕捉长程时序信息会导致推理效率下降。为此本文提出FibVLA，一种兼顾时序感知与推理效率的框架，通过对本体感觉状态和视觉帧采用斐波那契对数后见采样进行高效长程历史编码。该方法在不牺牲时序信息的前提下显著降低计算开销，提升了VLA模型在具身场景中的实时决策能力，为长上下文时序建模提供了新思路。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.27782v1",
+      "source": "arxiv",
+      "title": "RedFlow: Redirect Failure into Action-Level Corrections for Flow-matching VLA Policy",
+      "abstract": "Flow-matching Vision-Language-Action (VLA) policies have shown strong potential for robotic manipulation but often suffer from compounding errors caused by distribution shifts during deployment. While offline reinforcement learning (RL) provides a practical way to improve deployed policies using rollout data, existing methods either ignore failure data or exploit it only at the trajectory level, resulting in low learning efficiency and persistent errors. We propose **RedFlow**, a fine-grained offline RL framework that redirects failure experiences into action-level corrective supervision for flow-matching VLA policies. RedFlow consists of two key components: (1) a **Context-Aware Corrective Matching** mechanism that identifies failure-inducing actions and retrieves successful alternatives from similar contexts as corrective targets, and (2) an **Adaptive Redirection Objective** that jointly reinforces successful actions, suppresses undesirable ones, and redirects recoverable failures toward corrective targets. By converting both successful and failed experiences into dense supervision, RedFlow enables robust recovery learning from mixed-quality data. Experiments on the LIBERO benchmark and three real-world manipulation tasks show that RedFlow consistently outperforms state-of-the-art offline RL baselines, improving the real-world success rate from 56.7% to 74.7%. It also matches strong on-policy methods (PPO, GRPO, and DDPO) while requiring roughly an order of magnitude fewer training samples.",
+      "authors": [
+        "Zhengyang Yan",
+        "Junhao Li",
+        "Fangqi Zhu",
+        "Zijun Wang",
+        "Quanxin Shou",
+        "Yikun Miao",
+        "Xiaoyi Pang",
+        "Zicong Hong",
+        "Song Guo"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-30T07:14:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.27782v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Uses offline RL to convert failure experiences into action-level corrective supervision for flow-matching VLA policies",
+      "llm_evidence_cn": "提出RedFlow，以动作级修正监督利用失败数据，提升流匹配VLA策略的部署鲁棒性",
+      "llm_evidence": "提出RedFlow，以动作级修正监督利用失败数据，提升流匹配VLA策略的部署鲁棒性",
+      "canonical_evidence": "提出RedFlow，以动作级修正监督利用失败数据，提升流匹配VLA策略的部署鲁棒性",
+      "llm_tldr_en": "Presents RedFlow, a fine-grained offline RL framework that converts failure experiences into action-level corrective supervision for flow-matching VLA policies, reducing compounding errors.",
+      "llm_tldr_cn": "流匹配VLA策略在部署时因分布漂移而产生累积误差，而现有离线强化学习方法要么忽略失败数据，要么只做轨迹级利用，效率低且错误持续。为此提出RedFlow，一种细粒度的离线RL框架，将失败经验转化为动作级修正监督。其核心包括上下文感知修正匹配机制，用于识别诱发失败的上下文并生成修正动作，以及配套的流匹配学习目标。实验显示该方法能显著降低复合误差并提升操作成功率。",
+      "llm_tldr": "流匹配VLA策略在部署时因分布漂移而产生累积误差，而现有离线强化学习方法要么忽略失败数据，要么只做轨迹级利用，效率低且错误持续。为此提出RedFlow，一种细粒度的离线RL框架，将失败经验转化为动作级修正监督。其核心包括上下文感知修正匹配机制，用于识别诱发失败的上下文并生成修正动作，以及配套的流匹配学习目标。实验显示该方法能显著降低复合误差并提升操作成功率。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.29169v1",
+      "source": "arxiv",
+      "title": "ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency",
+      "abstract": "Vision-language-action (VLA) policies achieve strong performance in robotic manipulation but remain vulnerable to runtime disturbances that break the temporal alignment among visual observations, robot states, and executed actions. We introduce ActFovea, a plug-and-play safeguarding framework that detects and mitigates such failures without retraining or modifying the underlying VLA policy. ActFovea uses robot kinematics, proprioceptive states, and recent actions to construct action-conditioned foveated regions that retain contact-relevant areas and predicted motion corridors while suppressing task-irrelevant visual content. It detects runtime risks by evaluating whether visual motion and observation freshness remain consistent with geometric, proprioceptive, and action transitions. For recoverable disturbances, ActFovea constructs disturbance-specific candidate observations and accepts a recovery only after verifying the resulting action chunk. When stale or replayed observations make reliable recovery impossible, it invokes a bounded safe-failure procedure. In closed-loop evaluations of $π_0$ across multiple LIBERO suites, ActFovea increases success under localized visual overlays from 49.3\\% to 90.3\\%, closing 93.7\\% of the gap to clean performance. It further improves success under action drift and visual delay by 7.0 and 9.8 percentage points, respectively, while preserving clean-task performance. Under frozen-observation replay, ActFovea triggers timely safe failure in all trials, with no unprotected failures. These results demonstrate that spatiotemporal visual-action consistency provides an effective basis for runtime safeguarding of VLA policies.",
+      "authors": [
+        "Wenda Yu",
+        "Tianshi Wang",
+        "Fengling Li",
+        "Xin Li",
+        "Jingjing Li",
+        "Lei Zhu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-31T08:47:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.29169v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Provides runtime safeguarding for VLA policies without retraining, ensuring robust embodied decision making",
+      "llm_evidence_cn": "在不重训VLA策略的前提下，通过动作条件化注视区域检测并缓解运行时感知与动作不一致问题",
+      "llm_evidence": "在不重训VLA策略的前提下，通过动作条件化注视区域检测并缓解运行时感知与动作不一致问题",
+      "canonical_evidence": "在不重训VLA策略的前提下，通过动作条件化注视区域检测并缓解运行时感知与动作不一致问题",
+      "llm_tldr_en": "Introduces ActFovea, a plug-and-play safeguard for VLA policies that uses action-conditioned foveated regions and visual-action consistency checks to detect runtime failures without retraining.",
+      "llm_tldr_cn": "VLA策略在机器人操作中易受运行时干扰，导致视觉观测、机器人状态与执行动作之间的时间对齐被破坏。为此提出ActFovea，一种即插即用的防护框架，利用机器人运动学、本体感觉和近期动作构建动作条件化注视区域，保留接触相关区域并抑制无关视觉内容，再通过视觉运动与观测新鲜度评估运行时风险。该方法无需重训或修改底层VLA策略即可检测和缓解失败，为VLA部署提供了安全保障。",
+      "llm_tldr": "VLA策略在机器人操作中易受运行时干扰，导致视觉观测、机器人状态与执行动作之间的时间对齐被破坏。为此提出ActFovea，一种即插即用的防护框架，利用机器人运动学、本体感觉和近期动作构建动作条件化注视区域，保留接触相关区域并抑制无关视觉内容，再通过视觉运动与观测新鲜度评估运行时风险。该方法无需重训或修改底层VLA策略即可检测和缓解失败，为VLA部署提供了安全保障。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.29613v1",
+      "source": "arxiv",
+      "title": "WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning",
+      "abstract": "Reinforcement learning (RL) post-training of Vision-Language-Action (VLA) models has shown strong promise for robotic manipulation. Among RL methods, critic-based approaches rely on a value estimator that predominantly operates on single-frame observations or single-frame VLM backbone latents, which is a fundamental mismatch with the partially observable nature of robot control. A naive approach to incorporate observation history into the critic incurs exponential complexity with high-dimensional visual space, and still fails because pure scalar-return regression provides insufficient supervision for learning cross-temporal dynamics. We identify the root cause as a state approximation problem: without an explicit world modeling objective, the critic's representation cannot capture the temporal structure needed for accurate value estimation. To address this, we propose the World Critic Model (WCM), built on a lightweight LeJEPA architecture; WCM jointly predicts future latent state and estimates values, such that the critic's representation is explicitly trained to capture temporal dynamics rather than merely regress scalar returns. WCM integrates seamlessly into both on-policy and off-policy training pipelines and is compatible with state-of-the-art VLA backbones including Pi0, Pi0.5, and OpenVLA-OFT. Extensive experiments on 149 tasks across four benchmarks demonstrate that WCM consistently achieves state-of-the-art performance in both in-distribution and out-of-distribution settings, with particularly strong generalization gains. We further validate WCM on seven real-world manipulation tasks using OpenVLA-OFT and Pi0.5 with off-policy RL, confirming stable deployment across diverse settings.",
+      "authors": [
+        "Senyu Fei",
+        "Xiaopeng Yu",
+        "Siyin Wang",
+        "Xianzhong Zhao",
+        "Jingjing Gong",
+        "Xipeng Qiu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "published": "2026-07-31T16:48:45+00:00",
+      "link": "https://arxiv.org/pdf/2607.29613v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "directly improves VLA models via world-model-based critic for embodied robot learning",
+      "llm_evidence_cn": "通过世界建模评论家直接改进VLA模型，用于具身机器人学习",
+      "llm_evidence": "通过世界建模评论家直接改进VLA模型，用于具身机器人学习",
+      "canonical_evidence": "通过世界建模评论家直接改进VLA模型，用于具身机器人学习",
+      "llm_tldr_en": "WCM introduces a world critic model that conditions on observation history with an explicit world modeling objective, overcoming the single-frame limitation of current critics and substantially improving RL post-training of Vision-Language-Action policies.",
+      "llm_tldr_cn": "当前VLA模型的强化学习后训练中，评论家通常基于单帧观测，难以处理机器人控制的部分可观测性。WCM提出显式世界建模目标的价值评论家，用状态近似解决跨时序动态学习不足的问题，避免朴素历史拼接的指数复杂度。实验表明该方法显著提升了VLA策略的强化学习微调效果，为具身机器人控制提供了更有效的价值学习范式。",
+      "llm_tldr": "当前VLA模型的强化学习后训练中，评论家通常基于单帧观测，难以处理机器人控制的部分可观测性。WCM提出显式世界建模目标的价值评论家，用状态近似解决跨时序动态学习不足的问题，避免朴素历史拼接的指数复杂度。实验表明该方法显著提升了VLA策略的强化学习微调效果，为具身机器人控制提供了更有效的价值学习范式。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "robot learning with vision language action models",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.28993v1",
+      "source": "arxiv",
+      "title": "ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts",
+      "abstract": "World Action Models (WAMs) have emerged as a promising paradigm by jointly modeling robot actions and future visual dynamics. However, their reliance on pixel-generative future supervision can entangle action-relevant state transitions with task-irrelevant visual content, limiting robustness under visual distribution shifts. We identify Training-Distribution Hallucination, a recurring phenomenon in which futures conditioned on visually shifted observations hallucinate training-domain content rather than remain faithful to the current scene. A controlled frame-triplet diagnosis further shows that DINOv3 features remain more stable across visual shifts while better preserving task-state distinctions than Wan-VAE latents. Rather than correcting the predicted futures, we propose Semantic-Temporal WAM (ST-WAM) to improve action robustness by using DINOv3 as a shared semantic representation for future prediction and history retrieval while retaining fine-grained VAE dynamics. Its Dual-Space Future Experts (DSFE) jointly predict future VAE latents and DINO features, while Current-Anchored Intent Retrieval (CAIR) retrieves task-relevant evidence from recent DINO history under the current visual-language context. ST-WAM is trained end-to-end without additional embodied pretraining or task-specific annotations, and requires no explicit future generation at inference. It achieves 98.7% on LIBERO and 92.8% on RoboTwin 2.0; more importantly, compared with Fast-WAM, it improves zero-shot LIBERO-Plus performance by 21.3 percentage points and more than doubles real-world success under visual shifts from 25.8% to 61.5%. These results demonstrate that semantic-temporal modeling effectively complements pixel-generative dynamics for robust manipulation.",
+      "authors": [
+        "Mingxin Wang",
+        "Bin Hu",
+        "Bin Qian",
+        "Kaitao Jiang",
+        "Haoning Wu",
+        "Feng Yan",
+        "Bowen Jing",
+        "Ruiyang Hao",
+        "Enyi Wang",
+        "Kangning Niu",
+        "Yandan Yang",
+        "Mu Xu",
+        "Yan Wang",
+        "Houde Liu",
+        "Tianlun Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-07-31T03:44:56+00:00",
+      "link": "https://arxiv.org/pdf/2607.28993v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "semantic-temporal world action model for robust robot manipulation under visual shifts",
+      "llm_evidence_cn": "语义-时间世界动作模型应对视觉分布偏移下的稳健机器人操作",
+      "llm_evidence": "语义-时间世界动作模型应对视觉分布偏移下的稳健机器人操作",
+      "canonical_evidence": "语义-时间世界动作模型应对视觉分布偏移下的稳健机器人操作",
+      "llm_tldr_en": "ST-WAM identifies Training-Distribution Hallucination in generative world models and uses DINOv3 features to keep task-state distinctions stable under visual distribution shifts, improving robust manipulation.",
+      "llm_tldr_cn": "针对世界动作模型在视觉分布偏移下出现的训练分布幻觉现象，本文提出ST-WAM语义-时间世界动作模型，通过诊断发现DINOv3特征比Wan-VAE潜在特征更能保持跨偏移稳定性并保留任务状态区分。ST-WAM在操作过程中结合语义与时间建模，减少对未来动态中训练域虚假内容的依赖。实验证明其在视觉分布偏移环境中显著提升了操作稳健性，为可靠具身操作提供了新思路。",
+      "llm_tldr": "针对世界动作模型在视觉分布偏移下出现的训练分布幻觉现象，本文提出ST-WAM语义-时间世界动作模型，通过诊断发现DINOv3特征比Wan-VAE潜在特征更能保持跨偏移稳定性并保留任务状态区分。ST-WAM在操作过程中结合语义与时间建模，减少对未来动态中训练域虚假内容的依赖。实验证明其在视觉分布偏移环境中显著提升了操作稳健性，为可靠具身操作提供了新思路。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "robot learning with vision language action models",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.29009v1",
+      "source": "arxiv",
+      "title": "D-VLC: Decentralized Vision-Language Collaboration for Heterogeneous Embodied Multi-Robot Systems in Unknown Environments",
+      "abstract": "Multi-robot systems, particularly heterogeneous robot swarms, can improve the efficiency of complex task execution through parallel collaboration and complementary capabilities. However, conventional rule-based methods rely on predefined task models and specialized decision making programs, making it difficult to understand complex semantic instructions and coordinate heterogeneous robots. LLMs introduce strong language understanding and task reasoning capabilities, allowing multi-robot systems to interpret instructions, decompose tasks, and assign roles according to task semantics. VLMs further incorporate visual perception, enabling robots to reason about objects, regions, and spatial relationships in physical environments. Nevertheless, existing LLM/VLM based methods often depend on known maps, centralized and synchronized decision making, limiting their generalization to heterogeneous robots and unseen tasks. We therefore propose a framework that combines decentralized asynchronous reasoning, lightweight information sharing, capability aware collaboration, and a unified action interface, enabling general purpose VLMs to generate robot specific actions executed by learning free experts without task or robot specific training. Experiments across diverse scenarios and multiple VLMs show success rates above 70\\%, with completion time reduced by up to 55.8\\% relative to the geometric greedy baseline.",
+      "authors": [
+        "Yuan Zhou",
+        "Ruitong Lin",
+        "Shen Wang",
+        "Weiqi Gai",
+        "Mo zhu",
+        "Xin Zhou",
+        "Yuze Wu",
+        "Fei Gao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-31T04:20:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.29009v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Uses VLMs and LLMs for decentralized semantic instruction following and role assignment in heterogeneous embodied multi-robot systems",
+      "llm_evidence_cn": "面向异构具身多机器人系统，用VLM与LLM进行分散式语义决策与角色分配",
+      "llm_evidence": "面向异构具身多机器人系统，用VLM与LLM进行分散式语义决策与角色分配",
+      "canonical_evidence": "面向异构具身多机器人系统，用VLM与LLM进行分散式语义决策与角色分配",
+      "llm_tldr_en": "D-VLC leverages LLMs for instruction interpretation and task decomposition with VLMs for visual perception and spatial reasoning, enabling decentralized vision-language collaboration for heterogeneous embodied multi-robot systems in unknown environments.",
+      "llm_tldr_cn": "针对异构多机器人系统难以理解复杂语义指令并协调决策的问题，D-VLC结合LLM的语义理解与VLM的视觉感知，使机器人能够解析指令、分解任务并按语义分配角色。该方法以分散方式在未知环境中协同执行复杂任务，降低对预定义任务模型和专用决策程序的依赖，展示了视觉-语言模型驱动具身多机器人协作的潜力。",
+      "llm_tldr": "针对异构多机器人系统难以理解复杂语义指令并协调决策的问题，D-VLC结合LLM的语义理解与VLM的视觉感知，使机器人能够解析指令、分解任务并按语义分配角色。该方法以分散方式在未知环境中协同执行复杂任务，降低对预定义任务模型和专用决策程序的依赖，展示了视觉-语言模型驱动具身多机器人协作的潜力。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "multimodal decision making for embodied agents",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.29600v1",
+      "source": "arxiv",
+      "title": "HAM-VLN: Harnessing Hierarchical Agentic Memory for Zero-Shot Vision-and-Language Navigation",
+      "abstract": "Vision-and-language navigation (VLN) enables robots to follow instructions in previously unseen environments. Recently, a training-free paradigm has emerged: the robot queries a multimodal LLM to understand its observations and plan the next action. However, long-horizon navigation based on either image streams or dense map inevitably introduces a growing memory and reasoning bottleneck. We present HAM-VLN, a decision-coupled, agent-authored memory that equips the robot with a persistent, depth-grounded world graph. In the same model call used to select the next action, HAM-VLN also records semantic and reflective information---including room type, objects, navigation progress, and failure notes. Recent waypoints remain verbatim within a bounded window, while older history re-enters the context only through retrieval scored by relevance, recency, and salience, together with one-hop topological expansion. This design requires no additional LLM calls beyond the per-waypoint decision. Compared to previous methods, HAM-VLN not only improves various navigation metrics but also reduces the context length by more than 65%. Specifically, HAM-VLN achieves 61.0% Success Rate (SR) on VLN-CE R2R, 52.7% SR on VLN-CE RxR, and 79.7% SR on HM3D-v2 ObjectNav without any training.",
+      "authors": [
+        "An Liu",
+        "Bingxi Liu",
+        "Hongyu Ding",
+        "Yixuan Jiang",
+        "Yaran Chen",
+        "Fulin Tang",
+        "Cong Leng",
+        "Hong Zhang",
+        "Jian Cheng"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-31T16:32:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.29600v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Embodied vision-and-language navigation agent using multimodal LLM with agentic memory for action planning",
+      "llm_evidence_cn": "具身视觉语言导航智能体，使用多模态大模型与智能体记忆进行动作规划",
+      "llm_evidence": "具身视觉语言导航智能体，使用多模态大模型与智能体记忆进行动作规划",
+      "canonical_evidence": "具身视觉语言导航智能体，使用多模态大模型与智能体记忆进行动作规划",
+      "llm_tldr_en": "HAM-VLN adds a decision-coupled agentic memory with a depth-grounded world graph to multimodal LLM navigation, enabling simultaneous action selection and semantic recording to reduce memory bottleneck in long-horizon VLN.",
+      "llm_tldr_cn": "针对长时程视觉语言导航中图像流或稠密地图带来记忆与推理瓶颈的问题，HAM-VLN提出一种决策耦合的智能体自生成记忆：在用于选择下一动作的同一次多模态大模型调用中，同时记录语义与反思信息，并构建持久、深度锚定的世界图。该方法使机器人无需额外训练即可完成零样本导航，在保持低延迟的同时减少历史信息遗忘。",
+      "llm_tldr": "针对长时程视觉语言导航中图像流或稠密地图带来记忆与推理瓶颈的问题，HAM-VLN提出一种决策耦合的智能体自生成记忆：在用于选择下一动作的同一次多模态大模型调用中，同时记录语义与反思信息，并构建持久、深度锚定的世界图。该方法使机器人无需额外训练即可完成零样本导航，在保持低延迟的同时减少历史信息遗忘。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "Embodied agents using vision language action models for decision making",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}

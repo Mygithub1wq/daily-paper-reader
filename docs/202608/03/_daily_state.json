@@ -1,0 +1,137 @@
+{
+  "date": "20260803",
+  "date_label": "",
+  "generated_at": "2026-08-03 20:22:08 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.29569v1",
+      "route": "202608/03/2607.29569v1-safe-vision-language-action-models-via-barrier-enhanced-flow-matching",
+      "title": "Safe Vision Language Action Models via Barrier Enhanced Flow Matching",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "直接在VLA框架内将流匹配生成模型与控制屏障函数结合，从内部生成安全轨迹",
+      "first_seen_at": "2026-08-03 20:22:08 UTC",
+      "updated_at": "2026-08-03 20:22:08 UTC"
+    },
+    {
+      "paper_id": "2607.29596v1",
+      "route": "202608/03/2607.29596v1-fibvla-an-efficient-temporal-vision-language-action-model-with-fibonacci-sampling",
+      "title": "FibVLA: An Efficient Temporal Vision-Language-Action Model with Fibonacci Sampling",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "提出FibVLA框架，引入斐波那契/对数后见采样平衡长程时序信息捕捉与推理效率",
+      "first_seen_at": "2026-08-03 20:22:08 UTC",
+      "updated_at": "2026-08-03 20:22:08 UTC"
+    },
+    {
+      "paper_id": "2607.27782v1",
+      "route": "202608/03/2607.27782v1-redflow-redirect-failure-into-action-level-corrections-for-flow-matching-vla-policy",
+      "title": "RedFlow: Redirect Failure into Action-Level Corrections for Flow-matching VLA Policy",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出RedFlow，以动作级修正监督利用失败数据，提升流匹配VLA策略的部署鲁棒性",
+      "first_seen_at": "2026-08-03 20:22:08 UTC",
+      "updated_at": "2026-08-03 20:22:08 UTC"
+    },
+    {
+      "paper_id": "2607.29169v1",
+      "route": "202608/03/2607.29169v1-actfovea-runtime-safeguarding-for-vla-policies-via-spatiotemporal-visual-action-consistency",
+      "title": "ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "在不重训VLA策略的前提下，通过动作条件化注视区域检测并缓解运行时感知与动作不一致问题",
+      "first_seen_at": "2026-08-03 20:22:08 UTC",
+      "updated_at": "2026-08-03 20:22:08 UTC"
+    },
+    {
+      "paper_id": "2607.29613v1",
+      "route": "202608/03/2607.29613v1-wcm-a-world-critic-model-for-vision-language-action-reinforcement-learning",
+      "title": "WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "通过世界建模评论家直接改进VLA模型，用于具身机器人学习",
+      "first_seen_at": "2026-08-03 20:22:08 UTC",
+      "updated_at": "2026-08-03 20:22:08 UTC"
+    },
+    {
+      "paper_id": "2607.28993v1",
+      "route": "202608/03/2607.28993v1-st-wam-semantic-temporal-world-action-model-for-robust-manipulation-under-visual-distribution-shifts",
+      "title": "ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "语义-时间世界动作模型应对视觉分布偏移下的稳健机器人操作",
+      "first_seen_at": "2026-08-03 20:22:08 UTC",
+      "updated_at": "2026-08-03 20:22:08 UTC"
+    },
+    {
+      "paper_id": "2607.29009v1",
+      "route": "202608/03/2607.29009v1-d-vlc-decentralized-vision-language-collaboration-for-heterogeneous-embodied-multi-robot-systems-in-unknown-environments",
+      "title": "D-VLC: Decentralized Vision-Language Collaboration for Heterogeneous Embodied Multi-Robot Systems in Unknown Environments",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向异构具身多机器人系统，用VLM与LLM进行分散式语义决策与角色分配",
+      "first_seen_at": "2026-08-03 20:22:08 UTC",
+      "updated_at": "2026-08-03 20:22:08 UTC"
+    },
+    {
+      "paper_id": "2607.29600v1",
+      "route": "202608/03/2607.29600v1-ham-vln-harnessing-hierarchical-agentic-memory-for-zero-shot-vision-and-language-navigation",
+      "title": "HAM-VLN: Harnessing Hierarchical Agentic Memory for Zero-Shot Vision-and-Language Navigation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "具身视觉语言导航智能体，使用多模态大模型与智能体记忆进行动作规划",
+      "first_seen_at": "2026-08-03 20:22:08 UTC",
+      "updated_at": "2026-08-03 20:22:08 UTC"
+    }
+  ]
+}
