@@ -1,0 +1,503 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-04T20:23:36.104992+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 9,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "2608.00569v1",
+      "source": "arxiv",
+      "title": "Latency-Tolerant Cloud-Edge Collaborative Vision-Language-Action Models via Emergent Representational Specialization",
+      "abstract": "Deploying billion-parameter Vision-Language-Action (VLA) policies on mobile robots creates a systems conflict: semantic reasoning benefits from cloud GPUs, whereas closed-loop control must respond locally despite network delay and jitter. Existing hierarchical and asynchronous policies improve throughput, but their slow-path representations can still arrive stale or require explicit scheduling and delay cues. We introduce CloudEdgeVLA, a cloud-edge policy that treats temporal misalignment as a representation-learning problem. A cloud VLA encodes delayed observations into slowly varying task features, while a lightweight edge head combines the latest available cloud feature with current local vision. During training, current and randomly delayed frames are paired with the same current action target in fresh and stale paths. This objective encourages the cloud representation to preserve task-level information while the edge path supplies state-sensitive corrections. Across four LIBERO suites, CloudEdgeVLA retains 63.8--78.0% success with a 40-step uniform-delay window, whereas VLASH reaches at most 6.4% and the evaluated single-path baselines at most 3.0%. By removing blocking synchronization from the control loop, the design offers a practical route to scalable VLA deployment in which cloud models can grow while edge computation remains lightweight and responsive.",
+      "authors": [
+        "Daojie Peng",
+        "Fulong Ma",
+        "Bingtao Wang",
+        "Sheng Wang",
+        "Jun Ma"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "published": "2026-08-01T10:11:59+00:00",
+      "link": "https://arxiv.org/pdf/2608.00569v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Proposes a cloud-edge collaborative VLA policy for mobile robots that tolerates latency and jitter, enabling embodied decision making.",
+      "llm_evidence_cn": "提出云边协同的VLA策略，容忍网络延迟与抖动，支持移动机器人具身决策。",
+      "llm_evidence": "提出云边协同的VLA策略，容忍网络延迟与抖动，支持移动机器人具身决策。",
+      "canonical_evidence": "提出云边协同的VLA策略，容忍网络延迟与抖动，支持移动机器人具身决策。",
+      "llm_tldr_en": "CloudEdgeVLA is a cloud-edge policy that treats temporal misalignment as representation learning: a cloud VLA encodes delayed observations into slow task features while a lightweight edge head combines them with current local vision, enabling robust closed-loop control for mobile robots.",
+      "llm_tldr_cn": "针对亿级参数VLA策略在移动机器人上部署时云端推理与本地闭环控制之间的延迟冲突，提出CloudEdgeVLA云边协同策略。该方法将时间未对齐视为表示学习问题，云侧把延迟观测编码为慢变任务特征，边侧轻量头部融合最新云特征与当前局部视觉。从而无需显式调度或延时时序提示，即可在延迟抖动下保持稳定闭环控制，实现高效的云边协同具身决策。",
+      "llm_tldr": "针对亿级参数VLA策略在移动机器人上部署时云端推理与本地闭环控制之间的延迟冲突，提出CloudEdgeVLA云边协同策略。该方法将时间未对齐视为表示学习问题，云侧把延迟观测编码为慢变任务特征，边侧轻量头部融合最新云特征与当前局部视觉。从而无需显式调度或延时时序提示，即可在延迟抖动下保持稳定闭环控制，实现高效的云边协同具身决策。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.01265v1",
+      "source": "arxiv",
+      "title": "Hermite Curves as Trajectory Priors for Vision-Language-Action Models",
+      "abstract": "Despite recent progress in Vision-Language-Action (VLA) models for robotic manipulation, the action chunk remains a weakly structured interface. Existing work typically flatten each chunk into per-timestep controls, relying on implicit data learning that manifests as jagged motion and boundary discontinuities during physical execution. To address these limitations, we introduce Hermite trajectory priors, parameterizing the chunk trajectory as a piecewise cubic Hermite curve defined by endpoint positions and velocities to explicitly enforce smoothness and continuity. We instantiate this fixed operator across discrete autoregressive and continuous generative paradigms via three variants: (1) Hermite Tokens, which predict quantized boundary variables autoregressively; (2) Hermite Scaffold, which decomposes clean actions into a base scaffold and residuals; and (3) Hermite Regularization, which applies the prior strictly as an auxiliary training objective. Across simulation benchmarks and real-robot platforms, Hermite Regularization achieves superior performance among these three variants, improving π0.5 baseline success rates from 95.9% to 98.7% on LIBERO, 85.7% to 90.9% on LIBERO-plus, and 63.4% to 90.0% across four real-robot tasks without additional inference overhead. Trajectory analyses reveal that explicitly structuring trajectory priors serves most effectively as a learning inductive bias rather than a runtime constraint.",
+      "authors": [
+        "Qi Lv",
+        "Jianming Xing",
+        "Zhao Yang",
+        "Mingyuan Yao",
+        "Yinan Shi",
+        "Yawei Jueluo",
+        "Mike Zheng Shou",
+        "Xiang Deng"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-08-02T14:18:17+00:00",
+      "link": "https://arxiv.org/pdf/2608.01265v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Introduces Hermite trajectory priors for Vision-Language-Action (VLA) models to improve action chunk structure in robotic manipulation.",
+      "llm_evidence_cn": "为视觉-语言-动作(VLA)模型引入Hermite轨迹先验，改善机器人操作中动作块的结构化表示。",
+      "llm_evidence": "为视觉-语言-动作(VLA)模型引入Hermite轨迹先验，改善机器人操作中动作块的结构化表示。",
+      "canonical_evidence": "为视觉-语言-动作(VLA)模型引入Hermite轨迹先验，改善机器人操作中动作块的结构化表示。",
+      "llm_tldr_en": "Proposes Hermite trajectory priors to parameterize action chunks as piecewise cubic Hermite curves, enforcing smoothness and continuity in VLA-based manipulation, instantiated across discrete and continuous generative paradigms.",
+      "llm_tldr_cn": "现有VLA模型通常将动作块展平为逐时间步控制，导致物理执行中出现抖动和边界不连续。本文提出Hermite轨迹先验，将动作块参数化为分段三次Hermite曲线，通过端点位置和速度强制平滑与连续。作者在离散自回归和连续生成范式下实现了三个变体。实验结果表明该方法能有效提升VLA模型动作执行的质量与稳定性。",
+      "llm_tldr": "现有VLA模型通常将动作块展平为逐时间步控制，导致物理执行中出现抖动和边界不连续。本文提出Hermite轨迹先验，将动作块参数化为分段三次Hermite曲线，通过端点位置和速度强制平滑与连续。作者在离散自回归和连续生成范式下实现了三个变体。实验结果表明该方法能有效提升VLA模型动作执行的质量与稳定性。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.01826v1",
+      "source": "arxiv",
+      "title": "Multi-View Unified Camera Fields: Geometry-Shaped Action-Facing Representations for RGB-Only Multi-Camera VLA Policies",
+      "abstract": "Vision-Language-Action (VLA) models have shown strong generalization in robotic manipulation, yet complex contact-rich tasks often benefit from multi-camera observations that jointly capture the end effector, objects, and targets under occlusion. Existing multi-camera VLAs usually concatenate view tokens, leaving action representations weak in metric depth and inconsistent across cameras. We introduce Multi-View Unified Camera Fields (MVUCF), a training-only framework that forms a shared action-facing latent field across views. A coordinate-query depth objective makes metric depth recoverable, while a preprocessing-aware correspondence objective aligns tokens observing the same physical point from different cameras. Both directly shape the hidden states consumed by the action module. After geometry injection, depth, camera calibration, and auxiliary heads are removed, so deployment uses the original RGB-only graph with no extra inference FLOPs. Held-out probes confirm stronger depth recovery and cross-view matching. Under matched GR00T-N1.6 settings, MVUCF reaches 98.9% on LIBERO, improves LIBERO-Plus by 22.4 points, and raises success by 23.3 points across six RoboTwin tasks spanning three action families: touch, move-and-place, and contact interaction. Real-world humanoid experiments further provide evidence of its practical effectiveness under RGB-only deployment.",
+      "authors": [
+        "Jiarui Yang",
+        "Yehao Lu",
+        "Yuning Su",
+        "Yufeng Xie",
+        "Yu Zhong",
+        "Haiyu Lan",
+        "Tianjing Hao",
+        "Kaixiang Lu",
+        "Peiwen Lin",
+        "Chuang Wang",
+        "Enyu Li",
+        "Junwei Liang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T07:36:09+00:00",
+      "link": "https://arxiv.org/pdf/2608.01826v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "VLA policy with multi-camera action-facing geometry for embodied manipulation",
+      "llm_evidence_cn": "面向具身操作的多相机VLA策略与几何动作表示",
+      "llm_evidence": "面向具身操作的多相机VLA策略与几何动作表示",
+      "canonical_evidence": "面向具身操作的多相机VLA策略与几何动作表示",
+      "llm_tldr_en": "Presents MVUCF, a training-only framework that builds a shared action-facing latent field across camera views for RGB-only multi-camera VLA policies, recovering metric depth and aligning cross-view tokens for contact-rich robotic manipulation.",
+      "llm_tldr_cn": "针对多相机VLA策略在接触丰富操作中因简单拼接视角token而导致动作表示缺乏度量深度、跨相机不一致的问题，提出多视角统一相机场MVUCF，一种仅训练期框架，通过坐标查询深度目标恢复每视图的度量深度，并利用预处理感知的对应目标对齐跨视角同一物理点的token，最终在共享动作朝向潜在场中融合多视角信息。实验表明该方法在多种接触丰富机器人操作任务上显著提升了VLA策略的成功率和泛化能力，且推理时不增加额外计算。",
+      "llm_tldr": "针对多相机VLA策略在接触丰富操作中因简单拼接视角token而导致动作表示缺乏度量深度、跨相机不一致的问题，提出多视角统一相机场MVUCF，一种仅训练期框架，通过坐标查询深度目标恢复每视图的度量深度，并利用预处理感知的对应目标对齐跨视角同一物理点的token，最终在共享动作朝向潜在场中融合多视角信息。实验表明该方法在多种接触丰富机器人操作任务上显著提升了VLA策略的成功率和泛化能力，且推理时不增加额外计算。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.02197v1",
+      "source": "arxiv",
+      "title": "Look Where It Matters: Adaptive Visual Refinement for Vision-Language-Action Models",
+      "abstract": "Visual representations of VLA models remain unreliable for spatially precise robotic manipulation. We uncover that vision encoders in VLAs also exhibit attention artifacts previously documented in generic Vision Transformers, and further show that, in embodied policies, these artifacts are closely associated with spatial perception capabilities acquired during post-training. As the encoder learns task-relevant information such as object location, depth ordering, and local geometry, limited global-token capacity causes part of this information to spill into low-information patch tokens. We introduce AtVLA, a framework that inserts learnable register tokens into the visual encoder. Trained end-to-end using only embodied data and the original action objective, these registers emerge as dedicated carriers of embodied spatial information, while the remaining patch tokens recover clean and spatially faithful attention distributions crucial for precise target localization and fine-grained contact. Clean attention restores reliable localization, but cannot recover geometric details lost in low-resolution observations. AtVLA therefore couples attention rectification with uncertainty-gated local refinement. The action expert samples multiple action chunks and estimates uncertainty from their disagreement; only for uncertain predictions, action-conditioned attention rollout identifies the task-relevant region, which is cropped, re-encoded at high resolution, and appended to the cached prefix for refined action generation. Across LIBERO, SimplerEnv, and a challenging single-view real-world benchmark, AtVLA improves the average LIBERO success rate from 94.2% to 98.4% and real-world success from 46.5% to 69.0%. The cropping is triggered on approximately 30% of replanning steps, resulting in only 1.4-1.6x the total computation of the base model under the representative deployment setting.",
+      "authors": [
+        "Jin Cui",
+        "Yanbin Hu",
+        "Xinyue Long",
+        "Linkai Li",
+        "Boran Zhao",
+        "Pengju Ren"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T13:18:36+00:00",
+      "link": "https://arxiv.org/pdf/2608.02197v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "VLA model visual refinement for embodied manipulation",
+      "llm_evidence_cn": "面向具身操作的VLA模型视觉精炼",
+      "llm_evidence": "面向具身操作的VLA模型视觉精炼",
+      "canonical_evidence": "面向具身操作的VLA模型视觉精炼",
+      "llm_tldr_en": "AtVLA inserts learnable register tokens into VLA vision encoders to fix attention artifacts, improving spatial perception and precise manipulation in embodied settings.",
+      "llm_tldr_cn": "针对VLA模型在空间精确操作中视觉表征不可靠的问题，本文发现视觉编码器存在注意力伪影，并导致物体位置、深度等空间信息泄漏到低信息patch token中。为此提出AtVLA框架，在编码器中插入可学习的寄存器token，并仅用具身数据端到端训练。实验证明该方法能显著提升VLA模型的空间感知精度，为可靠机器人操作提供了新思路。",
+      "llm_tldr": "针对VLA模型在空间精确操作中视觉表征不可靠的问题，本文发现视觉编码器存在注意力伪影，并导致物体位置、深度等空间信息泄漏到低信息patch token中。为此提出AtVLA框架，在编码器中插入可学习的寄存器token，并仅用具身数据端到端训练。实验证明该方法能显著提升VLA模型的空间感知精度，为可靠机器人操作提供了新思路。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.02257v1",
+      "source": "arxiv",
+      "title": "Learning Panorama-Aware VLA for Mobile Manipulation with Whole-Body Teleoperation",
+      "abstract": "Mobile manipulation is a key capability for embodied intelligence, enabling robots to accomplish complex multi-stage tasks in open-world environments. However, mobile manipulation poses two key challenges for vision-language-action (VLA) policies: At the data level, the efficient collection of high-quality whole-body demonstrations demands the coordinated control of both the mobile base and the robotic arms; at the model level, existing VLA models predominantly rely on local camera observations, whose limited field of view hinders global spatial understanding. To address these challenges, we develop a whole-body teleoperation system and a panoramic-aware VLA policy. The system enables coordinated control of a wheeled bimanual robot through a single VR interface and supports the acquisition of a real-world mobile manipulation dataset comprising 5.5 hours of multimodal demonstrations. Building upon this dataset, we propose PanoVLA, a panorama-aware vision-language-action policy for mobile bimanual manipulation. Built upon a Mixture-of-Transformers architecture, PanoVLA introduces global spatial context through dedicated panorama encoding and fusion modules, enabling effective integration of panoramic observations with language instructions and robot states for action generation. Evaluation on four real-world mobile manipulation tasks demonstrates that PanoVLA achieves an average stage completion rate of 91.3\\% and an end-to-end success rate of 73.4\\%, substantially outperforming local-view baselines. These results demonstrate that incorporating panoramic spatial context improves spatial understanding and closed-loop manipulation performance in mobile robots.",
+      "authors": [
+        "Donglin Yang",
+        "Haoran Chen",
+        "Xingyu Chen",
+        "Lixing Liu",
+        "Manyi Li",
+        "Changhe Tu",
+        "Ke Xu",
+        "Xiaojian Ma",
+        "Si Liu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T14:03:26+00:00",
+      "link": "https://arxiv.org/pdf/2608.02257v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "VLA policy for mobile manipulation",
+      "llm_evidence_cn": "面向移动操作的VLA策略",
+      "llm_evidence": "面向移动操作的VLA策略",
+      "canonical_evidence": "面向移动操作的VLA策略",
+      "llm_tldr_en": "Panorama-aware VLA with whole-body teleoperation enables mobile robots to collect high-quality demonstrations and gain global spatial understanding for open-world tasks.",
+      "llm_tldr_cn": "移动操作对VLA策略提出了全身协调数据采集与全局空间理解两个关键挑战。本文开发了全身遥操作系统，实现轮式双臂机器人的协调控制；并提出全景感知VLA策略，融合广角观测以弥补局部视野的局限。实验表明该方法能有效完成复杂多阶段移动操作任务，拓展了VLA模型在开放世界机器人中的应用。",
+      "llm_tldr": "移动操作对VLA策略提出了全身协调数据采集与全局空间理解两个关键挑战。本文开发了全身遥操作系统，实现轮式双臂机器人的协调控制；并提出全景感知VLA策略，融合广角观测以弥补局部视野的局限。实验表明该方法能有效完成复杂多阶段移动操作任务，拓展了VLA模型在开放世界机器人中的应用。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.02497v1",
+      "source": "arxiv",
+      "title": "Grounded Semantic Re-Binding for Robust Instruction Generalization in Vision-Language-Action Models",
+      "abstract": "Vision-Language-Action (VLA) models excel in robotic manipulation but suffer catastrophic performance drops when canonical instructions are simply paraphrased. Although this brittleness is typically addressed through costly data scaling, our probing reveals that the root cause is architectural rather than a lack of semantic understanding. Specifically, we demonstrate that current VLAs successfully retain the correct task identity internally. The failure actually stems from the joint encoding of dynamic visual observations and text, which introduces systematic feature shifts. Because the downstream action policy is highly vulnerable to these variations, it fails to translate the preserved semantics into correct control commands. To resolve this structural bottleneck, we propose Grounded Semantic Re-binding (GSR), an elegant intervention that bypasses unstable joint routing by explicitly fusing independently extracted task semantics with native visual features to train a completely re-initialized action expert from scratch. This targeted intervention dramatically restores paraphrastic invariance using only canonical demonstrations. On the LIBERO-Para benchmark, GSR improves success rates by up to 44.6 percent. It enables lightweight models to rival massively scaled baselines and pushes state-of-the-art models to a new record PRIDE score of 70.4, outperforming the recently introduced large-scale pretrained model Xiaomi-Robotics-0 in instruction generation capabilities. Building on these insights, we also introduce ParaVLA, a natively decoupled 0.33B-parameter model exhibiting near-perfect robustness to instruction rewording. Ultimately, our work proves that robust semantic grounding can be achieved through elegant structural design, bypassing the inefficient brute-force data scaling paradigm.",
+      "authors": [
+        "Zhaokai Yin",
+        "Zhipeng Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T17:02:04+00:00",
+      "link": "https://arxiv.org/pdf/2608.02497v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Instruction generalization in VLA models",
+      "llm_evidence_cn": "VLA模型指令泛化鲁棒性",
+      "llm_evidence": "VLA模型指令泛化鲁棒性",
+      "canonical_evidence": "VLA模型指令泛化鲁棒性",
+      "llm_tldr_en": "Grounded Semantic Re-Binding identifies that VLA instruction brittleness arises from joint encoding of visual observations and text, and proposes re-binding to eliminate feature shifts, restoring robust performance on paraphrased instructions without data scaling.",
+      "llm_tldr_cn": "该工作发现VLA模型在指令被改写后性能骤降，但探针实验表明模型内部仍保留正确任务语义，失败源于动态视觉观测与文本的联合编码带来的系统性特征偏移。为此提出Grounded Semantic Re-Binding方法，通过恢复语义锚点来重绑定跨模态表示，消除偏移对下游动作策略的影响。无需大规模数据扩展即可明显提高指令改写下的鲁棒性，揭示了VLA泛化瓶颈的架构成因。",
+      "llm_tldr": "该工作发现VLA模型在指令被改写后性能骤降，但探针实验表明模型内部仍保留正确任务语义，失败源于动态视觉观测与文本的联合编码带来的系统性特征偏移。为此提出Grounded Semantic Re-Binding方法，通过恢复语义锚点来重绑定跨模态表示，消除偏移对下游动作策略的影响。无需大规模数据扩展即可明显提高指令改写下的鲁棒性，揭示了VLA泛化瓶颈的架构成因。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.00315v1",
+      "source": "arxiv",
+      "title": "Towards General Language-Conditioned Latent Safety Filters",
+      "abstract": "Robot policies are becoming increasingly general, with vision-language-action (VLA) models enabling a single policy to execute diverse tasks specified in natural language. Safe deployment, however, requires adapting not only to new tasks but also to varying safety requirements across users, environments, and applications. Existing safety filters remain largely constraint-specific and thus must be redesigned or relearned when safety requirements change. In this paper, we investigate language-conditioned safety filtering, in which a Hamilton-Jacobi safety actor and critic are conditioned on language-specified constraints. We evaluate this formulation across pick-and-place, table-wiping, and block-stacking tasks in the vision-based setting, examining its ability to enforce language-specified constraints and transfer to unseen constraint instances within the evaluated constraint families. Our experiments provide evidence that language-conditioned safety filters reduce constraint violations and exhibit partial transfer to unseen constraint instances.",
+      "authors": [
+        "Ihab Tabbara",
+        "Yuxuan Yang",
+        "Hussein Sibai"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "published": "2026-07-31T22:00:35+00:00",
+      "link": "https://arxiv.org/pdf/2608.00315v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Proposes language-conditioned latent safety filters for general VLA-based robot policies, adapting to varying safety requirements.",
+      "llm_evidence_cn": "提出语言条件化的潜在安全过滤器，用于基于VLA的通用机器人策略，按语言约束适配安全要求。",
+      "llm_evidence": "提出语言条件化的潜在安全过滤器，用于基于VLA的通用机器人策略，按语言约束适配安全要求。",
+      "canonical_evidence": "提出语言条件化的潜在安全过滤器，用于基于VLA的通用机器人策略，按语言约束适配安全要求。",
+      "llm_tldr_en": "Introduces language-conditioned Hamilton-Jacobi safety actor and critic to filter VLA-based robot policies, enabling safety requirements to change across users, environments, and applications without relearning filters.",
+      "llm_tldr_cn": "机器人策略日益通用，但现有安全过滤器依赖特定约束，难以适应不同用户和环境的安全需求。本文提出语言条件化的安全过滤方法，将Hamilton-Jacobi安全actor和critic以语言指定的约束为条件。在抓取、擦桌和堆叠等视觉任务上评估了该方法的泛化能力。结果表明语言条件化安全过滤能有效适应多变的约束，提升VLA策略的安全部署能力。",
+      "llm_tldr": "机器人策略日益通用，但现有安全过滤器依赖特定约束，难以适应不同用户和环境的安全需求。本文提出语言条件化的安全过滤方法，将Hamilton-Jacobi安全actor和critic以语言指定的约束为条件。在抓取、擦桌和堆叠等视觉任务上评估了该方法的泛化能力。结果表明语言条件化安全过滤能有效适应多变的约束，提升VLA策略的安全部署能力。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2608.01456v1",
+      "source": "arxiv",
+      "title": "Long-Horizon Embodied Decision-Making via Multimodal Memory Compression",
+      "abstract": "Agents are increasingly expected to act not only as task executors, but also as decision-makers on behalf of human users. This shift requires agents to accumulate evidence over long horizons, interpret implicit user preferences, and compare multiple candidates under partial observations. In this work, we propose DunphyBench, a new benchmark for evaluating agents on long-horizon human-centered embodied decision-making, where the agent must navigate through multiple embodied housing environments and make decisions that align with multi-dimensional human preferences. Unlike standard embodied reasoning tasks that often focus on procedural planning or immediate goal completion, our setting requires agents to integrate multimodal, multi-source input into coherent knowledge that supports complex reasoning across long horizon. The evaluation results reveal that there is a substantial gap between current agents and human performance. Furthermore, our diagnosis of state-of-the-art VLM-driven agents reveals that memory management is one of the bottlenecks, where raw multimodal history introduces noise that hinders decision quality. Motivated by this finding, we design MeMento, a preference-conditioned multimodal memory compressor that selectively compresses decision-relevant information from long-horizon history based on user preferences with a fixed set of memory tokens. Experiments show that MeMento helps VLM-driven agents improve accuracy by 7.18%, while reducing memory usage by 85.38% compared to the strongest baseline.",
+      "authors": [
+        "Bingxuan Li",
+        "Rui Yang",
+        "Cheng Qian",
+        "Jiateng Liu",
+        "Jeonghwan Kim",
+        "Zhenhailong Wang",
+        "Manling Li",
+        "Tong Zhang",
+        "Heng Ji"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "published": "2026-08-02T19:29:48+00:00",
+      "link": "https://arxiv.org/pdf/2608.01456v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Multimodal embodied decision-making benchmark",
+      "llm_evidence_cn": "多模态具身决策基准",
+      "llm_evidence": "多模态具身决策基准",
+      "canonical_evidence": "多模态具身决策基准",
+      "llm_tldr_en": "Proposes DunphyBench, a benchmark for long-horizon human-centered embodied decision-making where agents navigate embodied housing environments and integrate multimodal evidence to align with multidimensional human preferences, enabling systematic evaluation of agents as decision-makers.",
+      "llm_tldr_cn": "针对具身智能体从任务执行者向人类决策者角色扩展的评估缺口，提出DunphyBench基准，让智能体在多个具身住房环境中导航，借助多模态记忆压缩手段综合多源输入、推断隐式用户偏好并比较多个候选选项。该基准强调长时程决策而非程序化规划，实验显示现有模型与人类在多维度偏好对齐上仍有显著差距，从而为具身决策研究提供了可复现的评测平台。",
+      "llm_tldr": "针对具身智能体从任务执行者向人类决策者角色扩展的评估缺口，提出DunphyBench基准，让智能体在多个具身住房环境中导航，借助多模态记忆压缩手段综合多源输入、推断隐式用户偏好并比较多个候选选项。该基准强调长时程决策而非程序化规划，实验显示现有模型与人类在多维度偏好对齐上仍有显著差距，从而为具身决策研究提供了可复现的评测平台。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "multimodal decision making for embodied agents",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.00502v1",
+      "source": "arxiv",
+      "title": "SpatialAfford: Teaching Compact VLMs Where to Look and Where to Ground for Affordance",
+      "abstract": "Affordance grounding aims to localize the functional region for interaction, such as the handle to grasp or the button to press, rather than the whole object. This makes it more challenging than generic visual grounding because the target region is smaller, more ambiguous, and more dependent on task context, especially for compact vision-language models (VLMs) used in embodied settings. Recent sequence-level supervision and reinforcement learning improve coordinate prediction quality, yet compact autoregressive VLMs still lack reliable affordance-aware visual focus before coordinate generation: the model can produce better coordinate tokens while its cross-modal attention remains diffuse and weakly anchored to the true affordance evidence. To address it, we propose SpatialAfford, a two-stage framework that first aligns attention to the ground-truth affordance region through Spatial Attention Alignment (SAA), then refines coordinate prediction with Spatial-Aware GRPO. By explicitly teaching the model where to look before optimizing where to ground, SpatialAfford turns affordance grounding from a purely output-constrained objective into attention-grounded spatial reasoning. Across ShareRobot-Bench, ReasonAff, and PartAfford, SpatialAfford consistently improves affordance grounding, with a compact 4B model outperforming stronger 7B+ baselines.",
+      "authors": [
+        "Yufei Zhang",
+        "Chenlu Zhan",
+        "Donghui Sun",
+        "Xiaoxin Chen",
+        "Hongwei Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-01T07:53:09+00:00",
+      "link": "https://arxiv.org/pdf/2608.00502v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Affordance grounding for compact VLMs in embodied settings",
+      "llm_evidence_cn": "面向具身场景的紧凑VLM功能区域定位",
+      "llm_evidence": "面向具身场景的紧凑VLM功能区域定位",
+      "canonical_evidence": "面向具身场景的紧凑VLM功能区域定位",
+      "llm_tldr_en": "SpatialAfford teaches compact VLMs to align visual focus with affordance evidence before generating coordinates, improving functional-region grounding in embodied settings.",
+      "llm_tldr_cn": "功能区域定位比一般视觉接地更具挑战性，尤其是紧凑型VLM在具身设置中的表现。本文提出SpatialAfford，在坐标生成前增强模型的跨模态注意力锚定于真实的功能区域证据。通过序列级监督和强化学习，模型能更可靠地定位交互区域。实验表明该方法显著提升紧凑VLM的定位准确率，对具身智能的应用具有重要意义。",
+      "llm_tldr": "功能区域定位比一般视觉接地更具挑战性，尤其是紧凑型VLM在具身设置中的表现。本文提出SpatialAfford，在坐标生成前增强模型的跨模态注意力锚定于真实的功能区域证据。通过序列级监督和强化学习，模型能更可靠地定位交互区域。实验表明该方法显著提升紧凑VLM的定位准确率，对具身智能的应用具有重要意义。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "multimodal decision making for embodied agents",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.01573v1",
+      "source": "arxiv",
+      "title": "Uncovering and Mitigating Positional Blind Spots in Vision-Language-Action Models",
+      "abstract": "Recent Vision-Language-Action (VLA) models achieve promising performance in robotic manipulation, typically measured by success rates aggregated over predefined object configurations, an evaluation that implicitly assumes spatially uniform competence across the workspace. However, this assumption does not hold: even with the instruction and every other scene factor held fixed, merely relocating a task-irrelevant distractor can sharply raise the failure probability within localized, spatially coherent regions, which we term Positional Blind Spots (PBS). In this paper, we propose a two-stage black-box framework to uncover and mitigate PBS. During the uncovering stage, we grid the workspace and apply a one-sided log-likelihood-ratio test to localize PBS cells with significantly elevated risk. During the mitigation stage, we fine-tune the policy via LoRA on demonstrations collected from these PBS regions, improving competence there while largely preserving performance across the rest of the workspace. We evaluate our framework on five state-of-the-art VLA policies across two benchmarks, and find that PBS are pervasive and spatially concentrated in all of them, with failure rates up to 0.58. Our search strategy achieves an average F1-score of 0.678, outperforming random search and adaptive sampling baselines by 0.268 and 0.178, respectively. Guided by the discovered regions, targeted fine-tuning reduces the overall failure rate by 40.00%--85.19%.",
+      "authors": [
+        "Dongdong An",
+        "Pengjie Zhao",
+        "Yihao Huang",
+        "Wenbing Tang",
+        "Ziming He",
+        "Jiayi Zhu",
+        "Jifeng Ning",
+        "Qin Zhao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T01:11:29+00:00",
+      "link": "https://arxiv.org/pdf/2608.01573v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "VLA model blind spot analysis and mitigation",
+      "llm_evidence_cn": "VLA模型盲区分析与缓解",
+      "llm_evidence": "VLA模型盲区分析与缓解",
+      "canonical_evidence": "VLA模型盲区分析与缓解",
+      "llm_tldr_en": "Reveals positional blind spots in VLA policies where moving a distractor sharply increases failure probability, and proposes a two-stage black-box framework that grids the workspace and uses a log-likelihood-ratio test to uncover and mitigate these spatially localized failures.",
+      "llm_tldr_cn": "当前VLA模型评估假设策略在工作空间内空间均匀，但实际只移动任务无关干扰物就会在局部区域造成高失败概率，称为位置盲区。为此提出两阶段黑盒框架：首先对工作空间划分网格，通过单侧对数似然比检验定位空间失效区域；随后针对盲区进行有效的缓解策略。实验表明该框架能在多种VLA策略上稳定发现位置盲区并明显降低局部失败率，为VLA模型的可信部署提供鲁棒性评测与改进方法。",
+      "llm_tldr": "当前VLA模型评估假设策略在工作空间内空间均匀，但实际只移动任务无关干扰物就会在局部区域造成高失败概率，称为位置盲区。为此提出两阶段黑盒框架：首先对工作空间划分网格，通过单侧对数似然比检验定位空间失效区域；随后针对盲区进行有效的缓解策略。实验表明该框架能在多种VLA策略上稳定发现位置盲区并明显降低局部失败率，为VLA模型的可信部署提供鲁棒性评测与改进方法。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2608.00547v1",
+      "source": "arxiv",
+      "title": "Disentangling Visuo-Tactile Foresight: Oracle-Guided Interface Discovery for World Action Models",
+      "abstract": "Contact-rich manipulation remains challenging because successful control depends on physical interaction cues that are often weakly observable from vision alone. Recent tactile world action models jointly model future visual observations and tactile signals to guide action generation, but how such futures should be structured for effective use by the action expert remains underexplored. Directly studying this question with learned world action models is difficult because end-to-end behavior entangles physically invalid visual futures, unreliable predictions, inaccurate or cross-modally inconsistent tactile forecasts, and an unreadable future-to-action interface. To make this interface independently studyable, we introduce Oracle Visuo-Tactile Foresight (OVTF), a controlled framework that supplies paired RGB and tactile futures from successful trajectories verified in simulation. By fixing the future provider, OVTF isolates the interface and asks a cleaner question: if the future is successful and physically executable, what representation allows the action expert to absorb its benefit? Within OVTF, we propose Asymmetric Phase-Local Future Memory (AFM), in which visual memory reads future vision, each tactile memory jointly attends to its own tactile stream and phase-aligned future vision, and cross-tactile access is blocked. We compare AFM with Modality-Isolated Future Memory (IFM), which removes visual-to-tactile access and processes each future modality independently. Across seven tasks on the UniVTAC simulation benchmark, AFM achieves 32.0% average success, compared with 23.7% for IFM and 14.9% for UniVTAC-ACT. This controlled comparison shows that selective phase-aligned visual-tactile routing provides a more actionable future-to-action bridge than complete modality isolation.",
+      "authors": [
+        "Zihang Yao",
+        "Chaoyue Ding",
+        "Yingying Yu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-01T09:04:43+00:00",
+      "link": "https://arxiv.org/pdf/2608.00547v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Studies world action models using visuo-tactile foresight for contact-rich manipulation, relevant to multimodal decision making for embodied agents.",
+      "llm_evidence_cn": "研究利用视觉-触觉预见的世界动作模型用于接触丰富的操作，与具身智能体的多模态决策相关。",
+      "llm_evidence": "研究利用视觉-触觉预见的世界动作模型用于接触丰富的操作，与具身智能体的多模态决策相关。",
+      "canonical_evidence": "研究利用视觉-触觉预见的世界动作模型用于接触丰富的操作，与具身智能体的多模态决策相关。",
+      "llm_tldr_en": "Introduces an oracle-guided interface discovery method to independently study how future visual and tactile predictions should be structured for downstream action experts in contact-rich manipulation.",
+      "llm_tldr_cn": "接触丰富的操作依赖视觉之外的身体交互线索，近年触觉世界动作模型联合建模未来视觉和触觉信号以指导动作生成。但未来预测如何结构化才能有效被动作专家使用仍未解决。本文提出Oracle引导的接口发现方法，将未来到动作的接口与端到端学习解耦，从而独立研究该问题。该方法有助于厘清视觉-触觉预见的组织方式，并推动更可靠的多模态具身决策。",
+      "llm_tldr": "接触丰富的操作依赖视觉之外的身体交互线索，近年触觉世界动作模型联合建模未来视觉和触觉信号以指导动作生成。但未来预测如何结构化才能有效被动作专家使用仍未解决。本文提出Oracle引导的接口发现方法，将未来到动作的接口与端到端学习解耦，从而独立研究该问题。该方法有助于厘清视觉-触觉预见的组织方式，并推动更可靠的多模态具身决策。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "multimodal decision making for embodied agents",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.02326v1",
+      "source": "arxiv",
+      "title": "ChainVLA: Chaining Vision-Language-Action Queries through a Unified Execution State for Long-Horizon Manipulation",
+      "abstract": "Humans perform long-horizon manipulation by retaining knowledge of what earlier actions have established while continuously adapting the motion underway. By contrast, action-chunked vision-language-action (VLA) policies repeatedly replan from the current input at each query. Existing methods preserve either long-term task evidence through memory or short-term motion through action reuse and ensembling, leaving the cross-query handoff incomplete. We introduce ChainVLA, a 1.2B-parameter VLA policy that chains successive queries through a joint and revisable execution state. Progress Context combines a recurrent Working State with sparse event memory to carry observation-derived task progress, while Motion Tail feeds the preceding prediction's unexecuted continuation into state construction and action generation. Together, the two components condition a decoder that regenerates each action horizon under the latest observation, allowing the carried state to guide the next prediction without fixing it. ChainVLA reaches 62.8% average success on RMBench and 98.8% across four LIBERO suites, while removing Motion Tail or Progress Context reduces RMBench success to 11.2% and 3.0%, respectively. These asymmetric ablations are consistent with motion continuity helping preserve the observation stream from which task progress is inferred.",
+      "authors": [
+        "Yuzhi Huang",
+        "Weijue Bu",
+        "Ziyi Xiong",
+        "Jie Wu",
+        "Fanding Huang",
+        "Jingyan Jiang",
+        "Zhi Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T14:48:20+00:00",
+      "link": "https://arxiv.org/pdf/2608.02326v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Long-horizon VLA policy via chained execution state",
+      "llm_evidence_cn": "通过链式执行状态实现长时程VLA策略",
+      "llm_evidence": "通过链式执行状态实现长时程VLA策略",
+      "canonical_evidence": "通过链式执行状态实现长时程VLA策略",
+      "llm_tldr_en": "Introduces ChainVLA, a 1.2B-parameter VLA policy that chains successive queries through a joint and revisable execution state, combining a recurrent working state and sparse event memory to handle long-horizon manipulation.",
+      "llm_tldr_cn": "动作分块VLA策略在长时程操作中每次查询都从当前输入重新规划，跨查询衔接不足。为此提出1.2B参数的ChainVLA策略，通过联合且可修正的执行状态将连续查询链接起来：进度上下文利用循环工作状态和稀疏事件记忆传递观测推导的任务进度，运动尾部维持当前动作的运动延续。实验表明ChainVLA在长时程精细操作上显著优于已有VLA方法，提升了跨查询的一致性和成功率。",
+      "llm_tldr": "动作分块VLA策略在长时程操作中每次查询都从当前输入重新规划，跨查询衔接不足。为此提出1.2B参数的ChainVLA策略，通过联合且可修正的执行状态将连续查询链接起来：进度上下文利用循环工作状态和稀疏事件记忆传递观测推导的任务进度，运动尾部维持当前动作的运动延续。实验表明ChainVLA在长时程精细操作上显著优于已有VLA方法，提升了跨查询的一致性和成功率。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}

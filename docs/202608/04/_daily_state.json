@@ -1,0 +1,201 @@
+{
+  "date": "20260804",
+  "date_label": "",
+  "generated_at": "2026-08-04 20:32:44 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.00569v1",
+      "route": "202608/04/2608.00569v1-latency-tolerant-cloud-edge-collaborative-vision-language-action-models-via-emergent-representational-specialization",
+      "title": "Latency-Tolerant Cloud-Edge Collaborative Vision-Language-Action Models via Emergent Representational Specialization",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出云边协同的VLA策略，容忍网络延迟与抖动，支持移动机器人具身决策。",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    },
+    {
+      "paper_id": "2608.01265v1",
+      "route": "202608/04/2608.01265v1-hermite-curves-as-trajectory-priors-for-vision-language-action-models",
+      "title": "Hermite Curves as Trajectory Priors for Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "为视觉-语言-动作(VLA)模型引入Hermite轨迹先验，改善机器人操作中动作块的结构化表示。",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    },
+    {
+      "paper_id": "2608.01826v1",
+      "route": "202608/04/2608.01826v1-multi-view-unified-camera-fields-geometry-shaped-action-facing-representations-for-rgb-only-multi-camera-vla-policies",
+      "title": "Multi-View Unified Camera Fields: Geometry-Shaped Action-Facing Representations for RGB-Only Multi-Camera VLA Policies",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向具身操作的多相机VLA策略与几何动作表示",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    },
+    {
+      "paper_id": "2608.02197v1",
+      "route": "202608/04/2608.02197v1-look-where-it-matters-adaptive-visual-refinement-for-vision-language-action-models",
+      "title": "Look Where It Matters: Adaptive Visual Refinement for Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向具身操作的VLA模型视觉精炼",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    },
+    {
+      "paper_id": "2608.02257v1",
+      "route": "202608/04/2608.02257v1-learning-panorama-aware-vla-for-mobile-manipulation-with-whole-body-teleoperation",
+      "title": "Learning Panorama-Aware VLA for Mobile Manipulation with Whole-Body Teleoperation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向移动操作的VLA策略",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    },
+    {
+      "paper_id": "2608.02497v1",
+      "route": "202608/04/2608.02497v1-grounded-semantic-re-binding-for-robust-instruction-generalization-in-vision-language-action-models",
+      "title": "Grounded Semantic Re-Binding for Robust Instruction Generalization in Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "VLA模型指令泛化鲁棒性",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    },
+    {
+      "paper_id": "2608.00315v1",
+      "route": "202608/04/2608.00315v1-towards-general-language-conditioned-latent-safety-filters",
+      "title": "Towards General Language-Conditioned Latent Safety Filters",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "提出语言条件化的潜在安全过滤器，用于基于VLA的通用机器人策略，按语言约束适配安全要求。",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    },
+    {
+      "paper_id": "2608.01573v1",
+      "route": "202608/04/2608.01573v1-uncovering-and-mitigating-positional-blind-spots-in-vision-language-action-models",
+      "title": "Uncovering and Mitigating Positional Blind Spots in Vision-Language-Action Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "VLA模型盲区分析与缓解",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    },
+    {
+      "paper_id": "2608.02326v1",
+      "route": "202608/04/2608.02326v1-chainvla-chaining-vision-language-action-queries-through-a-unified-execution-state-for-long-horizon-manipulation",
+      "title": "ChainVLA: Chaining Vision-Language-Action Queries through a Unified Execution State for Long-Horizon Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过链式执行状态实现长时程VLA策略",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    },
+    {
+      "paper_id": "2608.01456v1",
+      "route": "202608/04/2608.01456v1-long-horizon-embodied-decision-making-via-multimodal-memory-compression",
+      "title": "Long-Horizon Embodied Decision-Making via Multimodal Memory Compression",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "多模态具身决策基准",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    },
+    {
+      "paper_id": "2608.00502v1",
+      "route": "202608/04/2608.00502v1-spatialafford-teaching-compact-vlms-where-to-look-and-where-to-ground-for-affordance",
+      "title": "SpatialAfford: Teaching Compact VLMs Where to Look and Where to Ground for Affordance",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向具身场景的紧凑VLM功能区域定位",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    },
+    {
+      "paper_id": "2608.00547v1",
+      "route": "202608/04/2608.00547v1-disentangling-visuo-tactile-foresight-oracle-guided-interface-discovery-for-world-action-models",
+      "title": "Disentangling Visuo-Tactile Foresight: Oracle-Guided Interface Discovery for World Action Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "研究利用视觉-触觉预见的世界动作模型用于接触丰富的操作，与具身智能体的多模态决策相关。",
+      "first_seen_at": "2026-08-04 20:32:44 UTC",
+      "updated_at": "2026-08-04 20:32:44 UTC"
+    }
+  ]
+}
