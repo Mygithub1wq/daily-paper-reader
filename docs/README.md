@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-04</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-05</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 12 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>4</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-04 20:32:44 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-05 20:35:44 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日12篇论文聚焦视觉-语言-动作模型（VLA），精读6篇，速读6篇，核心围绕效率、安全与长程操控。</p>
-<p>最值得关注两篇9分工作：利用表征特化实现延迟容忍的云端-边缘协作VLA，以及用Hermite曲线作为VLA轨迹先验，均显著提升部署性能。</p>
-<p>后续可深入探索安全过滤与位置盲点缓解，并结合ChainVLA长程操作查询链，推进VLA在真实机器人中的鲁棒落地。</p>
+<p>今日精读聚焦半自主视觉-语言-动作模型，速读关注视觉导航新方法；最值得看的是两篇9.0分VLA研究，分别引入阶段感知标签的价值函数和本体感觉状态使用分析；下一步可尝试将VLA的高分洞见迁移到导航任务中。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">4 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Latency-Tolerant Cloud-Edge Collaborative Vision-Language-Action Models via Emergent Representational Specialization">Latency-Tolerant Cloud-Edge Collaborative Vision-Language-Action Models via Emergent Representational Specialization</span></li><li><span class="dpr-home-dashboard-paper-title" title="Hermite Curves as Trajectory Priors for Vision-Language-Action Models">Hermite Curves as Trajectory Priors for Vision-Language-Action Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="Multi-View Unified Camera Fields: Geometry-Shaped Action-Facing Representations for RGB-Only Multi-Camera VLA Policies">Multi-View Unified Camera Fields: Geometry-Shaped Action-Facing Representations for RGB-Only Multi-Camera VLA Policies</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ValueFormer: A Causal Transformer Value Function with Stage-Aware Labels for Semi-Autonomous Vision-Language-Action Policies">ValueFormer: A Causal Transformer Value Function with Stage-Aware Labels for Semi-Autonomous Vision-Language-Action Policies</span></li><li><span class="dpr-home-dashboard-paper-title" title="How Should Vision-Language-Action Models Use Proprioceptive State?">How Should Vision-Language-Action Models Use Proprioceptive State?</span></li><li><span class="dpr-home-dashboard-paper-title" title="Structure-Aware Robust Fine-Tuning: Defending Vision-Language-Action Robots Against Physical Attention Hijacking">Structure-Aware Robust Fine-Tuning: Defending Vision-Language-Action Robots Against Physical Attention Hijacking</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>4</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Towards General Language-Conditioned Latent Safety Filters">Towards General Language-Conditioned Latent Safety Filters</span></li><li><span class="dpr-home-dashboard-paper-title" title="Uncovering and Mitigating Positional Blind Spots in Vision-Language-Action Models">Uncovering and Mitigating Positional Blind Spots in Vision-Language-Action Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="ChainVLA: Chaining Vision-Language-Action Queries through a Unified Execution State for Long-Horizon Manipulation">ChainVLA: Chaining Vision-Language-Action Queries through a Unified Execution State for Long-Horizon Manipulation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="From Routes to Steps: Separating Semantic Progress from Local Execution in Vision-and-Language Navigation">From Routes to Steps: Separating Semantic Progress from Local Execution in Vision-and-Language Navigation</span></li><li><span class="dpr-home-dashboard-paper-title" title="UniNav: A Unified World-Action Diffusion Model for Visual Navigation">UniNav: A Unified World-Action Diffusion Model for Visual Navigation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>2</strong></span></div>
 </section>
 </div>
 

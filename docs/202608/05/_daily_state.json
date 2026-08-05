@@ -1,0 +1,105 @@
+{
+  "date": "20260805",
+  "date_label": "",
+  "generated_at": "2026-08-05 20:35:44 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.02958v1",
+      "route": "202608/05/2608.02958v1-valueformer-a-causal-transformer-value-function-with-stage-aware-labels-for-semi-autonomous-vision-language-action-policies",
+      "title": "ValueFormer: A Causal Transformer Value Function with Stage-Aware Labels for Semi-Autonomous Vision-Language-Action Policies",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "为半自主VLA策略提供价值函数与密集标签以支持决策",
+      "first_seen_at": "2026-08-05 20:35:44 UTC",
+      "updated_at": "2026-08-05 20:35:44 UTC"
+    },
+    {
+      "paper_id": "2608.03052v1",
+      "route": "202608/05/2608.03052v1-how-should-vision-language-action-models-use-proprioceptive-state",
+      "title": "How Should Vision-Language-Action Models Use Proprioceptive State?",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "研究VLA模型如何融合本体感觉状态以进行机器人闭环控制。",
+      "first_seen_at": "2026-08-05 20:35:44 UTC",
+      "updated_at": "2026-08-05 20:35:44 UTC"
+    },
+    {
+      "paper_id": "2608.03231v1",
+      "route": "202608/05/2608.03231v1-structure-aware-robust-fine-tuning-defending-vision-language-action-robots-against-physical-attention-hijacking",
+      "title": "Structure-Aware Robust Fine-Tuning: Defending Vision-Language-Action Robots Against Physical Attention Hijacking",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "VLA策略对物理对抗攻击的鲁棒性",
+      "first_seen_at": "2026-08-05 20:35:44 UTC",
+      "updated_at": "2026-08-05 20:35:44 UTC"
+    },
+    {
+      "paper_id": "2608.03563v1",
+      "route": "202608/05/2608.03563v1-unified-visuomotor-targets-supervising-vlas-beyond-physical-actions",
+      "title": "Unified Visuomotor Targets: Supervising VLAs Beyond Physical Actions",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出统一视动监督目标以改进VLA模型训练",
+      "first_seen_at": "2026-08-05 20:35:44 UTC",
+      "updated_at": "2026-08-05 20:35:44 UTC"
+    },
+    {
+      "paper_id": "2608.03143v1",
+      "route": "202608/05/2608.03143v1-from-routes-to-steps-separating-semantic-progress-from-local-execution-in-vision-and-language-navigation",
+      "title": "From Routes to Steps: Separating Semantic Progress from Local Execution in Vision-and-Language Navigation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "视觉-语言导航中解耦语义进度与局部执行，辅助VLM决策",
+      "first_seen_at": "2026-08-05 20:35:44 UTC",
+      "updated_at": "2026-08-05 20:35:44 UTC"
+    },
+    {
+      "paper_id": "2608.03244v1",
+      "route": "202608/05/2608.03244v1-uninav-a-unified-world-action-diffusion-model-for-visual-navigation",
+      "title": "UniNav: A Unified World-Action Diffusion Model for Visual Navigation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向具身视觉导航的统一世界-动作扩散模型",
+      "first_seen_at": "2026-08-05 20:35:44 UTC",
+      "updated_at": "2026-08-05 20:35:44 UTC"
+    }
+  ]
+}
