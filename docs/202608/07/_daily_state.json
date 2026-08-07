@@ -1,0 +1,137 @@
+{
+  "date": "20260807",
+  "date_label": "",
+  "generated_at": "2026-08-07 01:13:05 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.04396v1",
+      "route": "202608/07/2608.04396v1-cofactvla-deconfounding-vision-language-action-models-via-counterfactual-intervention",
+      "title": "CofactVLA: Deconfounding Vision-Language-Action Models via Counterfactual Intervention",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "用反事实干预去混淆VLA模型",
+      "first_seen_at": "2026-08-07 01:13:05 UTC",
+      "updated_at": "2026-08-07 01:13:05 UTC"
+    },
+    {
+      "paper_id": "2608.04510v1",
+      "route": "202608/07/2608.04510v1-guard-grounding-uncertainty-and-ablation-based-risk-detection-for-diffusion-based-vlas",
+      "title": "GUARD: Grounding Uncertainty and Ablation-Based Risk Detection for Diffusion-Based VLAs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "扩散式VLA策略的接地风险检测",
+      "first_seen_at": "2026-08-07 01:13:05 UTC",
+      "updated_at": "2026-08-07 01:13:05 UTC"
+    },
+    {
+      "paper_id": "2608.04527v1",
+      "route": "202608/07/2608.04527v1-retrieve-in-time-correct-in-frequency",
+      "title": "Retrieve in Time, Correct in Frequency",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "冻结VLA策略的免训练测试时修正",
+      "first_seen_at": "2026-08-07 01:13:05 UTC",
+      "updated_at": "2026-08-07 01:13:05 UTC"
+    },
+    {
+      "paper_id": "2608.04633v1",
+      "route": "202608/07/2608.04633v1-mind-vla-instruction-aware-spatial-representation-alignment-for-vision-language-action-models",
+      "title": "Mind-VLA: Instruction-Aware Spatial Representation Alignment for Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "VLA模型中的指令感知空间表示对齐",
+      "first_seen_at": "2026-08-07 01:13:05 UTC",
+      "updated_at": "2026-08-07 01:13:05 UTC"
+    },
+    {
+      "paper_id": "2608.04765v1",
+      "route": "202608/07/2608.04765v1-explicit-language-memory-for-long-horizon-planning-in-vision-language-action-models",
+      "title": "Explicit Language Memory for Long-Horizon Planning in Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "VLA模型中的显式语言记忆用于长期规划",
+      "first_seen_at": "2026-08-07 01:13:05 UTC",
+      "updated_at": "2026-08-07 01:13:05 UTC"
+    },
+    {
+      "paper_id": "2608.05042v1",
+      "route": "202608/07/2608.05042v1-bridgevla-a-data-efficient-generalizable-and-memory-augmented-vision-language-action-framework-for-3d-manipulation",
+      "title": "BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向3D操作的数据高效、可泛化、记忆增强的VLA框架",
+      "first_seen_at": "2026-08-07 01:13:05 UTC",
+      "updated_at": "2026-08-07 01:13:05 UTC"
+    },
+    {
+      "paper_id": "2608.04428v1",
+      "route": "202608/07/2608.04428v1-deltoris-enabling-real-time-vla-inference-in-embodied-ai-via-bit-level-sparsity-and-speculative-inference",
+      "title": "Deltoris: Enabling Real-time VLA Inference in Embodied AI via Bit-level Sparsity and Speculative Inference",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向具身AI的实时扩散式VLA推理",
+      "first_seen_at": "2026-08-07 01:13:05 UTC",
+      "updated_at": "2026-08-07 01:13:05 UTC"
+    },
+    {
+      "paper_id": "2608.03099v1",
+      "route": "202608/07/2608.03099v1-what-language-does-and-what-the-evidence-supports-a-functional-role-taxonomy-and-evidence-audit-of-language-grounding-in-embodied-agents",
+      "title": "What Language Does and What the Evidence Supports: A Functional Role Taxonomy and Evidence Audit of Language Grounding in Embodied Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向具身智能体中语言接地功能的综述",
+      "first_seen_at": "2026-08-07 01:13:05 UTC",
+      "updated_at": "2026-08-07 01:13:05 UTC"
+    }
+  ]
+}
