@@ -1,0 +1,287 @@
+Title: Visual Grounding in Zero-Shot Vision-Language Control
+
+URL Source: https://arxiv.org/pdf/2608.06154v1
+
+Published Time: Fri, 07 Aug 2026 01:07:37 GMT
+
+Number of Pages: 8
+
+Markdown Content:
+# Visual Grounding in Zero-Shot Vision–Language Control 
+
+J. de Curt` o∗†∥ , Dayani Plasencia ‡† , Diego S´ anchez §† , I. de Zarz` a¶∥ ∗Department of Computer Applications in Science & Engineering , BARCELONA Supercomputing Center , Barcelona, Spain 
+
+†Escuela T´ ecnica Superior de Ingenier´ ıa (ICAI) , Universidad Pontificia Comillas , Madrid, Spain Email: jdecurto@icai.comillas.edu 
+
+‡Herbert Wertheim College of Engineering , University of Florida , Gainesville, FL 32611, USA Email: dayani.plasencia@ufl.edu 
+
+§The Grainger College of Engineering , University of Illinois Urbana-Champaign , Urbana, IL 61801, USA Email: dsanc83@illinois.edu 
+
+¶Human centered AI, Data & Software , LUXEMBOURG Institute of Science and Technology , Esch-sur-Alzette, Luxembourg Email: irene.zarza@list.lu 
+
+∥Estudis d’Inform` atica, Multim` edia i Telecomunicaci´ o, Universitat Oberta de Catalunya , Barcelona, Spain 
+
+Abstract —Vision–language models (VLMs) are increasingly used as zero-shot controllers, but successful trajectories do not necessarily show that their decisions are grounded in visual input: simulator dynamics and conservative action priors can produce favourable scores without meaningful perception. We investigate this problem with an input-ablation battery combining blind-image controls, repeated identical inputs, lane-axis reflec-tion, non-visual baselines, and pipeline-integrity checks. Across nine direct-action models, six structured local VLMs, and an exploratory VLM–MPC hierarchy, we analyse 32 874 scored calls over two embodiments and three simulation environments. The direct-control results are largely negative. A constant-SLOW 
+
+policy outperforms a scripted geometric controller, several models are image-invariant or nearly constant, and models that recognize longitudinal hazards still fail to transform LEFT and RIGHT 
+
+decisions consistently under reflection. None of the six local VLMs satisfies the joint longitudinal and lateral grounding criteria. However, an image-only deterministic positive control estimates the lead gap with 0.090 m MAE and exact mirror equivariance, confirming that the stimuli and controller interface contain sufficient visual information. The failures are there-fore modular rather than universal. A post-hoc but leakage-controlled symmetry-consensus guardian selects Gemma4-12B and Qwen3.5-9B using 16 calibration frames and freezes a 2-of-4 hazard vote across original and reflected views. On 272 held-out frames, it achieves 0.956 accuracy and 0.954 balanced accuracy (episode-cluster bootstrap 95% CI [0 .895 , 0.990] ). Nested leave-one-episode-out evaluation recovers the same model pair and threshold in all 12 folds and reaches 0.951 balanced accuracy. Abstaining on tied votes raises committed balanced accuracy to 0.973 at 0.824 coverage. When deterministic perception retains lateral authority, offline modular replay achieves 0.934 
+
+action agreement and exact mirror equivariance. A separate MPC diagnostic further shows that low-level optimization cannot recover missing geometry from collapsed visual intent. These results support the use of current VLMs as bounded, selective hazard assistants rather than as monolithic zero-shot controllers. 
+
+Index Terms —vision–language models, autonomous systems, model predictive control, multimodal perception 
+
+I. I NTRODUCTION 
+
+Vision–language models have made zero-shot visual control an appealing proposition for networked autonomous systems. A single pretrained model, prompted in natural language, promises to replace a hand-engineered perception and plan-ning stack, and the same model can be served from an on-board accelerator or from a hosted endpoint reached over the network. Both deployments are now practical, and the choice between them is a systems question involving latency, energy and recurring cost. That systems question presupposes a prior one that is rarely asked: does the controller use the camera at all? The concern is concrete. Simulated driving benchmarks reward forward progress and penalise collisions. In such envi-ronments a policy that always decelerates is close to optimal, and it requires no perception. If a VLM controller emits a near-constant action, aggregate metrics will report competence that the model does not have, and the resulting deployment decision, edge or cloud, which model, at what cost, will be made on evidence that measures the simulator rather than the model. We make both the failure and its useful boundary measur-able: 1) an input-ablation battery with blind controls, a noise floor, lane-axis reflection, baseline policies, and four pipeline-integrity guards (Sections III); 2) a constructive bounded capability: an image-only positive control and a leakage-controlled symmetry-consensus guardian reaching 0.954 held-out balanced accuracy and 0.973 at 0.824 selective coverage (Sec-tions IV-C and V-B); 3) evidence that monolithic scores and downstream so-phistication do not certify perception: constants can outperform scripts, and visual intent reduces an MPC hierarchy from 23 /25 to 8/25 goals; and arXiv:2608.06154v1 [cs.RO] 6 Aug 2026 TABLE I BLIND -INPUT CONDITIONS . O NLY THE IMAGE CHANGES .                    
+
+> Condition Image Tests
+> real true frame reference
+> real_repeat true frame, 2nd call noise floor
+> blank uniform mid-grey is the image read at all?
+> noise uniform random RGB is any content used?
+> shuffled other frame, same scen. is this frame used?
+> cross_scenario frame, other scenario is scene context used?
+> text_only none prompt alone sufficient?
+> mirrored flip across lane axis lateral grounding
+
+4) a graded capability structure in which longitudinal haz-ard recognition can be recovered despite failed lateral geometry, while prompt formulation strongly changes measured grounding (Sections V-E and V-F). II. B ACKGROUND AND RELATED WORK 
+
+Vision–language pretraining [1], [2] supports open-ended image reasoning and has been extended to direct action selection [12]–[15], driving-hazard description [16], and mixed aerial–ground perception [17], [18]. Open-weight controllers range from compact edge models [5], [11] to hosted 72B systems [3], [4]. Shortcut performance can be unrelated to the intended capability [19], motivating behavioural tests [20], [21]. This risk is acute in control, where dynamics, safety logic and reward shape trajectories independently of the policy. We therefore combine input ablation with metamorphic relations [22], an approach used in autonomous-driving perception [23], [24] and semantic-invariance testing [25], [26], and report effect sizes rather than aggregate success alone. On-board inference bounds latency and keeps data local but consumes limited memory and energy [5], [11], [28]; hosted inference offers larger models at the cost of network delay, recurring charges and less control over the stack. We compare both on identical stimuli (Section V-G). Local energy is directly observable [29]; hosted energy is not derivable from the API. III. T HE INPUT -A BLATION BATTERY 
+
+The battery asks whether the action depends on the image and, if so, on which property, using tests of increasing speci-ficity. For each frame we issue the same prompt under eight input conditions (Table I). Only the image varies. Agreement is measured against the action produced for the real frame. We report IDI = 1 − agree( real , blank ), but use a condition–action χ2 test with Cram´ er’s V as the primary, Holm-corrected statistic. IDI is weak: a pixel-grounded syn-thetic policy scored only 0.083 on mostly symmetric frames, whereas V = 0 .61 detected dependence. Hosted endpoints remain stochastic at temperature 0.The real_repeat condition measures self-disagreement 
+
+s; dependence below that floor is uninformative. We report 
+
+IDI adj = IDI − s and flag IDI ≤ 1.5s. One model repeated its answer on only 21% of identical images ( s = 0.79 ): apparent IDI was 0.77 , but adjusted IDI was −0.021 , despite conventional tests giving p < 10 −4.Refusal or unparseable blank-image output changes the response, not necessarily the decision. We test both all outputs and parsed actions; significance only at response level is a refusal effect. One model had V = 0 .46 , p < 10 −4 over outputs but V = 0 , p = 1 over decisions, entirely from 54 /144 
+
+blank-frame parse failures versus 1/144 real-frame failures. Under reflection across the lane axis, grounded direction must exchange LEFT and RIGHT ; failure to swap indicates a prior. For this top-down horizontal road, the correct image transform is a vertical flip, not a travel-reversing horizontal flip. We report ndir because the test has no power without directional actions. We test real-frame action against lead gap g using both a contingency test for g < 18 m and permutation-tested I(A; g)
+
+with quartile-binned g. Grounding requires both to reject and a smaller median gap for braking than proceeding. On identical seeds we compare every constant action, uniform random control, sampling from each model’s action marginal, and a scripted geometric controller using ground-truth state. Because steps are autocorrelated, confidence intervals cluster-bootstrap episodes ( B = 5000 ); permutation tests also use 5000 resamples. Model comparisons are Holm-corrected [42] using SciPy [43]. IV. E XPERIMENTAL SETUP 
+
+We use two embodiments: a quadrotor in 
+
+gym-pybullet-drones [31] and a ground vehicle in highway-env [30], both under Gymnasium [32]. The blind-input battery uses a static frame bank of 144 frames (laptop arm) and 288 frames (GPU arm) drawn from four scenarios, light traffic, dense traffic, a merge, and a blocked lane, at three seeds each. Because rendering differs across operating systems and SDL builds while simulation does not, we verify cross-machine equivalence by a geometry fingerprint : a hash of every frame’s ground-truth lead gap. The two arms in this work agree exactly, on all 144 shared frames to 0.000 m, despite different pygame and numpy 
+
+versions. 
+
+A. Models 
+
+The edge arm comprises four open-weight models runnable on a single T4: SmolVLM-Instruct [11], Qwen2-VL-2B and Qwen2-VL-7B [3], and LLaVA-1.5-7B [2], loaded through the Transformers library [44]. The hosted arm comprises Qwen2.5-VL-72B [4], MiniCPM-V-4.5 [5], [10], Cosmos3-Super-Reasoner (33B), Kimi-K2.6 and Kimi-K3, served through an OpenAI-compatible endpoint. The structured local arm uses Qwen3-VL-8B [6], Gemma 4-12B [7], Qwen3.5-9B [8], Qwen2.5-VL-7B, Ministral 3-8B [9], and MiniCPM-V-4.5: recorded Q4 K M Ollama 0.32.5 builds run sequentially on one A100-80GB. Preflight pins one request mode per model; exact digests and templates are released. Reasoning models emit a chain of thought before the an-swer; if the token budget is exhausted first, the visible content is empty and the call is lost. We therefore set the budget per model from a measured probe rather than one global value, and request structured output where the endpoint supports it. Under a shared 1024 -token budget the two Kimi models lost 
+
+64% and 60% of calls to truncation, while Cosmos3 completed in a mean of 187 tokens; at 4096 tokens with JSON-mode output those losses fall to 28% and 0.7% . Every truncated call is recorded as a failure and never silently substituted. 
+
+B. Corpus and parsing 
+
+The original study contributes 23 416 model queries: 2 016 
+
+edge, two 5 760 -query hosted runs, 9 000 prompt-ablation calls and 880 probes. The structured local arm adds 192 admission, 
+
+3 456 static original/mirror and 1 585 online queries. The MPC diagnostic adds 4 225 Gemma4 calls across 531 episodes, for 32 874 scored calls excluding adapter preflight. Ground-truth state is never supplied to a model. Parse failures remain 
+
+UNPARSED ; online fail-safe execution is logged separately as executed_action= S L O W and is never credited to the model. 
+
+C. Constructive renderer-calibrated controller 
+
+Structured scene estimates feed a fixed safety pol-icy. The image-only positive control measures geometry from RGB without simulator state; VLMs receive a static crop/enlargement with a renderer legend, 10 m ruler and fixed thresholds, but no frame-specific label. Admission on 16 balanced frame/mirror pairs requires parse ≥ .95 , raw and balanced close accuracy ≥ .75 , scene/action equivariance 
+
+≥ .65 /. 75 , at least three actions and two directional actions. The 288-pair full battery and 12-episode online diagnostic retain the same gate; online frames additionally pass renderer-integrity and positive-control checks. The structured controller operates on a calibrated top-down representation with an explicit ego reference and lane conven-tion (see Figure 1). In addition to the released simulator frame, we provide a legend-augmented view and evaluate symmetry consistency by reflecting the scene across the lane axis. 
+
+D. Symmetry-consensus longitudinal guardian 
+
+We reuse the completed local calls in a post-hoc but leakage-controlled analysis. The pre-existing 16-frame admission set selects two of six models and a threshold over four hazard votes (two models × original/reflected view); both are frozen before the other 272 frames are read. A 2–2 split permits abstention. Episode-cluster bootstrap and nested leave-one-episode-out tests measure uncertainty and selection stability. In offline modular replay, the VLMs receive only longitudinal authority while a deterministic RGB parser retains collision and lateral-clearance authority. 
+
+E. Hierarchical VLM–MPC diagnostic 
+
+A separate forward-camera rover tests whether a competent low-level controller can rescue a weak semantic planner. The                                 
+
+> TABLE II CLOSED -LOOP BASELINE LADDER (H I G H W A Y -E N V ), 32 EPISODES PER POLICY . A CONSTANT ACTION OUTPERFORMS THE SCRIPTED CONTROLLER ON EVERY METRIC .
+> Policy Dist. (m) Reward Speed Crash constant-SLOW 514.4 19.64 20.1 3.1%
+> oracle-geometric 444.5 16.34 23.5 37.5% random-uniform 339.3 12.05 22.7 78.1% constant-LEFT 211.3 6.92 25.0 87.5% constant-RIGHT 197.0 7.01 25.0 100% constant-STRAIGHT 145.8 5.13 28.1 100%
+
+default Gemma4 Ollama interface emits one of five intents every 1.0 s; a constrained, linearized bicycle MPC [41] runs at 0.2 s with horizon eight and maps the intent to a target speed and lateral offset. In the primary 5-scenario × 5-seed ablation, the MPC is fixed while the intent source varies and simulator obstacle centres feed its keep-out constraints. A second 4-scenario × 8-seed ablation disables those constraints except for an oracle-MPC reference and separates lateral-only from full VLM directives. Safety overrides are disabled; the episode records report zero unparsed outputs across 4 225 
+
+VLM calls. The exact model digest and the separate ablation driver were not present in the returned bundle, so this arm is explicitly exploratory; controller source, episode records and an independent validator are released. V. R ESULTS 
+
+Table II reports the baseline ladder over 7 policies × 4
+
+scenarios × 8 seeds. The best policy is a constant one. It travels 15 .7% farther than the scripted geometric controller, earns 20 .2% more reward, and crashes 12 × less often, while consuming no visual input whatsoever. Any VLM that converges on deceleration will therefore score well on aggregate metrics, and three of the models we test do exactly that. Two caveats. highway-env ’s discrete meta-action space has no true stop, so STOP and SLOW alias to the same command and produce identical rows; we report one. And the scripted controller’s 37 .5% crash rate shows it is a weak reference, not an upper bound: its STRAIGHT default at high speed causes collisions. The comparison that matters is against the constants, which require no tuning. A decision-level replay reaches the same conclusion: constant-STRAIGHT matches or exceeds every edge model’s agreement with the scripted controller, and randomizing the temporal order while preserving each model’s action histogram does not reduce two of the four scores. We release the complete replay table rather than treating agreement with a weak oracle as a principal result. 
+
+A. Structured output is not geometric grounding 
+
+All six VLMs pass image-path, schema and online-renderer preflights, use a pinned request mode, parse every request and require no fallback. The positive control recovers 274 visible lead gaps to 0.090 m MAE with exact scene/action Fig. 1. Visual interface used by the structured controller. From left to right: the released highway-env frame, the calibrated VLM view with an explicit identification of the ego vehicle and left–right lane convention, and the reflection across the lane axis used to evaluate symmetry consistency. Under this transformation, longitudinal hazard estimates should remain unchanged, whereas L EFT and R IGHT decisions should be exchanged. TABLE III TASK -CALIBRATED LOCAL ARM : 288 STATIC ORIGINAL /MIRROR PAIRS AND 12 VALID -RENDERER EPISODES PER ESTIMATOR . S WAP DENOMINATORS ARE IN PARENTHESES ; NO VLM PASSES THE JOINT GATE .
+
+Estimator Parse Bal. MAE Scene Action Swap ( n) Crash acc. (m) eq. eq. Renderer positive 1.000 1.000 0.090 1.000 1.000 1.000 (10) 0.167 Qwen3-VL-8B 1.000 0.445 15.345 0.253 0.365 0.119 (134) 0.083 Gemma 4-12B 1.000 0.858 16.014 0.399 0.497 0.000 (43) 0.667 Qwen3.5-9B 1.000 0.867 13.125 0.031 0.538 0.097 (93) 0.083 Qwen2.5-VL-7B 1.000 0.502 53.653 0.000 0.872 0.000 (1) 1.000 Ministral 3-8B 1.000 0.534 6.240 0.010 0.556 0.134 (112) 0.083 MiniCPM-V-4.5 1.000 0.641 11.049 0.007 0.215 0.020 (199) 0.083 
+
+equivariance and all five actions (Table III); the VLM null result is therefore not a pipeline or stimulus failure. Gemma 4 and Qwen3.5 classify proximity well (balanced accuracy 0.858 and 0.867 ) but have scene equivariance 0.399 
+
+and 0.031 . Ministral 3 has the lowest MAE ( 6.240 m) by over-calling danger (sensitivity/specificity 0.995 /0.074 ). Qwen2.5-VL’s action equivariance 0.872 is degenerate: only one direc-tional decision is evaluable and scene equivariance is zero. The best correct directional swap is 0.134 ; none is admitted. Yet Qwen3-VL, Qwen3.5, Ministral 3 and MiniCPM each crash in only 1/12 episodes. Qwen3.5 emits SLOW on 308 /310 
+
+decisions. These trajectories reflect a conservative prior and simulator reward, not reliable geometry. 
+
+B. Symmetry consensus recovers a longitudinal guardian 
+
+Failure of the five-action gate does not remove every useful visual signal. Calibration selects Gemma 4, Qwen3.5 and a 2-of-4 threshold. On the frozen 272-frame holdout, original/reflected consensus obtains 0.956 accuracy and 0.954 
+
+balanced accuracy, with sensitivity/specificity 0.958 /0.950 
+
+(Table IV) and a cluster-bootstrap 95% interval [0 .895 , 0.990] .It corrects 35 Gemma 4 errors while introducing four (exact McNemar p = 3 .35 × 10 −7). Nested leave-one-episode-out training selects the same pair and threshold in 12 /12 folds and reaches 0.951 balanced accuracy. Delegating 2–2 splits to a classical controller raises committed balanced accuracy to 0.973 at 0.824 coverage; unanimity reaches 0.996 at 0.647 . Offline modular replay retains deterministic lateral geometry, agrees with the renderer 
+
+TABLE IV LEAKAGE -CONTROLLED LONGITUDINAL GUARDIAN ON THE 272-FRAME HOLDOUT .
+
+Method Coverage Acc. Bal. acc. Sens./Spec. Gemma4-12B, original 1.000 0.842 0.869 0.821/0.917 Two-model symmetry guardian 1.000 0.956 0.954 0.958/0.950 Guardian, abstain on 2–2 0.824 0.960 0.973 0.946/1.000 Guardian, unanimous only 0.647 0.994 0.996 0.992/1.000 
+
+TABLE V SELECTED INTENT -SOURCE CONTROLS WITH THE STATE -CONSTRAINED 
+
+MPC FIXED , 25 PAIRED WORLDS PER SOURCE . T HE FULL 11-SOURCE TABLE IS RELEASED .                            
+
+> Intent source Goal Crash Dist. (m) STOP
+> MPC-only 23/25 0/25 95.6 0.0% oracle intent 23/25 0/25 96.6 7.2% random intent 14/25 0/25 82.6 21.4% Gemma4 VLM 8/25 0/25 46.3 81.6% VLM, mirrored 8/25 0/25 47.1 81.2% VLM, blank 0/25 0/25 0.2 100.0%
+
+policy on 0.934 of holdout frames and is exactly mirror-equivariant. Only seven reference actions are directional, so the positive claim is deliberately narrow: VLMs can serve as a selective longitudinal hazard module, not a learned lateral controller. 
+
+C. MPC cannot repair an ungrounded intent layer 
+
+The two-rate hierarchy improves low-level tracking but not the missing visual semantics. In 25 paired worlds, changing only the high-level source yields 23 /25 goals for MPC-only and oracle intent, 14 /25 for random intent, and 8/25 for both the VLM and its mirrored-input condition (Table V). The VLM emits STOP on 81 .6% of steps; mirroring changes neither completion nor the absence of RIGHT actions. Blank input produces STOP on all 5 000 steps. A trivial constant-
+
+LEFT source reaches 24 /25 , again showing that completion is not a grounding metric. The zero collision rate is not visual safety: this primary MPC receives simulator obstacle centres. The harder ablation exposes that dependence. Constrained 
+
+mpc-oracle reaches 30 /32 goals with 2/32 collisions; 
+
+mpc-blind falls to 1/32 and 31 /32 . Lateral VLM intent reaches 0/32 with 32 /32 collisions, while its mirror reaches 
+
+5/32 with 27 /32 . Full VLM intent reaches 0/32 but cuts TABLE VI POLICY DEGENERACY AUDIT ON CLOSED -LOOP LOGS . MI /H IS THE FRACTION OF THE MODEL ’S OWN ACTION VARIABILITY EXPLAINED BY SCENE GEOMETRY . p IS HOLM -CORRECTED .                                                       
+
+> Plat. Model Modal H(b) MI (b) MI/ Hp
+> drone Qwen2-VL-2B 1.000 0.00 ———drone Qwen2-VL-7B 1.000 0.00 ———drone LLaVA-1.5-7B 0.928 0.45 0.032 0.071 0.373 drone SmolVLM 0.485 1.82 0.146 0.080 0.002
+> rover Qwen2-VL-2B 1.000 0.00 ———rover LLaVA-1.5-7B 1.000 0.00 ———rover Qwen2-VL-7B 0.982 0.13 0.037 0.283 0.037
+> rover SmolVLM 0.649 0.94 0.033 0.035 0.041
+
+Fig. 2. Action entropy against mutual information with scene geometry. High entropy with near-zero MI (lower right) is the diagnostic pathology: output diversity without environmental grounding. 
+
+collisions to 11 /32 by issuing STOP on 3 970 /4 554 steps. MPC can execute valid geometry; it cannot create it from collapsed intent. 
+
+D. Edge models are image-invariant 
+
+Table VI audits the closed-loop logs. Five of eight model– platform cells are constant policies (modal share ≥ 0.98 ). Three show scene-dependence surviving Holm correction, but at magnitudes that do not support a claim of situational awareness: the largest, SmolVLM on the aerial platform, explains 8.0% of its own action variability, and the rover cells explain 3.5% and 28 .3% of a near-zero entropy. Two models produce numerically identical trajectories on 10 
+
+scenario–seed cells: both are constant-STRAIGHT policies in a deterministic simulator, which is a genuine convergence rather than a logging error, but one that would be indistinguishable from a caching bug without the degeneracy audit. Qwen2-VL-2B additionally fails to parse on 54 .4% of aerial steps, a fact invisible in any aggregate success rate. Figure 2 separates varying from deciding. SmolVLM has the highest action entropy of any edge model and among the lowest information content: it fluctuates without tracking the world. 
+
+TABLE VII HOSTED ARM , 144 FRAMES × 8 CONDITIONS PER MODEL . s IS THE SELF -CONSISTENCY NOISE FLOOR : THE RATE AT WHICH A MODEL DISAGREES WITH ITSELF ON THE identical IMAGE . V ALUES IN THE LAST TWO ROWS ARE COMPUTED ON PARSED DECISIONS ONLY .                                                                                          
+
+> Qwen2.5 Cosmos3 MiniCPM Kimi Metric VL-72B SR-33B V-4.5 K2.6 K3
+> unparsed rate 0.000 0.000 0.000 0.282 0.007 noise floor s0.021 0.125 0.000 0.410 0.792
+> agree( blank )0.396 0.222 0.000 0.007 0.229 agree( noise )0.396 0.090 0.000 0.000 0.188 agree( text_only )0.396 0.222 0.000 0.000 0.167 agree( cross_sc. )0.333 0.479 0.986 0.424 0.208 Cram´ er’s V0.502 0.557 0.710 0.453 0.302
+> IDI adj 0.583 0.653 1.000 0.583 −0.021
+> clears noise floor yes yes yes yes no
+> ndir 50 13 0340 mirror swap rate 0.000 0.000 —0.000 0.225
+> I(A;g)(bits) 0.408 0.198 0.028 0.106 0.122
+> p(permutation) 0.0002 0.0002 0.125 0.244 0.030
+> p(action vs. obs.) <10 −40.0016 0.370 0.483 0.120
+> Verdict grounded grounded presence not self-(depth) (depth) only scored inconsistent
+
+The blind-input battery corroborates this on the one edge model whose vision path passed our loader san-ity check: SmolVLM shows agree( blank ) = 0.903 but 
+
+agree( text_only ) = 0.097 . Replacing the road with a grey rectangle barely changes its action; removing the image entirely changes it on 90% of frames. The presence of an image token matters far more than its content. 
+
+E. Four regimes in the hosted arm 
+
+Table VII reports the five hosted models. Four regimes are visible, and the fourth is only visible because of the noise floor. 
+
+Qwen2.5-VL-72B is grounded in depth. Its three emitted actions order monotonically by ground-truth lead gap: STOP 
+
+at a median 5.0 m ( n=57 ), SLOW at 26 .8 m ( n=37 ), LEFT 
+
+at 33 .2 m ( n=50 ). Mutual information with the gap is 0.408 
+
+bits, permutation p = 0 .0002 , against a noise floor of 0.021 .Its behaviour under degraded input is unambiguous: blank ,
+
+noise and text_only each produce STOP on all 144 
+
+frames, 432 /432 identical responses to three entirely different non-inputs. It stops when it cannot see and grades its response by distance when it can. Notably, cross_scenario yields the lowest agreement of any condition ( 0.333 ): a different real scene changes its action more than no scene at all. 
+
+Cosmos3-Super-Reasoner is grounded more coarsely. It is the only model to use the full five-action vocabulary, and it is also the cheapest we tested. Its actions separate near from far (I(A; g) = 0 .198 bits, p = 0 .0002 ; action against the binary obstacle event p = 0 .0016 ), but the ordering is not monotone: 
+
+STRAIGHT at 22 .1 m and SLOW at 12 .3 m are distinguishable, while STOP , LEFT and RIGHT all sit at a median 5.0 m, and it still emits STRAIGHT on 39 of the 81 frames where an obstacle lies inside 18 m. One detail separates it from Qwen: it answers SLOW to a blank frame and STOP to a noise frame, whereas Qwen answers STOP to both. Discriminating uniform grey from random pixels is low-level image sensitivity, and it TABLE VIII THE TWO GROUNDED MODELS : EMITTED ACTION AGAINST THE SIMULATOR ’S GROUND -TRUTH LEAD GAP , REAL FRAMES ONLY . N EITHER ORDERING WAS PROMPTED . U NDER LANE -AXIS REFLECTION NEITHER MODEL EXCHANGES DIRECTION .                                      
+
+> Model Action nMed. gap Under reflection
+> Qwen2.5
+> LEFT 50 33.2 m SLOW 25, LEFT 24,
+> SLOW 37 26.8 m STOP 1
+> STOP 57 5.0 m —Cosmos3
+> STRAIGHT 86 22.1 m —
+> SLOW 32 12.3 m —
+> STOP 13 5.0 m —
+> RIGHT 85.0 m STRAIGHT 6, SLOW 3,
+> LEFT 55.0 m STOP 2, RIGHT 2
+
+is evidence that the model reads the image without reading the scene. 
+
+Neither grounded model grounds its lateral decisions. 
+
+Under reflection across the lane axis the mirror swap rate is 
+
+0.000 for both: 0/50 directional actions for Qwen and 0/13 for Cosmos3. On Qwen’s 50 directional frames the reflected image yields SLOW 25 times, LEFT 24 and STOP once; RIGHT never appears in any Qwen output, in any condition, on any frame. For that model LEFT is not a lateral decision but a token for 
+
+the road is clear, proceed around , and its effective action space is three-valued and ordered purely by distance. Cosmos3 does emit both directions, yet its reflected responses are equally unrelated to the flip. No other test in the battery predicts this; the mirror probe is what isolates it, and it now does so on two models that pass every other grounding criterion. 
+
+MiniCPM-V-4.5 detects image presence, not content. It is perfectly deterministic ( s = 0 .000 ) and separates road-like images from non-images completely ( SLOW 142 / STRAIGHT 
+
+2 on real frames; STOP 144 on each of blank, noise and text-only). Within real frames it is effectively constant: p = 0 .370 
+
+against the obstacle, I(A; g) = 0 .028 bits at p = 0 .125 .
+
+Kimi-K3 is self-inconsistent, and only the noise floor reveals it. With a 4096 -token budget and structured output it parses on 99 .3% of calls, emits all five actions, and registers 
+
+IDI = 0 .771 , Cram´ er’s V = 0 .302 at p < 10 −4, and I(A; g) = 0.122 bits at p = 0 .030 . On every test the battery inherited from prior work it looks image-dependent. It reproduces its own answer on 21% of identical images, giving s = 0 .792 
+
+and IDI adj = −0.021 : the model disagrees with itself more than it disagrees with a blank frame. Its apparent mirror swap rate of 0.225 over 40 directional actions is likewise inside its own noise. We classify it as a random policy with respect to the visual input, and we would have classified it as grounded without the repeat condition. 
+
+Kimi-K2.6 is not scorable. Even at 4096 tokens it exhausts the budget on 28 .2% of calls, and on the parsed remainder its gap relationship is inverted: it brakes at a median 27 .3 m and proceeds at 6.2 m, consistently across both runs. With s =0.410 and p = 0 .483 against the obstacle we exclude it from conclusions. A caveat on both Kimi results. K3’s randomness is con-ditional on the serving configuration that made it parseable: 
+
+Fig. 3. Agreement with the real-frame action across blind-input conditions, hosted arm. Red indicates the model produces the same action whether or not it can see. real_repeat is the noise floor, not a manipulation: a light cell in that column means the model does not reproduce its own answer. TABLE IX PROMPT ABLATION , 100 QUERIES PER CELL . M ODAL SHARE 1.00 IS A CONSTANT POLICY ; na IS THE NUMBER OF DISTINCT ACTIONS EMITTED .                                        
+
+> Model Prompt Modal naIDI
+> Qwen2.5-VL-72B baseline 0.37 30.63 chain-of-thought 0.48 60.99 few-shot 0.96 21.00 anti-degeneracy 0.93 21.00 MiniCPM-V-4.5 baseline 0.98 21.00 chain-of-thought 0.49 50.97 few-shot 0.64 31.00 anti-degeneracy 0.44 40.82 SmolVLM baseline 0.89 20.11 minimal 0.48 30.53 few-shot 1.00 10.00 anti-degeneracy 0.92 30.08
+
+under a 1024 -token budget it was truncated on 60% of calls, and under JSON-mode output at 4096 tokens it answers in a mean of 36 tokens and at random. Neither configuration we tried yields a usable controller; we do not claim the model is inherently random. 
+
+Replication. The complete hosted battery, five models, 
+
+5 760 calls, was executed twice under identical configuration, thirty minutes apart. All five verdicts reproduced. For the two grounded models the agreement is close: IDI 0 .604 against 
+
+0.604 and 0.778 against 0.778 ; I(A; g) 0 .466 against 0.408 
+
+and 0.159 against 0.198 ; mirror swap 0.000 in all four cases, on 51 /50 and 9/13 directional actions. MiniCPM-V-4.5 was bit-identical. Kimi-K3’s noise floor was 0.722 and 0.792 ,and its IDI adj changed sign between runs ( 0.160 , −0.021 ), which is itself consistent with a random policy. Because hosted endpoints can change without notice, we report the later run as primary and the earlier as its replicate. Figure 3 shows the full agreement matrix. 
+
+F. Prompt formulation gates measured grounding 
+
+Table IX ablates six prompt formulations. The effect is large and partly counter-intuitive. Chain-of-thought roughly halves modal share for MiniCPM-V-4.5 (0.98 → 0.49 ) and more than doubles its action repertoire. A minimal prompt does the same for SmolVLM (0.89 → 0.48 ). The counter-intuitive result concerns the two prompts designed to prevent degeneracy. Few-shot exemplars drive Qwen2.5-VL-72B from modal share 0.37 to 0.96 and SmolVLM to a fully constant 1.00 . An instruction stating explicitly that previous controllers had failed by emitting the same action on every frame, and that different images must produce different actions, drives Qwen to 0.93 . Prompts that constrain the output format appear to collapse the policy onto whichever action the format makes most salient. This is consistent with a body of work showing that language-model behaviour is highly sensitive to prompt sur-face form [36]–[38] and, specifically, to the ordering and choice of few-shot exemplars [39]. Two implications. First, any claim that a VLM cannot ground control must be qualified by prompt formulation; a single-prompt null result is not evidence about the model. Second, increased action entropy is not itself evidence of grounding, Table IX reports diversity, not scene-dependence, and the two dissociate (Fig. 2). The same caution applies to chain-of-thought [33], whose verbalised reasoning is known not to reliably reflect the computation that produced the answer [34], [35]. 
+
+G. Transfer and deployment characteristics 
+
+Across eight model–platform cells, multilingual percep-tion scores [27] do not predict control grounding (Pearson 
+
+r = −0.438 , p = 0.278 ; n = 8), so description scores remain proxies [40]. Deployment is also non-monotone: the two grounded hosted models are the cheapest tested ( $0 .078 
+
+and $0 .082 per thousand decisions), whereas unscorable Kimi-K2.6 costs $9 .01 , averages 2 186 output tokens, truncates on 28% of calls and has 11.3 s median latency. Complete cost, latency and edge-energy tables are released. VI. D ISCUSSION AND CONCLUSION 
+
+The central lesson of this study is that successful task completion and visual grounding are not equivalent. A VLM controller can obtain a favourable reward, travel a long dis-tance, or avoid collisions without extracting the geometry required for the task. We therefore separate three questions that are often conflated: whether the model uses the image at all, whether it recovers task-relevant spatial information, and whether that information supports an appropriate control decision. Across 32 874 scored calls, the proposed battery shows that a model may pass one of these levels while failing the next. Some controllers react to the presence of an image but not to its content; others distinguish near from distant obstacles but fail to exchange LEFT and RIGHT after reflection; and several obtain apparently safe trajectories by repeatedly selecting a conservative action. The direct-control experiments consequently provide a cau-tion against interpreting aggregate closed-loop metrics in isolation. A constant-SLOW policy outperforms the scripted geometric controller on the principal highway-env metrics, despite receiving no visual input. Several edge models are nearly constant or image-invariant, while the hosted mod-els exhibit distinct regimes ranging from genuine longitudi-nal grounding to image-presence sensitivity, stochastic self-inconsistency, and unscorable truncation. In the structured local arm, no VLM passes the joint geometric gate: the strongest models classify longitudinal proximity reasonably well, but their distance estimates and lateral decisions remain inconsistent under lane-axis reflection. The image-only pos-itive control nevertheless recovers lead distance to 0.090 mMAE with exact mirror equivariance, demonstrating that the failure does not arise because the stimuli or controller interface lack sufficient information. The results also identify a useful positive capability. When control is decomposed rather than assigned monolithically to one model, the longitudinal signal can be recovered reliably. The symmetry-consensus guardian combines Gemma 4 and Qwen3.5 predictions from the original and reflected views and achieves 0.954 balanced accuracy on an untouched 272-frame holdout. Furthermore, the same model pair and 2-of-4 threshold are recovered in all 12 nested leave-one-episode-out folds. Allowing the guardian to abstain when the four votes split evenly raises committed balanced accuracy to 0.973 at 
+
+0.824 coverage, while unanimous decisions reach 0.996 at 
+
+0.647 coverage. This behaviour is important operationally: disagreement becomes a usable uncertainty signal rather than an error that must be hidden behind a default action. When deterministic perception retains responsibility for lateral clear-ance, the resulting modular replay agrees with the renderer policy on 0.934 of holdout frames and preserves exact mirror equivariance. The MPC experiments clarify the boundary of this modu-lar strategy. A competent low-level optimizer can accurately execute a valid reference and exploit known obstacle ge-ometry, but it cannot reconstruct geometry that is absent from the high-level visual intent. Adding MPC downstream therefore improves tracking, not grounding: collapsed or one-sided VLM directives remain collapsed after optimization. The appropriate architectural conclusion is not to discard VLMs, but to restrict their authority to capabilities that can be independently validated. In the present setting, VLMs are most credible as selective longitudinal hazard monitors, while metric geometry, constraint enforcement, and actuation remain under deterministic or otherwise verifiable components. More broadly, evaluations of VLM control should test each link of the perception–decision–control chain. Blind inputs de-termine whether image content matters; repeated identical in-puts establish the model’s stochastic noise floor; metamorphic transformations test whether decisions obey known geometric relations; and non-visual baselines reveal when the simulator rewards a shortcut. These checks change the interpretation of the same trajectories from “the controller succeeds” to the more precise statement of what the model actually perceives and which decisions it can support. Current VLMs are there-fore not yet dependable general-purpose zero-shot controllers, but they can already contribute useful semantic evidence within a bounded architecture based on consensus, symmetry and abstention. Extending that authority will require closing the lateral-grounding gap and validating the complete modular stack under natural-camera observations, richer dynamics, and genuinely closed-loop deployment conditions. CODE AVAILABILITY 
+
+All code, data, and experimental artifacts are publicly avail-able at: https://github.com/drdecurto/VLControl. The repos-itory contains the complete evaluation pipeline, including the input-ablation battery, structured local controllers, MPC experiments, and the symmetry-consensus guardian. ACKNOWLEDGEMENTS 
+
+This research was supported by the LUXEMBOURG Institute of Science and Technology through the projects “ADIALab-MAST” and “LLMs4EU” (Grant Agreement No 101198470) and the BARCELONA Supercomputing Center through the project “TIFON” (File number MIG-20232039). REFERENCES [1] A. Radford et al. , “Learning transferable visual models from natural language supervision,” in Proc. 38th Int. Conf. Machine Learning (ICML) , vol. 139, 2021, pp. 8748–8763. [2] H. Liu, C. Li, Y. Li, and Y. J. Lee, “Improved baselines with visual instruction tuning,” arXiv:2310.03744 , 2023. [3] P. Wang et al. , “Qwen2-VL: Enhancing vision-language model’s per-ception of the world at any resolution,” arXiv:2409.12191 , 2024. [4] S. Bai et al. , “Qwen2.5-VL technical report,” arXiv:2502.13923 , 2025. [5] Y. Yao et al. , “MiniCPM-V: A GPT-4V level MLLM on your phone,” 
+
+arXiv:2408.01800 , 2024. [6] S. Bai et al. , “Qwen3-VL technical report,” arXiv:2511.21631 , 2025. [7] Gemma Team, “Gemma 4 technical report,” arXiv:2607.02770 , 2026. [8] Qwen Team, “Qwen3.5: Towards native multimodal agents,” technical release, 2026. [9] Mistral AI, “Introducing Mistral 3,” 2025. [10] T. Yu et al. , “MiniCPM-V 4.5: Cooking efficient MLLMs via architec-ture, data, and training recipe,” arXiv:2509.18154 , 2025. [11] A. Marafioti et al. , “SmolVLM: Redefining small and efficient multi-modal models,” arXiv:2504.05299 , 2025. [12] G. Zhou, Y. Hong, and Q. Wu, “NavGPT: Explicit reasoning in vision-and-language navigation with large language models,” in Proc. AAAI Conf. Artificial Intelligence , vol. 38, no. 7, 2024, pp. 7641–7649. [13] D. Song, J. Liang, A. Payandeh, A. H. Raj, X. Xiao, and D. Manocha, “VLM-Social-Nav: Socially aware robot navigation through scoring using vision-language models,” IEEE Robotics and Automation Letters ,vol. 10, no. 1, pp. 508–515, 2024. [14] M. Elnoor et al. , “VLM-GroNav: Robot navigation using physically grounded vision-language models in outdoor environments,” in Proc. IEEE Int. Conf. Robotics and Automation (ICRA) , 2025, pp. 2391–2398. [15] L. Zhang et al. , “MapNav: A novel memory representation via annotated semantic maps for VLM-based vision-and-language navigation,” in 
+
+Proc. 63rd Annual Meeting Assoc. Computational Linguistics , 2025, pp. 13032–13056. [16] D. Xiao, M. Dianati, P. Jennings, and R. Woodman, “HazardVLM: A video language model for real-time hazard description in automated driving systems,” IEEE Trans. Intelligent Vehicles , 2024. [17] J. de Curt` o and I. de Zarz` a, “LLM-powered cooperative perception framework for mixed UAV-vehicle platoons,” in Proc. 10th Int. Conf. Fog and Mobile Edge Computing (FMEC) , 2025, pp. 282–289. [18] J. de Curt` o, I. de Zarz` a, and C. T. Calafate, “Semantic scene understand-ing with large language models on unmanned aerial vehicles,” Drones ,vol. 7, no. 2, art. 114, 2023. [19] R. Geirhos et al. , “Shortcut learning in deep neural networks,” Nature Machine Intelligence , vol. 2, no. 11, pp. 665–673, 2020. [20] M. T. Ribeiro, T. Wu, C. Guestrin, and S. Singh, “Beyond accuracy: Behavioral testing of NLP models with CheckList,” in Proc. 58th Annual Meeting Assoc. Computational Linguistics , 2020, pp. 4902–4912. [21] P. Liang et al. , “Holistic evaluation of language models,” 
+
+arXiv:2211.09110 , 2022. [22] T. Y. Chen, F.-C. Kuo, H. Liu, P.-L. Poon, D. Towey, T. H. Tse, and Z. Q. Zhou, “Metamorphic testing: A review of challenges and opportunities,” 
+
+ACM Computing Surveys , vol. 51, no. 1, pp. 1–27, 2018. [23] Y. Tian, K. Pei, S. Jana, and B. Ray, “DeepTest: Automated testing of DNN-driven autonomous cars,” in Proc. 40th Int. Conf. Software Engineering , 2018, pp. 303–314. [24] M. Zhang, Y. Zhang, L. Zhang, C. Liu, and S. Khurshid, “DeepRoad: GAN-based metamorphic testing and input validation framework for autonomous driving systems,” in Proc. 33rd IEEE/ACM Int. Conf. Automated Software Engineering , 2018, pp. 132–142. [25] J. de Curt` o and I. de Zarz` a, “Metamorphic testing for semantic invariance in large language models,” IEEE Access , vol. 13, pp. 214772–214791, 2025. [26] I. de Zarz` a, J. de Curt` o, J. Cabot, P. Manzoni, and C. T. Calafate, “Semantic invariance in agentic AI,” in Proc. 20th Int. Conf. Agents and Multi-Agent Systems (AMSTA) , Springer Nature, 2026. [27] I. de Zarz` a, M. Liz, J. de Curt` o, and C. T. Calafate, “Energy-aware multilingual evaluation of large language models,” Electronics , vol. 15, no. 7, art. 1395, 2026. [28] M. Zhang, X. Shen, J. Cao, Z. Cui, and S. Jiang, “EdgeShard: Efficient LLM inference via collaborative edge computing,” IEEE Internet of Things Journal , vol. 12, no. 10, pp. 13119–13131, 2024. [29] A. S. Luccioni, Y. Jernite, and E. Strubell, “Power hungry processing: Watts driving the cost of AI deployment?” in Proc. ACM Conf. Fairness, Accountability, and Transparency , 2024. [30] E. Leurent, “An environment for autonomous driving decision-making,” GitHub repository, 2018. [Online]. Available: https://github. com/eleurent/highway-env [31] J. Panerati, H. Zheng, S. Zhou, J. Xu, A. Prorok, and A. P. Schoel-lig, “Learning to fly—a Gym environment with PyBullet physics for reinforcement learning of multi-agent quadcopter control,” in Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems (IROS) , 2021, pp. 7512–7519. [32] M. Towers et al. , “Gymnasium: A standard interface for reinforcement learning environments,” arXiv:2407.17032 , 2024. [33] J. Wei et al. , “Chain-of-thought prompting elicits reasoning in large lan-guage models,” in Advances in Neural Information Processing Systems ,vol. 35, 2022, pp. 24824–24837. [34] M. Turpin, J. Michael, E. Perez, and S. Bowman, “Language models don’t always say what they think: Unfaithful explanations in chain-of-thought prompting,” in Advances in Neural Information Processing Systems , vol. 36, 2024. [35] T. Lanham et al. , “Measuring faithfulness in chain-of-thought reason-ing,” arXiv:2307.13702 , 2023. [36] A. Webson and E. Pavlick, “Do prompt-based models really understand the meaning of their prompts?” arXiv:2109.01247 , 2022. [37] K. Zhu et al. , “PromptBench: Towards evaluating the robustness of large language models on adversarial prompts,” arXiv:2306.04528 , 2023. [38] Y. Elazar, N. Kassner, S. Ravfogel, A. Ravichander, E. Hovy, H. Sch¨ utze, and Y. Goldberg, “Measuring and improving consistency in pretrained language models,” Trans. Assoc. Computational Linguistics , vol. 9, pp. 1012–1031, 2021. [39] Y. Lu, M. Bartolo, A. Moore, S. Riedel, and P. Stenetorp, “Fantastically ordered prompts and where to find them: Overcoming few-shot prompt order sensitivity,” arXiv:2104.08786 , 2022. [40] Y. Belinkov, “Probing classifiers: Promises, shortcomings, and ad-vances,” Computational Linguistics , vol. 48, no. 1, pp. 207–219, 2022. [41] D. Q. Mayne, J. B. Rawlings, C. V. Rao, and P. O. M. Scokaert, “Con-strained model predictive control: Stability and optimality,” Automatica ,vol. 36, no. 6, pp. 789–814, 2000. [42] S. Holm, “A simple sequentially rejective multiple test procedure,” 
+
+Scandinavian Journal of Statistics , vol. 6, no. 2, pp. 65–70, 1979. [43] P. Virtanen et al. , “SciPy 1.0: Fundamental algorithms for scientific computing in Python,” Nature Methods , vol. 17, no. 3, pp. 261–272, 2020. [44] T. Wolf et al. , “Transformers: State-of-the-art natural language pro-cessing,” in Proc. 2020 Conf. Empirical Methods in Natural Language Processing: System Demonstrations , 2020, pp. 38–45.

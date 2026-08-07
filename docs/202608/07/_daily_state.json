@@ -1,10 +1,26 @@
 {
   "date": "20260807",
   "date_label": "",
-  "generated_at": "2026-08-07 01:13:05 UTC",
+  "generated_at": "2026-08-07 20:49:37 UTC",
   "recommend_exists": true,
-  "run_count": 1,
+  "run_count": 2,
   "papers": [
+    {
+      "paper_id": "2608.05999v1",
+      "route": "202608/07/2608.05999v1-beyond-flat-policies-hierarchical-post-training-for-embodied-agents-in-robotic-manipulation",
+      "title": "Beyond Flat Policies: Hierarchical Post-Training for Embodied Agents in Robotic Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "面向体现式机器人操作的VLA层次化后训练",
+      "first_seen_at": "2026-08-07 20:49:37 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
     {
       "paper_id": "2608.04396v1",
       "route": "202608/07/2608.04396v1-cofactvla-deconfounding-vision-language-action-models-via-counterfactual-intervention",
@@ -17,9 +33,137 @@
         }
       ],
       "score": 9.0,
-      "evidence": "用反事实干预去混淆VLA模型",
+      "evidence": "直接面向机器人操作中的VLA模型，通过反事实干预消除视觉-语言-动作建模中的混杂偏差。",
       "first_seen_at": "2026-08-07 01:13:05 UTC",
-      "updated_at": "2026-08-07 01:13:05 UTC"
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.04633v1",
+      "route": "202608/07/2608.04633v1-mind-vla-instruction-aware-spatial-representation-alignment-for-vision-language-action-models",
+      "title": "Mind-VLA: Instruction-Aware Spatial Representation Alignment for Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "直接面向具身操作中的VLA模型，提出指令感知的空间对齐方法",
+      "first_seen_at": "2026-08-07 01:13:05 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.04765v1",
+      "route": "202608/07/2608.04765v1-explicit-language-memory-for-long-horizon-planning-in-vision-language-action-models",
+      "title": "Explicit Language Memory for Long-Horizon Planning in Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "分层长时程VLA架构，利用显式语言记忆提升时间一致性与组合泛化",
+      "first_seen_at": "2026-08-07 01:13:05 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.05042v1",
+      "route": "202608/07/2608.05042v1-bridgevla-a-data-efficient-generalizable-and-memory-augmented-vision-language-action-framework-for-3d-manipulation",
+      "title": "BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "直接提出用于具身3D操作的VLA框架，提升决策与泛化能力",
+      "first_seen_at": "2026-08-07 01:13:05 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.05369v1",
+      "route": "202608/07/2608.05369v1-world-to-wrist-task-conditioned-future-wrist-modeling-for-fine-grained-robot-manipulation",
+      "title": "World-to-Wrist: Task-Conditioned Future Wrist Modeling for Fine-Grained Robot Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "W2-VLA建模任务条件下的未来腕部动态以支持细粒度操作",
+      "first_seen_at": "2026-08-07 20:49:37 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.05674v1",
+      "route": "202608/07/2608.05674v1-joyai-ra-05-scaling-robot-manipulation-learning-via-dual-action-alignment",
+      "title": "JoyAI-RA 0.5: Scaling Robot Manipulation Learning via Dual Action Alignment",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "通过双重动作对齐的视觉-语言-世界-动作框架扩展机器人操作学习",
+      "first_seen_at": "2026-08-07 20:49:37 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.05730v1",
+      "route": "202608/07/2608.05730v1-spacevla-spatially-grounded-vla-for-robotic-manipulation-with-user-authored-grasp-and-place-anchors",
+      "title": "SpaceVLA: Spatially Grounded VLA for Robotic Manipulation with User-Authored Grasp and Place Anchors",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "基于用户指定空间锚点的VLA模型，用于具身抓取放置操作",
+      "first_seen_at": "2026-08-07 20:49:37 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.05738v1",
+      "route": "202608/07/2608.05738v1-in-context-vla-endowing-vision-language-action-models-with-language-via-in-context-post-training-and-agentic-tool-use",
+      "title": "In-Context VLA: Endowing Vision-Language-Action Models with Language via In-Context Post-Training and Agentic Tool Use",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "直接面向VLA模型，通过上下文后训练和智能体工具使用为具身操作注入语言能力。",
+      "first_seen_at": "2026-08-07 20:49:37 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.06374v1",
+      "route": "202608/07/2608.06374v1-dypes-vla-learning-shared-dynamics-priors-and-embodiment-specific-control-for-cross-embodiment-manipulation",
+      "title": "DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向跨体现操作的VLA学习，共享动力学先验与特定体现控制",
+      "first_seen_at": "2026-08-07 20:49:37 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
     },
     {
       "paper_id": "2608.04510v1",
@@ -54,54 +198,6 @@
       "updated_at": "2026-08-07 01:13:05 UTC"
     },
     {
-      "paper_id": "2608.04633v1",
-      "route": "202608/07/2608.04633v1-mind-vla-instruction-aware-spatial-representation-alignment-for-vision-language-action-models",
-      "title": "Mind-VLA: Instruction-Aware Spatial Representation Alignment for Vision-Language-Action Models",
-      "section": "deep",
-      "tags": [
-        {
-          "kind": "query",
-          "label": "embodied-vla"
-        }
-      ],
-      "score": 9.0,
-      "evidence": "VLA模型中的指令感知空间表示对齐",
-      "first_seen_at": "2026-08-07 01:13:05 UTC",
-      "updated_at": "2026-08-07 01:13:05 UTC"
-    },
-    {
-      "paper_id": "2608.04765v1",
-      "route": "202608/07/2608.04765v1-explicit-language-memory-for-long-horizon-planning-in-vision-language-action-models",
-      "title": "Explicit Language Memory for Long-Horizon Planning in Vision-Language-Action Models",
-      "section": "deep",
-      "tags": [
-        {
-          "kind": "query",
-          "label": "embodied-vla"
-        }
-      ],
-      "score": 9.0,
-      "evidence": "VLA模型中的显式语言记忆用于长期规划",
-      "first_seen_at": "2026-08-07 01:13:05 UTC",
-      "updated_at": "2026-08-07 01:13:05 UTC"
-    },
-    {
-      "paper_id": "2608.05042v1",
-      "route": "202608/07/2608.05042v1-bridgevla-a-data-efficient-generalizable-and-memory-augmented-vision-language-action-framework-for-3d-manipulation",
-      "title": "BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation",
-      "section": "deep",
-      "tags": [
-        {
-          "kind": "query",
-          "label": "embodied-vla"
-        }
-      ],
-      "score": 9.0,
-      "evidence": "面向3D操作的数据高效、可泛化、记忆增强的VLA框架",
-      "first_seen_at": "2026-08-07 01:13:05 UTC",
-      "updated_at": "2026-08-07 01:13:05 UTC"
-    },
-    {
       "paper_id": "2608.04428v1",
       "route": "202608/07/2608.04428v1-deltoris-enabling-real-time-vla-inference-in-embodied-ai-via-bit-level-sparsity-and-speculative-inference",
       "title": "Deltoris: Enabling Real-time VLA Inference in Embodied AI via Bit-level Sparsity and Speculative Inference",
@@ -113,9 +209,73 @@
         }
       ],
       "score": 8.0,
-      "evidence": "面向具身AI的实时扩散式VLA推理",
+      "evidence": "软硬件协同设计，实现具身AI中扩散VLA模型的实时推理",
       "first_seen_at": "2026-08-07 01:13:05 UTC",
-      "updated_at": "2026-08-07 01:13:05 UTC"
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.05215v1",
+      "route": "202608/07/2608.05215v1-vlaff-vision-language-affordance-model-for-unified-actionable-affordances",
+      "title": "VLAff: Vision-Language-Affordance Model for Unified Actionable Affordances",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "提出视觉-语言-可供性模型从人类视频中学习机器人操作技能，贴合具身机器人学习VLA模型方向。",
+      "first_seen_at": "2026-08-07 20:49:37 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.05970v1",
+      "route": "202608/07/2608.05970v1-skillmemo-expert-guided-skill-memory-framework-for-compositional-embodied-manipulation",
+      "title": "SkillMemo: Expert-guided Skill Memory Framework for Compositional Embodied Manipulation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对具身操作中的VLA等模型提出技能记忆框架，提升组合决策与泛化",
+      "first_seen_at": "2026-08-07 20:49:37 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.04933v1",
+      "route": "202608/07/2608.04933v1-mimir-a-neuro-symbolic-memory-system-with-dynamic-grounding-for-embodied-agents-in-interactive-environments",
+      "title": "Mimir: A Neuro-Symbolic Memory System with Dynamic Grounding for Embodied Agents in Interactive Environments",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向具身代理的神经符号记忆与动态接地，支撑长期决策",
+      "first_seen_at": "2026-08-07 20:49:37 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
+    },
+    {
+      "paper_id": "2608.06154v1",
+      "route": "202608/07/2608.06154v1-visual-grounding-in-zero-shot-vision-language-control",
+      "title": "Visual Grounding in Zero-Shot Vision-Language Control",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "针对具身智能体的多模态决策，系统评估零样本VLM控制器的决策是否真正基于视觉输入。",
+      "first_seen_at": "2026-08-07 20:49:37 UTC",
+      "updated_at": "2026-08-07 20:49:37 UTC"
     },
     {
       "paper_id": "2608.03099v1",
@@ -129,9 +289,9 @@
         }
       ],
       "score": 6.0,
-      "evidence": "面向具身智能体中语言接地功能的综述",
+      "evidence": "系统梳理语言在具身代理决策中的功能角色与证据支持",
       "first_seen_at": "2026-08-07 01:13:05 UTC",
-      "updated_at": "2026-08-07 01:13:05 UTC"
+      "updated_at": "2026-08-07 20:49:37 UTC"
     }
   ]
 }
