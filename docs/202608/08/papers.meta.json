@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-08",
+  "date": "2026-08-08",
+  "generated_at": "2026-08-08T19:31:28",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/08/2608.03483v1-continue-or-replan-bernoulli-continuation-policy-learning-for-adaptive-horizon-execution",
+      "section": "deep",
+      "title_en": "Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution",
+      "authors": "Weichen Xu, Zhenhua Liu, Lin Luo, Yaobo Liang, Chengtang Yao, Qingyu Mei, Jian Cao, Xixin Cao, Xing Zhang, Jiaolong Yang, Baining Guo",
+      "date": "2026-08-04",
+      "pdf": "https://arxiv.org/pdf/2608.03483v1",
+      "score": "9.0",
+      "evidence": "为分块VLA模型设计自适应执行周期，用伯努利继续/重规划决策替代固定周期",
+      "tldr": "现有VLA模型以固定执行步数周期重规划，导致关键操作可能使用过时动作块。本文提出BCP，在冻结的基座VLA上增加轻量continuation头，用强化学习学习“继续/重规划”决策，奖励兼顾成功率与重规划开销。在RoboTwin等基准及真实机器人上显著提升成功率，且开销可忽略，整体运行时间甚至更低，可即插即用迁移到不同基座模型。",
+      "tags": "query:embodied-vla",
+      "abstract_en": "Existing chunk-based Vision-Language-Action (VLA) models execute a fixed number of actions (i.e., execution horizon) before replanning, turning replanning into a task-agnostic periodic schedule that is independent of task progress. As a result, when no replanning boundary falls before a critical manipulation stage, it is executed from a stale chunk rather than a freshly replanned one. To address this limitation, we propose Bernoulli-Continuation Policy (BCP), a lightweight, plug-and-play framework for adaptive horizon execution that keeps the base VLA frozen. Given a fixed-length action chunk, its continuation head decomposes execution-horizon selection into a sequence of continue-or-replan decisions, which imposes an ordinal, prefix-sharing inductive bias over candidate horizons rather than treating them as independent classes. Since the optimal horizon for each chunk is not observable, we train this head with reinforcement learning from trajectory-level outcomes and introduce a Replanning-Efficiency Reward that jointly rewards task success and efficient VLA usage, discouraging the policy from collapsing to unnecessarily short horizons. On RoboTwin 2.0 with LingBot-VLA as the base policy, BCP improves the average success rate by +11.08% on 13 low-success tasks and from 89.88% to 93.94% (+4.06%) across all 50 tasks. Although trained only under the Clean setting, BCP generalizes to the Randomized setting, raising the average success rate by +4.06%. It also transfers to a different base policy $π_{0.5}$, achieving a better result on LIBERO (+1.7%) and, notably, on the harder LIBERO-PRO (+6.8%). On a real robot, BCP lifts success from 74% to 92% and from 44% to 84% on two manipulation tasks. Meanwhile, its negligible overhead, combined with higher success, makes BCP's overall runtime even lower than the fixed-horizon baselines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/08/2608.04510v1-guard-grounding-uncertainty-and-ablation-based-risk-detection-for-diffusion-based-vlas",
+      "section": "deep",
+      "title_en": "GUARD: Grounding Uncertainty and Ablation-Based Risk Detection for Diffusion-Based VLAs",
+      "authors": "Suhas Hegde, Jitendra Yasaswi Bharadwaj Katta",
+      "date": "2026-08-05",
+      "pdf": "https://arxiv.org/pdf/2608.04510v1",
+      "score": "8.0",
+      "evidence": "提出针对扩散式VLA策略的测试时故障检测方法，直接关注具身决策中的接地问题",
+      "tldr": "扩散VLA策略即使在预测与视觉语言证据弱关联时也可能生成看似合理的动作。GUARD在测试时通过探测动作头对多模态证据的依赖来检测此类接地性缺失，无需修改预训练策略。它消融KV缓存中显著条目以构建反事实缓存，对比去噪响应提取敏感性等诊断特征，并由轻量时序分类器输出失败信号。在多个策略与基准上，GUARD的未见任务ROC-AUC平均比最强现有运行时监视器高出5.73个百分点。",
+      "tags": "query:embodied-vla",
+      "abstract_en": "Diffusion-based vision-language-action (VLA) policies can generate plausible actions even when their predictions are weakly grounded in the visual and language evidence defining the task. We introduce GUARD, a test-time failure detection method that measures this grounding without modifying the pretrained policy. GUARD estimates the influence of token-indexed entries in the final vision-language model key-value (KV) cache, constructs counterfactual caches by ablating salient KV entries, and compares their denoising responses with the original conditioning. Based on the comparison, we derive GUARD diagnostic stream including sensitivity, attention entropy, modality bias, and grounding efficiency, which are calibrated online and processed by a lightweight temporal classifier. We evaluate GUARD under task-held-out splits across five policy-benchmark settings, using Pi0, SmolVLA, and Alpamayo-1.5 on LIBERO, SimplerEnv, MetaWorld, and PhysicalAI-AV. GUARD achieves the best ROC-AUC on four of five unseen-task settings and ranks second on the remaining setting, improving the average unseen-task ROC-AUC by 5.73 percentage points over the strongest competing runtime monitor while remaining within 0.19 points of the best seen-task average. These results show that directly probing action-head dependence on multimodal evidence provides a transferable failure signal across policies, tasks, embodiments, and domains.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-07</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-08</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 18 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 2 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
-    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>2 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>12</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>0</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-07 20:49:37 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-08 19:31:25 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日聚焦具身智能与VLA模型，精读12篇、速读6篇，核心进展集中在层次化后训练与反事实干预方法。</p>
-<p>最值得关注的是满分的《Beyond Flat Policies》和9分的《CofactVLA》，分别指向机器人操作策略分层训练与VLA去混淆建模。</p>
-<p>建议后续可结合速读中的实时推理（Deltoris）、可操作affordance（VLAff）及技能记忆（SkillMemo）方向，补充效率与泛化视角。</p>
+<p>今日精读2篇论文，覆盖自适应执行策略与扩散VLA安全检测。</p>
+<p>最值得关注：9分研究提出伯努利续策，动态决策“继续或重规划”以优化执行时域；8分研究引入不确定性与消融风险检测，增强扩散VLA可靠性。</p>
+<p>建议优先阅读前者，若关注模型安全，后者可作为补充。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">12 篇</strong>
+    <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Beyond Flat Policies: Hierarchical Post-Training for Embodied Agents in Robotic Manipulation">Beyond Flat Policies: Hierarchical Post-Training for Embodied Agents in Robotic Manipulation</span></li><li><span class="dpr-home-dashboard-paper-title" title="CofactVLA: Deconfounding Vision-Language-Action Models via Counterfactual Intervention">CofactVLA: Deconfounding Vision-Language-Action Models via Counterfactual Intervention</span></li><li><span class="dpr-home-dashboard-paper-title" title="Mind-VLA: Instruction-Aware Spatial Representation Alignment for Vision-Language-Action Models">Mind-VLA: Instruction-Aware Spatial Representation Alignment for Vision-Language-Action Models</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution">Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution</span></li><li><span class="dpr-home-dashboard-paper-title" title="GUARD: Grounding Uncertainty and Ablation-Based Risk Detection for Diffusion-Based VLAs">GUARD: Grounding Uncertainty and Ablation-Based Risk Detection for Diffusion-Based VLAs</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>12</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>2</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">0 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Deltoris: Enabling Real-time VLA Inference in Embodied AI via Bit-level Sparsity and Speculative Inference">Deltoris: Enabling Real-time VLA Inference in Embodied AI via Bit-level Sparsity and Speculative Inference</span></li><li><span class="dpr-home-dashboard-paper-title" title="VLAff: Vision-Language-Affordance Model for Unified Actionable Affordances">VLAff: Vision-Language-Affordance Model for Unified Actionable Affordances</span></li><li><span class="dpr-home-dashboard-paper-title" title="SkillMemo: Expert-guided Skill Memory Framework for Compositional Embodied Manipulation">SkillMemo: Expert-guided Skill Memory Framework for Compositional Embodied Manipulation</span></li></ul>
+<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>6</strong></span></div>
+
 </section>
 </div>
 

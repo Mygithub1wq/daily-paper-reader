@@ -1,0 +1,41 @@
+{
+  "date": "20260808",
+  "date_label": "",
+  "generated_at": "2026-08-08 19:31:25 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.03483v1",
+      "route": "202608/08/2608.03483v1-continue-or-replan-bernoulli-continuation-policy-learning-for-adaptive-horizon-execution",
+      "title": "Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "为分块VLA模型设计自适应执行周期，用伯努利继续/重规划决策替代固定周期",
+      "first_seen_at": "2026-08-08 19:31:25 UTC",
+      "updated_at": "2026-08-08 19:31:25 UTC"
+    },
+    {
+      "paper_id": "2608.04510v1",
+      "route": "202608/08/2608.04510v1-guard-grounding-uncertainty-and-ablation-based-risk-detection-for-diffusion-based-vlas",
+      "title": "GUARD: Grounding Uncertainty and Ablation-Based Risk Detection for Diffusion-Based VLAs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "提出针对扩散式VLA策略的测试时故障检测方法，直接关注具身决策中的接地问题",
+      "first_seen_at": "2026-08-08 19:31:25 UTC",
+      "updated_at": "2026-08-08 19:31:25 UTC"
+    }
+  ]
+}
