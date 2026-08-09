@@ -1,0 +1,108 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-09T20:03:50.830138+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2608.02580v1",
+      "source": "arxiv",
+      "title": "Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data",
+      "abstract": "Learning generalizable robot manipulation policies requires large-scale and diverse demonstration data. Egocentric human manipulation videos offer rich scene and task diversity, and prior work has shown that retargeting and rendering such videos into robot-format data can yield effective per-task policies at small scale. However, whether this approach can provide pretraining benefits for vision-language-action models at scale remains unexplored. We present \\textbf{Ego2Robot}, a scalable pipeline that converts egocentric human manipulation videos into robot training data through action retargeting, robot-arm visual synthesis, and multi-level quality curation. Ego2Robot supports both curated datasets and in-the-wild videos, producing 18,561 hours of robot training data spanning 15 robot morphologies, making it the largest ego-to-robot dataset to date. To evaluate generalization, we extend RoboTwin2.0 with disentangled perturbation axes covering visual appearance, scene layout, embodiment morphology, and task semantics. Experiments show that joint pretraining on Ego2Robot-synthesized and robot data consistently improves out-of-distribution generalization across multiple perturbation types, with benefits validated on real-robot deployment. Project page: https://www-ye.github.io/ego2robot_blog/",
+      "authors": [
+        "Ye Wang",
+        "Pei Lin",
+        "Xiong-Hui Chen",
+        "Haoqi Yuan",
+        "Zhixuan Liang",
+        "Yiyang Huang",
+        "Anzhe Chen",
+        "Zixing Lei",
+        "Jie Zhang",
+        "Tao Zhang",
+        "Haoyang Li",
+        "Tong Zhang",
+        "Chenxi Xiao",
+        "Ziyuan Jiao",
+        "Qin Jin"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-03T17:52:26+00:00",
+      "link": "https://arxiv.org/pdf/2608.02580v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Scalable robot data synthesis from egocentric human videos for VLA pretraining",
+      "llm_evidence_cn": "从自我中心人类视频合成大规模机器人数据用于VLA预训练",
+      "llm_evidence": "从自我中心人类视频合成大规模机器人数据用于VLA预训练",
+      "canonical_evidence": "从自我中心人类视频合成大规模机器人数据用于VLA预训练",
+      "llm_tldr_en": "Ego2Robot converts egocentric human manipulation videos into robot training data via action retargeting, robot-arm visual synthesis, and multi-level quality curation, producing 18,561 hours of robot data and exploring pretraining benefits for VLA models.",
+      "llm_tldr_cn": "通用机器人策略需要大规模多样化演示数据，但自我中心人类视频是否能为VLA模型提供预训练增益尚未充分探索。本文提出Ego2Robot流水线，通过动作重定向、机械臂视觉合成和多级质量筛选将人类操作视频转化为机器人训练数据，支持精选数据集和野外视频，生成18,561小时机器人数据。实验验证了该方法在VLA模型预训练中的益处。该工作为可扩展机器人数据合成和VLA预训练提供了新路径。",
+      "llm_tldr": "通用机器人策略需要大规模多样化演示数据，但自我中心人类视频是否能为VLA模型提供预训练增益尚未充分探索。本文提出Ego2Robot流水线，通过动作重定向、机械臂视觉合成和多级质量筛选将人类操作视频转化为机器人训练数据，支持精选数据集和野外视频，生成18,561小时机器人数据。实验验证了该方法在VLA模型预训练中的益处。该工作为可扩展机器人数据合成和VLA预训练提供了新路径。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "robot learning with vision language action models",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.04527v1",
+      "source": "arxiv",
+      "title": "Retrieve in Time, Correct in Frequency",
+      "abstract": "Frozen vision-language-action (VLA) policies generate temporally extended action chunks, but long-horizon manipulation remains vulnerable to accumulated execution error and visual aliasing across task stages. Successful rollouts provide useful corrective evidence, yet current frame retrieval can return progress-misaligned actions,while direct replay or time-domain fusion can overwrite the reactive structure of the policy proposal. We introduce Retrieve in Time, Correct in Frequency (RTCF), a training-free test-time correction framework that improves frozen VLA performance with low model-side overhead.RTCF separates which experience to retrieve from which part of its action to transfer. Progressive Memory Alignment (PMA) causally aligns the growing visual execution history with complete successful trajectories through incrementally updated monotonic frontiers, jointly identifying a relevant memory and the current aligned memory position without stage labels. From the aligned action chunk,RTCF transfers a coefficient-wise-clipped low-frequency residual on motion channels. Higher-frequency components and gripper decisions remain inherited from the frozen policy. Across four LIBERO suites and 2,000 episodes per condition, RTCF raises aggregate success from 86.4% to 88.4% and improves LIBERO-Long from 61.6% to 68.6%.These gains require no parameter updates, repeated VLA inference, or additional GPU resources: correction can be performed on the client CPU after a single policy invocation, and the median latencies sum to only 10.99 ms per action chunk",
+      "authors": [
+        "Yuze Fan",
+        "Yue Cao",
+        "Pengjie Gao",
+        "Haojia Gao",
+        "Guangqiu Guo",
+        "Ziyue Zhang",
+        "Junbo Tan",
+        "Bokui Chen",
+        "Zhuo Zou",
+        "Xueqian Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-05T06:58:00+00:00",
+      "link": "https://arxiv.org/pdf/2608.04527v1",
+      "tags": [
+        "keyword:embodied-VLA",
+        "query:embodied-VLA"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Training-free test-time correction framework for frozen VLA policies",
+      "llm_evidence_cn": "面向冻结VLA模型的免训练测试时修正框架",
+      "llm_evidence": "面向冻结VLA模型的免训练测试时修正框架",
+      "canonical_evidence": "面向冻结VLA模型的免训练测试时修正框架",
+      "llm_tldr_en": "Presents RTCF, a training-free test-time correction framework for frozen VLA policies, using progressive memory alignment and frequency-based correction to improve long-horizon manipulation.",
+      "llm_tldr_cn": "冻结的VLA策略生成长时段动作块，但在长程操作中累积执行误差和视觉混淆会导致失败。该文提出RTCF训练无关的测试时修正框架，将经验检索与动作迁移相分离，通过渐进式记忆对齐（PMA）因果对齐视觉执行历史，并利用频率域修正避免覆盖策略的响应结构。该方法以较低模型端开销显著提升冻结VLA在长程操作中的成功率。",
+      "llm_tldr": "冻结的VLA策略生成长时段动作块，但在长程操作中累积执行误差和视觉混淆会导致失败。该文提出RTCF训练无关的测试时修正框架，将经验检索与动作迁移相分离，通过渐进式记忆对齐（PMA）因果对齐视觉执行历史，并利用频率域修正避免覆盖策略的响应结构。该方法以较低模型端开销显著提升冻结VLA在长程操作中的成功率。",
+      "llm_tags": [
+        "query:embodied-vla"
+      ],
+      "matched_query_tag": "query:embodied-vla",
+      "matched_query_text": "vision language action models for embodied decision making",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}

@@ -41,7 +41,7 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-08</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-09</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
     <strong class="dpr-home-dashboard-count">共 2 篇</strong>
@@ -51,7 +51,7 @@
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>0</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-08 19:31:25 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-09 20:05:50 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读2篇论文，覆盖自适应执行策略与扩散VLA安全检测。</p>
-<p>最值得关注：9分研究提出伯努利续策，动态决策“继续或重规划”以优化执行时域；8分研究引入不确定性与消融风险检测，增强扩散VLA可靠性。</p>
-<p>建议优先阅读前者，若关注模型安全，后者可作为补充。</p>
+<p>今日精读2篇高分论文，聚焦机器人数据合成与时间序列检索校正两大方向；《Ego2Robot》从第一人称人类数据生成机器人训练数据，《Retrieve in Time》提出时间感知的检索与频率校正方法；建议优先关注具身智能数据扩展与时间序列预测的交叉应用。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -76,7 +74,7 @@
     <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution">Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution</span></li><li><span class="dpr-home-dashboard-paper-title" title="GUARD: Grounding Uncertainty and Ablation-Based Risk Detection for Diffusion-Based VLAs">GUARD: Grounding Uncertainty and Ablation-Based Risk Detection for Diffusion-Based VLAs</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data">Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data</span></li><li><span class="dpr-home-dashboard-paper-title" title="Retrieve in Time, Correct in Frequency">Retrieve in Time, Correct in Frequency</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>2</strong></span></div>
 </section>

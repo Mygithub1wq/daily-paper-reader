@@ -1,0 +1,339 @@
+Title: Retrieve in Time, Correct in Frequency
+
+URL Source: https://arxiv.org/pdf/2608.04527v1
+
+Published Time: Thu, 06 Aug 2026 00:35:03 GMT
+
+Number of Pages: 10
+
+Markdown Content:
+# Retrieve in Time, Correct in Frequency 
+
+# Yuze Fan 2,3 Yue Cao 1,2,4 Pengjie Gao 5 Haojia Gao 1 Guangqiu Guo 1,2,5
+
+# Ziyuezhang 1 Junbo Tan 1 Bokui Chen 5 Zhuo Zou 4 Xueqian Wang 5
+
+> 1
+
+Research Institute of Tsinghua University in Shenzhen 2Everwise-Tech Co., Ltd. 
+
+> 3
+
+Tongji University 4Fudan University 
+
+> 5
+
+Tsinghua Shenzhen International Graduate School, Tsinghua University 
+
+# Abstract 
+
+Frozen vision-language-action (VLA) policies generate temporally extended action chunks, but long-horizon ma-nipulation remains vulnerable to accumulated execution error and visual aliasing across task stages. Successful rollouts provide useful corrective evidence, yet current-frame retrieval can return progress-misaligned actions, while direct replay or time-domain fusion can overwrite the reactive structure of the policy proposal. We intro-duce Retrieve in Time, Correct in Frequency (RTCF), a training-free test-time correction framework that improves frozen VLA performance with low model-side overhead. RTCF separates which experience to retrieve from which part of its action to transfer. Progressive Memory Align-ment ( PMA ) causally aligns the growing visual execution history with complete successful trajectories through incre-mentally updated monotonic frontiers, jointly identifying a relevant memory and the current aligned memory posi-tion without stage labels. From the aligned action chunk, RTCF transfers a coefficient-wise-clipped low-frequency residual on motion channels. Higher-frequency components and gripper decisions remain inherited from the frozen policy. Across four LIBERO suites and 2,000 episodes per condition, RTCF raises aggregate success from 86.4% to 88.4% and improves LIBERO-Long from 61.6% to 68.6%. These gains require no parameter updates, repeated VLA inference, or additional GPU resources: correction can be performed on the client CPU after a single policy invoca-tion, and the median latencies sum to only 10.99 ms per action chunk. 
+
+# 1 Introduction 
+
+Vision-language-action (VLA) policies have advanced language-conditioned robot manipulation by mapping vi-sual observations and language instructions to temporally extended action chunks Zitkovich et al. [2023], Kim et al. [2025], Pertsch et al. [2025]. However, deployment is a persistent closed-loop process, not a collection of isolated offline trials. A frozen VLA that succeeds in some episodes can still fail in nearby states when visual observations become ambiguous, execution progress drifts, or small local errors accumulate into late-stage manipulation fail-ures. Updating the backbone online is costly and risky for large VLA policies, motivating test-time mechanisms that improve behavior while leaving the base policy unchanged. Recent memory-based and retrieval-augmented robot learning methods offer a promising alternative: reusing deployment experience to guide future decisions Zhao et al. [2026], Wu et al. [2026], Park et al. [2026], Si et al. [2026]. These methods show that retrieved experience can improve the behavior of frozen or partially frozen policies without updating the entire policy. However, closed-loop memory reuse raises a question beyond conventional visual retrieval: how can a policy identify experience that is not only visually relevant to the current observation, but also consistent with the execution progress implied by the preceding history? This challenge arises because similar observations can recur at different task stages while requiring different con-tinuations. The same object configuration may appear before and after contact, and repeated approach or recov-ery motions may revisit nearly identical views after the execution context has changed. In contact-rich manipula-tion, the appropriate next action therefore depends not only on the current image but also on the trajectory lead-ing to it. Explicitly segmenting demonstrations or rollouts into stages can reduce this ambiguity, but stage labels and heuristic boundaries based on velocity, gripper state, or hand-designed phases introduce task-specific assumptions. Test-time memory retrieval for chunk-based VLAs should instead infer a progress-consistent location within memory from the growing execution history. Once a progress-aligned chunk has been retrieved, a second question arises: how should it influence the policy proposal? Existing approaches use learned residual mod-ules, parameterized adapters, sampler-level guidance, or selection among multiple predicted futures. Although effec-tive, these approaches introduce additional training, model components, or inference dependencies. We instead exploit a structural property of robot actions: action chunks are typically smooth, with low-frequency components captur-ing their dominant motion trends. This motivates using memory to correct the global motion structure of the pol-icy proposal rather than replaying individual time-domain 1arXiv:2608.04527v1 [cs.RO] 5 Aug 2026 Figure 1: High-level intuition of RTCF. Retrieve in Time progressively aligns the growing observation history with a successful memory and identifies an aligned memory position consistent with current progress. Correct in Frequency applies a bounded low-frequency residual from the aligned motion prior while preserving the remaining frozen-policy proposal. actions. Accordingly, we treat the aligned memory chunk as a low-frequency motion prior and apply training-free residual correction in coefficient space. We introduce Retrieve in Time, Correct in Frequency (RTCF), a training-free test-time correction framework that improves frozen VLA performance with low overhead. RTCF decouples progress-aware memory retrieval from frequency-domain action correction. Its online retrieval mechanism, Progressive Memory Alignment ( PMA ), main-tains a frontier over monotonic alignments between the growing visual execution history and each complete suc-cessful memory. The resulting aligned memory position in-dexes a future action chunk, which is used as a prior rather than replayed directly. RTCF transforms both this chunk and the frozen policy proposal into DCT coefficient space and transfers a clipped low-frequency residual, preserv-ing the proposal’s fine-scale temporal variations outside the memory update. Figure 1 summarizes this separation between progress-aware retrieval and frequency-selective correction. Across four LIBERO suites, RTCF improves the frozen policy’s aggregate success from 86.4% to 88.4%, with its largest suite-level gain of 7.0 percentage points on LIBERO-Long. The effect varies across tasks: difficult long-horizon tasks show substantial gains, near-ceiling tasks remain largely unchanged. This variation motivates component-wise ablations of retrieval and correction, to-gether with paired analyses of when memory changes an episode outcome. Our contributions are: • Low-overhead performance improvement for frozen VLAs. We introduce a training-free post-policy correction framework that improves frozen VLA execution without parameter updates, repeated policy inference, or additional GPU resources. • Progress-aware and frequency-selective correc-tion. RTCF combines causal alignment of the grow-ing execution history with successful trajectories and bounded low-frequency residual transfer. This design uses retrieved experience to improve motion execu-tion while preserving the reactive structure of the frozen-policy proposal. • Matched-memory evaluation across LIBERO. 
+
+Across four suites and 2,000 episodes per condition, RTCF improves the same frozen policy by 2.0 ag-gregate percentage points and achieves its largest suite-level gain of 7.0 points on LIBERO-Long. Task-level results reveal substantial gains on difficult long-horizon tasks, unchanged near-ceiling tasks, and a small number of regressions. 
+
+# 2 Related Work 
+
+Vision-language-action policies and action repre-sentations. VLA policies combine vision-language rep-resentations with robot action generation Zitkovich et al. [2023], Kim et al. [2025]. Action chunking represents tem-porally extended control Zhao et al. [2023]; FAST encodes action chunks as DCT coefficients followed by BPE to-kenization Pertsch et al. [2025]. FreqPolicy shows that low-frequency action components primarily capture global motion patterns, whereas higher-frequency components encode finer local details Zhong et al. [2025]; related frequency-aware policies exploit structure in low-frequency trajectory modes Zhang et al. [2026a]. RTCF builds on this 2interpretation rather than introducing a new frequency-domain policy. It uses pretrained visual descriptors, which transfer effectively to robot control Nair et al. [2023], to retrieve progress-aligned successful experience and trans-fer a bounded low-frequency residual to the frozen VLA proposal at deployment time. 
+
+Memory-based test-time adaptation for robot poli-cies. Retrieval supports nearest-neighbor visual imita-tion, few-shot imitation, graph search, and affordance transfer Pari et al. [2022], Du et al. [2023], Yin and Abbeel [2024], Kuang et al. [2025]. At execution time, systems retrieve and align demonstrations for replay or planning Di Palo and Johns [2024a,b], Malato et al. [2024], Oba et al. [2024]. Recent VLA methods learn memory mech-anisms, retrieval-conditioned residuals, trajectory condi-tioning, or task-specific adapters Shi et al. [2026], Li et al. [2026], Wu et al. [2026], Park et al. [2026], Si et al. [2026]. Retrieve-then-Steer similarly reuses successful deployment experience to adapt a frozen generative VLA at test time, but injects an aggregated action prior into an intermediate state of the generative sampler Zhao et al. [2026]. In con-trast, RTCF aligns the current execution with complete successful trajectories and applies a bounded frequency-selective residual after the frozen policy proposal, requiring no access to intermediate sampler states. 
+
+Temporal alignment for memory retrieval. Se-quence alignment handles differences in execution speed and local phase duration, including in streaming set-tings Dixon [2005]. STRAP retrieves sub-trajectories with DTW, HAND adapts hand paths through subsequence alignment, and ReGIL aligns recent execution with a demonstration to construct rewards Memmel et al. [2025], Hong et al. [2025], Zhang et al. [2026b]. These methods use alignment for tracking, data selection, trajectory adapta-tion, or learning signals. PMA instead maintains a causal frontier over each complete successful memory, ranks the full bank, and uses the aligned position to index corrective experience. 
+
+# 3 Method 
+
+RTCF separates memory reuse into progress-aware re-trieval and frequency-domain correction. PMA locates the current execution within successful trajectories by maintaining monotonic alignment frontiers. RTCF then retrieves the aligned action record and transfers a clipped low-frequency residual to the frozen policy proposal. Exe-cution history resolves progress ambiguity, while frequency selection preserves the proposal’s fine-scale temporal vari-ations (Figure 2). 
+
+Problem Setup and Compact Success Memory. 
+
+Let t index policy invocations rather than individual con-trol steps. Given an observation ot and a language instruc-tion ℓ, a frozen chunk-based VLA policy π produces an executable action chunk 
+
+Aπt = π(ot, ℓ ) ∈ RH×Da , (1) where H is the action horizon and Da is the action di-mension. The policy parameters remain fixed during both memory construction and evaluation. Successful episodes form a frozen memory bank B+ =
+
+{M i}Ni=1 . Each memory Mi = ( Zi, Ui) contains a com-plete visual sequence Zi = [ zi, 1, . . . , zi,L i ] and the cor-responding action-record sequence Ui = [ ui, 1, . . . , ui,L i ],both indexed at the policy-invocation rate. As the memory bank grows, high-dimensional visual rep-resentations increase the cost of online retrieval, while raw action chunks require substantial storage. We therefore store each memory in a compact form. For each observa-tion, we project frozen SigLIP final-layer features Zhai et al. [2023] onto a low-dimensional PCA subspace and 
+
+ℓ2-normalize the resulting visual descriptor zi,q . These compressed descriptors are used to compute similarities during online alignment, reducing the cost of repeated retrieval. For action storage, we reuse πFAST ’s native BPE repre-sentation Pertsch et al. [2025], Sennrich et al. [2016]. Each action record ui,q stores tokens encoding the chunk’s tem-poral DCT coefficients Ahmed et al. [1974]. The sequence is decoded into DCT coefficients only when frequency-domain correction is performed; tokenization is used only for compact storage. This representation allows the mem-ory bank to store more successful experiences within a fixed storage budget, without introducing an additional action encoder or changing the correction space. 
+
+# 3.1 Retrieve in Time: Progressive Mem-ory Alignment 
+
+Subsequence Dynamic Time Warping. To incor-porate execution history rather than relying on a single potentially ambiguous frame, we begin from subsequence dynamic time warping (S-DTW) Müller [2007]. Given a query sequence X = [ x1, . . . , xN ] and a longer reference sequence Y = [ y1, . . . , yM ], S-DTW aligns the complete query with an optimally selected subsequence of the ref-erence. Let C(n, m ) = c(xn, ym) be the local matching cost, and let D(n, m ) be the minimum cumulative cost for aligning the query prefix X1: n while ending at reference position m. The open-begin initialization is 
+
+D(1 , m ) = C(1 , m ), 1 ≤ m ≤ M, D(n, 1) = 
+
+> n
+
+X
+
+> k=1
+
+C(k, 1) , 1 ≤ n ≤ N. (2) Assigning each first-row entry only its local cost allows the alignment to start at any reference position. The remaining 3Figure 2: Overview of RTCF. PMA aligns the growing visual execution history with successful memories, and the resulting action prior provides a bounded low-frequency residual for the frozen VLA proposal. entries follow the standard DTW recurrence 
+
+D(n, m ) = C(n, m ) + min 
+
+
+
+D(n − 1, m − 1) ,D(n − 1, m ),D(n, m − 1) 
+
+. (3) After the complete query has been processed, the open-end condition selects the best endpoint from the last row, 
+
+b∗ = arg min  
+
+> 1≤m≤M
+
+D(N, m ), (4) with the corresponding start position recovered by back-tracking. Thus, S-DTW preserves local temporal stretching while relaxing the reference boundaries. Standard offline S-DTW, however, processes a completed query against one reference at a time. Test-time control instead requires a causal endpoint after each policy invocation for every trajectory in the memory bank, without recomputing align-ments over the entire execution history. To bridge this gap, we introduce PMA , a causal and frontier-preserving adaptation of subsequence alignment. At policy invocation t, the current observation is encoded through the same frozen SigLIP–PCA pipeline used during memory construction, yielding a normalized visual descrip-tor zt. The descriptors observed so far form a growing query sequence 
+
+Qt = [ z1, . . . , zt].
+
+For every successful memory Zi = [ zi, 1, . . . , zi,L i ], PMA 
+
+maintains an alignment frontier over all possible memory positions. Rather than greedily committing to a single progress estimate, the frontier preserves competing mono-tonic hypotheses, allowing later observations to resolve ambiguities introduced by earlier visually similar states. For an incoming descriptor zt, its local matching cost at position q of memory i is defined as the cosine dissimilarity 
+
+ci,t (q) = 1 − clip  z⊤ 
+
+> t
+
+zi,q , −1, 1 , (5) 
+
+Figure 3: Progressive Memory Alignment. Each incoming query descriptor appends one dynamic-programming fron-tier to every successful memory. The frontier retains the best monotonic alignment ending at each possible memory position, allowing subsequent observations to revise earlier progress hypotheses. Its minimum provides an aligned memory position and a normalized score for each memory. 
+
+PMA ranks the memories and returns the top-ranked memory, its aligned memory position, and the associated action record for downstream frequency-domain correc-tion. where clipping guards against numerical deviations outside the valid cosine-similarity range. Let Ji,t (q) denote the minimum cumulative cost of align-ing Qt to memory i while assigning its latest descriptor 
+
+zt to memory position q. We use an asymmetric causal transition pattern: every new policy invocation advances the query by exactly one step, while the corresponding memory position may remain unchanged or advance by a 4bounded amount. Specifically, let 
+
+∆q = {δ ∈ Z | 0 ≤ δ ≤ vmax , q − δ ≥ 1}
+
+denote the valid progress increments at position q. The alignment frontier is updated as 
+
+Ji,t (q) = ci,t (q) + min 
+
+> δ∈∆q
+
+{Ji,t −1(q − δ) + γ|δ − 1|} . (6) Here, δ = 0 allows the online execution to remain at the same memory stage, δ = 1 represents nominal unit progress, and δ > 1 permits bounded skips when the online and recorded executions evolve at different rates. The hard bound vmax prevents implausibly large progress jumps, while γ|δ − 1| acts as a soft temporal prior favor-ing unit progress. Unlike a symmetric DTW transition rule, the recurrence contains no within-frontier transition: the alignment can update its progress only when a new observation arrives. Consequently, every query descriptor contributes exactly one alignment assignment, which is important for causal action retrieval. We initialize 
+
+Ji, 1(q) = ci, 1(q), 1 ≤ q ≤ Li, (7) allowing the query to begin at any position of the memory. This realizes the open-begin condition inherited from sub-sequence alignment. Invalid predecessor states are assigned infinite cost. Since the previous frontier Ji,t −1 contains all information required for the next update, each invo-cation extends the alignment incrementally rather than recomputing it from the complete query history. The open-end condition is obtained by selecting the lowest-cost endpoint on the current frontier: 
+
+b∗ 
+
+> i,t
+
+= arg min 
+
+> 1≤q≤Li
+
+Ji,t (q),dPMA  
+
+> i,t
+
+= Ji,t (b∗
+
+> i,t
+
+)
+
+t .
+
+(8) Because the causal transition pattern assigns exactly one memory position to each of the t query descriptors, divi-sion by t yields an average per-invocation alignment cost without requiring a variable-length path normalization. 
+
+PMA ranks all memories according to dPMA  
+
+> i,t
+
+. Let 
+
+i∗ 
+
+> t
+
+= arg min  
+
+> i
+
+dPMA  
+
+> i,t
+
+,b∗ 
+
+> t
+
+= b∗ 
+
+> i∗
+> t,t
+
+. (9) The top-ranked memory supplies the action record asso-ciated with its aligned endpoint. Thus, PMA does not retrieve the memory frame that merely looks most simi-lar to the current observation. It retrieves the successful trajectory whose temporal evolution best explains the exe-cution observed so far, and determines the precise progress position from which corrective action information should be read. 
+
+# 3.2 Correct in Frequency: Low-Frequency Residual Correction 
+
+Retrieval identifies a relevant successful trajectory and its progress position, but its action chunk should not be replayed directly: the current robot and object states may differ from those in memory. We instead use the aligned action as a stage-conditioned prior. The DCT separates its slowly varying motion trend from faster local variation, allowing RTCF to edit only a low-frequency subspace while retaining the reactive details of the frozen policy. 
+
+Aligned prior in frequency coordinates. The end-point b∗ 
+
+> t
+
+selects the aligned action record umem  
+
+> t
+
+=Read( Mi∗ 
+
+> t
+
+, b ∗ 
+
+> t
+
+), which is used as a prior rather than re-played. Decoding it yields the memory spectrum Cmem  
+
+> t
+
+.The policy proposal is represented in the same coordinates as Cπt = D(N (Aπt )) , requiring no additional learned ac-tion encoder. If the aligned future chunk is unavailable or its token sequence cannot be decoded, RTCF skips correction and executes the original policy proposal Aπt .
+
+Frequency-selective residual transfer. Let f index temporal frequency and d index action dimension. We define the binary correction mask 
+
+Gf,d = I[0 < f < F c] I[d ∈ I motion ], (10) where Fc is the temporal-frequency cutoff and Imotion con-tains the motion-channel indices. The mask excludes the DC term, higher frequencies, and non-motion dimensions. In particular, event-like gripper commands remain un-changed to avoid blurring discrete open–close transitions. We transfer a bounded residual rather than replacing the selected coefficients: 
+
+∆Ct = G ⊙ clip( Cmem  
+
+> t
+
+− Cπt , −δmax , δ max ) ,
+
+Ccorr  
+
+> t
+
+= Cπt + λ0∆Ct. (11) Here, λ0 denotes a fixed global residual scale. 
+
+# 3.3 Online Inference and Complexity 
+
+Algorithm 1 summarizes online inference. PMA stores only the previous and current frontiers for each memory and never materializes a full alignment matrix. For memory length Li and fixed vmax , retrieval requires 
+
+O(P 
+
+> i
+
+Li) time and memory per invocation; the DCT pair costs O(DaH log H). Frontiers reset between episodes, while the memory bank and policy remain fixed. 
+
+# 4 Experiments 
+
+We evaluate whether a frozen VLA can benefit from suc-cessful execution memory without parameter updates. The study covers four LIBERO suites: LIBERO-Long, LIBERO-Spatial, LIBERO-Object, and LIBERO-Goal Liu et al. [2023]. Together they test long-horizon execution as 5Algorithm 1 Online RTCF inference 
+
+Require: frozen policy π, memory bank B+, instruction 
+
+ℓ, correction scale λ0 
+
+> 1:
+
+Initialize the PMA frontier for each memory  
+
+> 2:
+
+for t = 1 , 2, . . . do  
+
+> 3:
+
+Predict Aπt and extract zt 
+
+> 4:
+
+Update all PMA frontiers  
+
+> 5:
+
+Select the best memory and aligned endpoint  
+
+> 6:
+
+Read the aligned action chunk  
+
+> 7:
+
+if the chunk is available and decodes successfully 
+
+then  
+
+> 8:
+
+Apply bounded low-frequency spectral correc-tion  
+
+> 9:
+
+else  
+
+> 10:
+
+Keep the original proposal Aπt 
+
+> 11:
+
+end if  
+
+> 12:
+
+Enforce feasibility and execute  
+
+> 13:
+
+end for 
+
+well as changes in spatial relations, manipulated objects, and task goals. We report suite-level results across all suites and task-level analysis on LIBERO-Long, which is the most difficult suite for the frozen policy and shows the largest improvement under RTCF. We compare the frozen baseline, two component ablations, and full RTCF to analyze where memory helps or disrupts execution. 
+
+# 4.1 Experimental Setup 
+
+Benchmark, policy, and evaluation. We use a frozen PI-FAST policy on the four LIBERO suites. Each suite contains ten tasks. For every task, we evaluate ten initial states under five seeds (101–105), giving 50 episodes per task and 500 episodes per suite for each condition. The four suites therefore contribute 2,000 episodes per condition. Success is determined by the benchmark task predicate before the episode horizon. 
+
+Memory collection and evaluation protocol. Suc-cessful trajectories are collected with memory seed 7 and stored before evaluation; the memory bank is then frozen. At test time, RTCF searches the complete bank without access to an initial-state identifier or an oracle memory filter. The frozen-policy baseline is rerun on the same task, initial-state, and evaluation-seed inventory as all memory-based conditions. This controls the evaluation support while keeping both policy parameters and stored experience fixed. 
+
+Compared methods and metrics. We compare the frozen PI-FAST baseline with full RTCF and two con-trolled variants that remove history-aware alignment or frequency-selective correction. Table 1 also includes re-ported reference results for Diffusion Policy Chi et al. [2023], Octo Octo Model Team et al. [2024], OpenVLA Kim et al. [2025], CoA-VLA, and π0-FAST Black et al. 
+
+Figure 4: Representative scenes from the ten multi-stage LIBERO-Long tasks, ordered from Task 0 to Task 9. [2025], Pertsch et al. [2025]; only the PI-FAST, Frame-NN, Time-Domain, and RTCF rows use our matched protocol. All memory-based conditions use the same bank, task–state inventory, evaluation seeds, unchanged-gripper constraint, and final action magnitude limit. We use a fixed residual scale of λ0 = 0 .1 in all experiments. We re-port success rate (SR), absolute percentage-point change, and the change in successful episodes. A rescue denotes a matched baseline failure followed by success under a cor-rection condition, whereas a regression denotes the reverse. Since independent simulator restarts are not byte-identical, paired transitions are used as descriptive mechanism evi-dence rather than strict trajectory-level counterfactuals. 
+
+# 4.2 Results and Analysis 
+
+Overall performance. Table 1 places our matched PI-FAST comparison alongside reported reference results, while Figure 5 visualizes the matched four-condition com-parison. The aggregate improvement is driven primarily by long-horizon execution. Across 2,000 episodes per con-dition, the number of successful episodes increases from 1,727 to 1,768, corresponding to an SR increase from 86.4% to 88.4% ( +2 .0 percentage points). On LIBERO-Long, RTCF adds 35 successes and raises SR from 61.6% to 68.6%. It also adds five successes on Spatial and two on Object, despite baseline SRs above 96%. Goal is effectively unchanged, decreasing by one success (90.0% to 89.8%). Thus, the main benefit appears where execution history and accumulated motion error have the most room to affect outcome. 
+
+LIBERO-Long task-level performance. Figure 6 shows that the Long improvement spans six of ten tasks. RTCF improves Tasks 0, 2, 3, 5, 7, and 9, matches the frozen policy on Task 1, and regresses on Tasks 4, 6, and 8. The largest change occurs on Task 5, where SR rises from 46.0% to 68.0% ( +11 successes). Tasks 0 and 9 each gain eight successes, while Task 3 gains seven. Together the six improved tasks add 43 successes, outweighing eight lost successes on the three regressed tasks and yielding the suite-level net gain of 35. The two ablations explain why the full method matters beyond this baseline comparison: the history-free variant reaches 63.6% on Long, whereas 6Method Long Spatial Object Goal All Diffusion Policy 50.5 78.3 92.5 68.3 72.4 Octo 51.1 78.9 85.7 84.6 75.1 OpenVLA 53.7 84.7 88.4 79.2 76.5 CoA-VLA 55.0 85.3 93.1 85.8 79.8 PI-FAST (baseline) 61.6 96.4 97.4 90.0 86.4 Frame-NN 63.6 95.8 96.8 88.6 86.2 Time-Domain 50.0 96.2 97.2 87.0 82.6 RTCF (ours) 68.6 97.4 97.8 89.8 88.4 
+
+Table 1: Suite-level SR (%). The upper block gives re-ported reference results; the lower block uses our matched evaluation with frozen PI-FAST as the baseline. Frame-NN and Time-Domain are RTCF ablations. Bold denotes the best result per column. 
+
+Figure 5: Suite-level LIBERO success rates for the frozen PI-FAST baseline and RTCF over 500 episodes per condi-tion. The largest gain is on LIBERO-Long. removing frequency-selective correction reduces SR to 50.0%. Their task-level profiles show that the full design recovers gains on difficult Tasks 0, 3, 5, 7, and 9 that are not consistently retained by either partial variant. 
+
+Component ablations. The matched four-condition block in Table 1 and Figure 6 addresses the two central design questions under the same frozen policy, memory bank, states, seeds, correction scale, and correction bound. Removing execution history from alignment reduces Long SR from 68.6% to 63.6%, while removing frequency se-lection reduces it to 50.0%. Across the other three suites, full RTCF also exceeds the history-free variant by 1.0– 1.6 points and the variant without frequency selection by 0.6–2.8 points. These results show that history-aware alignment and frequency-selective correction make comple-mentary contributions, with selective transfer becoming especially important in multi-stage execution. 
+
+Figure 6: LIBERO-Long task-level success under the frozen policy, two component ablations, and full RTCF.                  
+
+> Metric Frozen RTCF Policy forwards / chunk 11Added compute device –CPU
+> PMA retrieval p50 / p95 –6.28 / 7.52 ms FAST future readout p50 –4.71 ms Measured retrieval + readout –10.99 ms Action-ready latency 386.47 ms 398.67 ms ∗
+> Descriptor RAM (active suite) 032–50 MiB
+
+Table 2: Deployment profile per action chunk. ∗Stage-median estimate, not a direct end-to-end p50; semantic-history and LF-noDC stages were not timed separately. Incremental DP state adds 48–75 KiB. 
+
+Deployment overhead. RTCF reuses the baseline’s frozen PI-FAST checkpoint and single policy forward pass; timings use one NVIDIA RTX 4090 and one Intel Xeon Platinum 8358P processor (2.60 GHz base frequency, up to 3.40 GHz). All added stages are CPU-only, with exact retrieval over the complete active-suite bank and no task or initial-state identifiers, oracle filtering, or history trun-cation. The stage-median estimate in Table 2 increases action-ready latency by approximately 12.20 ms per chunk (3.16%) over the baseline, rather than representing a di-rectly measured end-to-end p50; only the active suite is resident during evaluation. 
+
+Paired outcome transitions. On LIBERO-Long, the history-free variant yields 57 rescues and 47 regressions, whereas removing frequency selection yields 34 rescues and 92 regressions relative to matched frozen-policy rollouts. These descriptive transitions explain its 50.0% SR: full-residual transfer more often disrupts otherwise successful proposals. Frequency-selective correction retains the low-7frequency motion trend while preserving the proposal outside selected coefficients. 
+
+# 5 Discussion 
+
+The LIBERO results show that most of the aggregate gain comes from LIBERO-Long, consistent with progress ambiguity and accumulated action error becoming more consequential in multi-stage tasks. Full RTCF also outper-forms both component ablations on every suite, provid-ing controlled evidence that history-aware alignment and frequency-selective transfer are complementary. In partic-ular, the large degradation under time-domain correction indicates that retrieved experience is most useful when transferred selectively rather than used to overwrite the policy proposal. Future work can extend the evaluation to larger memory banks, additional VLA models. 
+
+# 6 Conclusion 
+
+We presented RTCF, a training-free test-time correction framework for frozen chunk-based VLA policies. Progres-sive Memory Alignment aligns the growing execution his-tory with successful trajectories and uses the aligned posi-tion to retrieve a future action prior. RTCF then applies a clipped and scaled low-frequency residual on motion channels while preserving higher-frequency variations and gripper decisions. If the future chunk is unavailable or can-not be decoded, the original policy proposal is executed unchanged. Across four LIBERO suites, RTCF raises aggregate suc-cess from 86.4% to 88.4%, with the largest observed gain on LIBERO-Long, from 61.6% to 68.6%. It uses a single policy invocation, requires no additional GPU resources, and adds 10.99 ms across the two measured stages per action chunk. The ablations support both history-aware alignment and frequency-selective correction. 
+
+# References 
+
+Nasir Ahmed, T. Raj Natarajan, and K. R. Rao. Discrete cosine transform. IEEE Transactions on Computers ,C-23(1):90–93, 1974. doi: 10.1109/T-C.1974.223784. Kevin Black, Noah Brown, Danny Driess, Adnan Es-mail, Michael Robert Equi, Chelsea Finn, Niccolo Fusai, Lachy Groom, Karol Hausman, Brian Ichter, Szymon Jakubczak, Tim Jones, Liyiming Ke, Sergey Levine, Adrian Li-Bell, Mohith Mothukuri, Suraj Nair, Karl Pertsch, Lucy Xiaoyang Shi, Laura Smith, James Tan-ner, Quan Vuong, Anna Walling, Haohuan Wang, and Ury Zhilinsky. π0: A vision-language-action flow model for general robot control. In Proceedings of Robotics: Science and Systems , 2025. doi: 10.15607/RSS.2025. XXI.010. Cheng Chi, Siyuan Feng, Yilun Du, Zhenjia Xu, Eric Cousineau, Benjamin C. M. Burchfiel, and Shuran Song. Diffusion policy: Visuomotor policy learning via ac-tion diffusion. In Proceedings of Robotics: Science and Systems , Daegu, Republic of Korea, July 2023. doi: 10.15607/RSS.2023.XIX.026. Norman Di Palo and Edward Johns. DINOBot: Robot manipulation via retrieval and alignment with vision foundation models. In Proceedings of the IEEE Interna-tional Conference on Robotics and Automation , pages 2798–2805, 2024a. Norman Di Palo and Edward Johns. On the effectiveness of retrieval, alignment, and replay in manipulation. IEEE Robotics and Automation Letters , 9(3):2032–2039, 2024b. doi: 10.1109/LRA.2024.3349832. Simon Dixon. An on-line time warping algorithm for tracking musical performances. In Proceedings of the Nineteenth International Joint Conference on Artificial Intelligence , pages 1727–1728, 2005. Maximilian Du, Suraj Nair, Dorsa Sadigh, and Chelsea Finn. Behavior retrieval: Few-shot imitation learning by querying unlabeled datasets. In Proceedings of Robotics: Science and Systems , 2023. doi: 10.15607/RSS.2023. XIX.011. Matthew Hong, Anthony Liang, Kevin Kim, Harshitha Rajaprakash, Jesse Thomason, Erdem Biyik, and Jesse Zhang. HAND me the data: Fast robot adaptation via hand path retrieval. arXiv preprint arXiv:2505.20455 ,2025. Moo Jin Kim, Karl Pertsch, Siddharth Karamcheti, Ted Xiao, Ashwin Balakrishna, Suraj Nair, Rafael Rafailov, Ethan P. Foster, Pannag R. Sanketi, Quan Vuong, Thomas Kollar, Benjamin Burchfiel, Russ Tedrake, Dorsa Sadigh, Sergey Levine, Percy Liang, and Chelsea Finn. OpenVLA: An open-source vision-language-action model. In Proceedings of The 8th Conference on Robot Learning , volume 270 of Proceedings of Machine Learn-ing Research , pages 2679–2713. PMLR, 2025. Yuxuan Kuang, Junjie Ye, Haoran Geng, Jiageng Mao, Congyue Deng, Leonidas Guibas, He Wang, and Yue Wang. RAM: Retrieval-based affordance transfer for generalizable zero-shot robotic manipulation. In Pro-ceedings of The 8th Conference on Robot Learning , vol-ume 270 of Proceedings of Machine Learning Research ,pages 547–565. PMLR, 2025. Zaijing Li, Bing Hu, Rui Shao, Gongwei Chen, Dongmei Jiang, Pengwei Xie, Jianye Hao, and Liqiang Nie. Global prior meets local consistency: Dual-memory augmented vision-language-action model for efficient robotic manip-ulation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 35135–35145, 2026. 8Bo Liu, Yifeng Zhu, Chongkai Gao, Yihao Feng, Qiang Liu, Yuke Zhu, and Peter Stone. LIBERO: Benchmark-ing knowledge transfer for lifelong robot learning. In 
+
+Advances in Neural Information Processing Systems ,volume 36, 2023. Federico Malato, Florian Leopold, Andrew Melnik, and Ville Hautamäki. Zero-shot imitation policy via search in demonstration dataset. In Proceedings of the IEEE International Conference on Acoustics, Speech and Sig-nal Processing , pages 7590–7594, 2024. doi: 10.1109/ ICASSP48485.2024.10447339. Marius Memmel, Jacob Berg, Bingqing Chen, Abhishek Gupta, and Jonathan Francis. STRAP: Robot sub-trajectory retrieval for augmented policy learning. In 
+
+Proceedings of the International Conference on Learning Representations , 2025. Meinard Müller. Dynamic time warping. In Information Retrieval for Music and Motion , pages 69–84. Springer, 2007. Suraj Nair, Aravind Rajeswaran, Vikash Kumar, Chelsea Finn, and Abhinav Gupta. R3M: A universal visual representation for robot manipulation. In Proceedings of The 6th Conference on Robot Learning , volume 205 of Proceedings of Machine Learning Research , pages 892–909. PMLR, 2023. Takeru Oba, Matthew Walter, and Norimichi Ukita. READ: Retrieval-enhanced asymmetric diffusion for motion planning. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recogni-tion , pages 17974–17984, 2024. Octo Model Team, Dibya Ghosh, Homer Walke, Karl Pertsch, Kevin Black, Oier Mees, Sudeep Dasari, Joey Hejna, Tobias Kreiman, Charles Xu, Jianlan Luo, You Liang Tan, Lawrence Yunliang Chen, Pannag San-keti, Quan Vuong, Ted Xiao, Dorsa Sadigh, Chelsea Finn, and Sergey Levine. Octo: An open-source gener-alist robot policy. In Proceedings of Robotics: Science and Systems , 2024. doi: 10.15607/RSS.2024.XX.090. Jyothish Pari, Nur Muhammad Shafiullah, Sridhar Pan-dian Arunachalam, and Lerrel Pinto. The surprising effectiveness of representation learning for visual imita-tion. In Proceedings of Robotics: Science and Systems ,2022. doi: 10.15607/RSS.2022.XVIII.010. Jeongeun Park, Juhan Park, Taekyung Kim, Sungjoon Choi, Dongyoon Han, and Sangdoo Yun. Retrieve, don’t retrain: Extending vision language action models to new tasks at test time. arXiv preprint arXiv:2606.15631 ,2026. Karl Pertsch, Kyle Stachowicz, Brian Ichter, Danny Driess, Suraj Nair, Quan Vuong, Oier Mees, Chelsea Finn, and Sergey Levine. FAST: Efficient action tokenization for vision-language-action models. In Proceedings of Robotics: Science and Systems , 2025. doi: 10.15607/ RSS.2025.XXI.012. Rico Sennrich, Barry Haddow, and Alexandra Birch. Neu-ral machine translation of rare words with subword units. In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pages 1715–1725, Berlin, Germany, 2016. Association for Computational Linguistics. doi: 10.18653/v1/P16-1162. Hao Shi, Bin Xie, Yingfei Liu, Lin Sun, Fengrong Liu, Tian-cai Wang, Erjin Zhou, Haoqiang Fan, Xiangyu Zhang, and Gao Huang. MemoryVLA: Perceptual-cognitive memory in vision-language-action models for robotic manipulation. In International Conference on Learning Representations , 2026. Shengyu Si, Yuanzhuo Lu, Ruimeng Yang, Ziyi Ye, Zux-uan Wu, and Yu-Gang Jiang. VLA-Pro: Cross-task procedural memory transfer for vision-language-action models. arXiv preprint arXiv:2605.29562 , 2026. Shaokai Wu, Yanbiao Ji, Qiuchang Li, Zhiyi Zhang, Qichen He, Wenyuan Xie, Guodong Zhang, Bayram Bayramli, Yue Ding, and Hongtao Lu. Dejavu: Towards experi-ence feedback learning for embodied intelligence. In 
+
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2026. Zhao-Heng Yin and Pieter Abbeel. Offline imitation learning through graph search and retrieval. In Pro-ceedings of Robotics: Science and Systems , 2024. doi: 10.15607/RSS.2024.XX.054. Xiaohua Zhai, Basil Mustafa, Alexander Kolesnikov, and Lucas Beyer. Sigmoid loss for language image pre-training. In Proceedings of the IEEE/CVF International Conference on Computer Vision , pages 11975–11986, 2023. Jinhao Zhang, Zhexuan Zhou, Huizhe Li, Yichen Lai, Wenlong Xia, Haoming Song, Youmin Gong, and Jie Mei. Hydra-DP3: Frequency-aware right-sizing of 3d diffusion policies for visuomotor control. arXiv preprint arXiv:2605.01581 , 2026a. Yuying Zhang, Francesco Verdoja, Wenyan Yang, and Ville Kyrki. ReGIL: Retrieval-guided imitation learn-ing from a single demonstration. arXiv preprint arXiv:2606.09381 , 2026b. Jianchao Zhao, Huoren Yang, Yusong Hu, Yuyang Gao, Qiguan Ou, Cong Wan, Songlin Dong, Zhiheng Ma, and Yihong Gong. Retrieve-then-steer: Online success memory for test-time adaptation of generative VLAs. 
+
+arXiv preprint arXiv:2605.10094 , 2026. 9Tony Z. Zhao, Vikash Kumar, Sergey Levine, and Chelsea Finn. Learning fine-grained bimanual manipulation with low-cost hardware. In Proceedings of Robotics: Science and Systems , Daegu, Republic of Korea, July 2023. doi: 10.15607/RSS.2023.XIX.016. Yiming Zhong, Yumeng Liu, Chuyang Xiao, Zemin Yang, Youzhuo Wang, Yufei Zhu, Ye Shi, Yujing Sun, Xinge Zhu, and Yuexin Ma. Freqpolicy: Frequency autore-gressive visuomotor policy with continuous tokens. In 
+
+Advances in Neural Information Processing Systems ,volume 38, 2025. Brianna Zitkovich, Tianhe Yu, Sichun Xu, et al. RT-2: Vision-language-action models transfer web knowledge to robotic control. In Proceedings of The 7th Confer-ence on Robot Learning , volume 229 of Proceedings of Machine Learning Research , pages 2165–2183. PMLR, 2023. 10
