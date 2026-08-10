@@ -1,0 +1,169 @@
+{
+  "date": "20260810",
+  "date_label": "",
+  "generated_at": "2026-08-10 21:10:43 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.06729v1",
+      "route": "202608/10/2608.06729v1-atlasvla-persistent-world-ego-state-modeling-for-vision-language-action-models",
+      "title": "AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "VLA模型用于具身智能与长时程决策",
+      "first_seen_at": "2026-08-10 21:10:43 UTC",
+      "updated_at": "2026-08-10 21:10:43 UTC"
+    },
+    {
+      "paper_id": "2608.01402v1",
+      "route": "202608/10/2608.01402v1-demystifying-when-and-why-vlas-fail-in-contact-rich-tasks-and-how-to-fix-them",
+      "title": "Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "分析并修复VLA模型在接触丰富操作中的失效模式",
+      "first_seen_at": "2026-08-10 21:10:43 UTC",
+      "updated_at": "2026-08-10 21:10:43 UTC"
+    },
+    {
+      "paper_id": "2608.06434v1",
+      "route": "202608/10/2608.06434v1-fast-and-accurate-an-adaptive-vla-inference-framework-through-environment-aware-model-selection",
+      "title": "Fast and Accurate: An Adaptive VLA Inference Framework through Environment-aware Model Selection",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "自适应VLA推理与具身智能",
+      "first_seen_at": "2026-08-10 21:10:43 UTC",
+      "updated_at": "2026-08-10 21:10:43 UTC"
+    },
+    {
+      "paper_id": "2608.06965v1",
+      "route": "202608/10/2608.06965v1-cross-view-action-consistency-for-camera-robust-vision-language-action-policies",
+      "title": "Cross-View Action Consistency for Camera-Robust Vision-Language-Action Policies",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "通过跨视角动作一致性提升VLA策略的相机鲁棒性",
+      "first_seen_at": "2026-08-10 21:10:43 UTC",
+      "updated_at": "2026-08-10 21:10:43 UTC"
+    },
+    {
+      "paper_id": "2608.07267v1",
+      "route": "202608/10/2608.07267v1-wnm-3d-a-world-navigation-model-with-3d-scene-conditioning-for-closed-loop-vln",
+      "title": "WNM-3D: A World Navigation Model with 3D Scene Conditioning for Closed-Loop VLN",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "使用VLA策略进行具身导航决策",
+      "first_seen_at": "2026-08-10 21:10:43 UTC",
+      "updated_at": "2026-08-10 21:10:43 UTC"
+    },
+    {
+      "paper_id": "2608.07314v1",
+      "route": "202608/10/2608.07314v1-tempo-semantic-action-decoupled-rl-post-training-for-vision-language-action-models",
+      "title": "TEMPO: Semantic-Action Decoupled RL Post-Training for Vision-Language-Action Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向VLA模型的解耦强化学习后训练",
+      "first_seen_at": "2026-08-10 21:10:43 UTC",
+      "updated_at": "2026-08-10 21:10:43 UTC"
+    },
+    {
+      "paper_id": "2608.06688v1",
+      "route": "202608/10/2608.06688v1-crosstracer-cross-embodiment-navigation-via-vla-model-reasoning-and-trace-residuals-adapting",
+      "title": "CrossTracer: Cross-Embodiment Navigation via VLA Model Reasoning and Trace Residuals Adapting",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "VLA推理用于跨本体机器人导航",
+      "first_seen_at": "2026-08-10 21:10:43 UTC",
+      "updated_at": "2026-08-10 21:10:43 UTC"
+    },
+    {
+      "paper_id": "2608.06756v1",
+      "route": "202608/10/2608.06756v1-capek-05-an-execution-centric-vision-language-model-for-embodied-intelligence",
+      "title": "Capek 0.5: An Execution-Centric Vision-Language Model for Embodied Intelligence",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向执行组织的具身视觉语言模型，与VLA式具身智能体相关",
+      "first_seen_at": "2026-08-10 21:10:43 UTC",
+      "updated_at": "2026-08-10 21:10:43 UTC"
+    },
+    {
+      "paper_id": "2608.07361v1",
+      "route": "202608/10/2608.07361v1-depth-wise-probing-and-pruning-of-the-planning-token-in-a-driving-vision-language-action-model",
+      "title": "Depth-Wise Probing and Pruning of the Planning Token in a Driving Vision-Language-Action Model",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "驾驶VLA模型的规划标记分析与剪枝，提升决策效率",
+      "first_seen_at": "2026-08-10 21:10:43 UTC",
+      "updated_at": "2026-08-10 21:10:43 UTC"
+    },
+    {
+      "paper_id": "2608.01899v1",
+      "route": "202608/10/2608.01899v1-spatiolm-towards-general-physical-spatial-intelligence-in-vision-language-models",
+      "title": "SpatioLM: Towards General Physical Spatial Intelligence in Vision-Language Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "embodied-vla"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "提升VLM空间智能以支撑具身空间理解与决策",
+      "first_seen_at": "2026-08-10 21:10:43 UTC",
+      "updated_at": "2026-08-10 21:10:43 UTC"
+    }
+  ]
+}

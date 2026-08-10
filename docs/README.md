@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-09</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-10</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 2 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 10 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>0</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-09 20:05:50 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-10 21:10:43 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,10 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读2篇高分论文，聚焦机器人数据合成与时间序列检索校正两大方向；《Ego2Robot》从第一人称人类数据生成机器人训练数据，《Retrieve in Time》提出时间感知的检索与频率校正方法；建议优先关注具身智能数据扩展与时间序列预测的交叉应用。</p>
+<p>今日共生成 10 篇推荐（精读 6 篇，速读 4 篇）</p>
+<p>精读：《AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models》（10.0/10）, 《Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them》（9.0/10）</p>
+<p>速读：《CrossTracer: Cross-Embodiment Navigation via VLA Model Reasoning and Trace Residuals Adapting》（8.0/10）, 《Capek 0.5: An Execution-Centric Vision-Language Model for Embodied Intelligence》（8.0/10）, 《Depth-Wise Probing and Pruning of the Planning Token in a Driving Vision-Language-Action Model》（8.0/10）</p>
+<p>这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +74,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data">Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data</span></li><li><span class="dpr-home-dashboard-paper-title" title="Retrieve in Time, Correct in Frequency">Retrieve in Time, Correct in Frequency</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models">AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them">Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them</span></li><li><span class="dpr-home-dashboard-paper-title" title="Fast and Accurate: An Adaptive VLA Inference Framework through Environment-aware Model Selection">Fast and Accurate: An Adaptive VLA Inference Framework through Environment-aware Model Selection</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>6</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +87,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">0 篇</strong>
+    <strong class="dpr-home-dashboard-count">4 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="CrossTracer: Cross-Embodiment Navigation via VLA Model Reasoning and Trace Residuals Adapting">CrossTracer: Cross-Embodiment Navigation via VLA Model Reasoning and Trace Residuals Adapting</span></li><li><span class="dpr-home-dashboard-paper-title" title="Capek 0.5: An Execution-Centric Vision-Language Model for Embodied Intelligence">Capek 0.5: An Execution-Centric Vision-Language Model for Embodied Intelligence</span></li><li><span class="dpr-home-dashboard-paper-title" title="Depth-Wise Probing and Pruning of the Planning Token in a Driving Vision-Language-Action Model">Depth-Wise Probing and Pruning of the Planning Token in a Driving Vision-Language-Action Model</span></li></ul>
   </div>
-
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">embodied-vla <strong>4</strong></span></div>
 </section>
 </div>
 
