@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-20T20:26:16.927123+00:00",
-  "updated_date": "20260820",
+  "generated_at": "2026-08-21T20:44:47.825173+00:00",
+  "updated_date": "20260821",
   "carryover_days": 9,
   "tag_states": {
     "embodied-VLA": {
-      "updated_date": "20260820",
+      "updated_date": "20260821",
       "carryover_days": 9,
       "items": []
     }
